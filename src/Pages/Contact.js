@@ -82,30 +82,28 @@ class Contact extends React.Component{
                         <div className="column">
                                <h3>The manual method</h3>
                         <div className="row">
-                            <div style = {{marginTop: '30px', fontSize: '17px', lineHeight: '1.7rem'}}>
+                            <div style = {{marginTop: '30px', fontSize: '17px', lineHeight: '2rem'}}>
                                 If you prefer, you can also
-                                <div className={"row"} style={{color: 'transparent'}}>
+                                <div className={"row"} style={{color: 'transparent', lineHeight: '1rem'}}>
                                     <span> </span>
                                 </div>
                                 <div className={"row"}>
-                                    <span><span><i className={"fa fa-envelope"}></i> </span>email me at ashley_e_chang<span>@</span>brown.edu,</span>
+                                    <span><span><i className={"fa fa-envelope"}></i> </span>email me at <span style={{color: '#ccd6f6'}}>ashley_e_chang<span>@</span>brown.edu</span>,</span>
                                 </div>
                                 <div className={"row"}>
-                                    <span><span><i className={"fa fa-envelope"}></i> </span>email me at ashley_e_chang<span>@</span>brown.edu,</span>
+                                    <span><span><i className={"fa fa-phone"}></i> </span>call me at <span style={{color: '#ccd6f6'}}>(434)<span> 849</span>-4438</span>, or</span>
                                 </div>
                                 <div className={"row"}>
-                                    <span><span><i className={"fa fa-envelope"}></i> </span>email me at ashley_e_chang<span>@</span>brown.edu,</span>
+                                    <span><span><i className={"fa fa-envelope"}></i> </span>email me at <span style={{color: '#ccd6f6'}}>(434)849-4438</span>,</span>
                                 </div>
                                 <div className={"row"}>
-                                    <span><span><i className={"fa fa-envelope"}></i> </span>email me at ashley_e_chang<span>@</span>brown.edu,</span>
                                 </div>
                                 and I'll be sure to respond.
 
-                                <div className={"row"} style={{color: 'transparent'}}>
+                                <div className={"row"} style={{color: 'transparent', lineHeight: '1rem'}}>
                                     <span> </span>
                                 </div>
-                                Thanks so much for parsing
-                                through this site, and I hope you have a fantastic day :)
+                                Thanks a lot for visiting this site, and I hope you have a fantastic day :)
                             </div>
                             </div>
                     </div>
