@@ -16,7 +16,7 @@ class Navbar extends React.Component {
               </div>
           </li>
           <li className="clickable">
-              <li className="nav2"><h1 style={{color:'none', margin: 0}}><i className="nav fa fa-bars"
+              <li className="nav3"><h1 style={{color:'none', margin: 0}}><i className="nav fa fa-bars"
                            style={{fontSize:'35px'}}></i></h1></li>
               <li className="nav2"><a href="#about">About</a></li>
               <li className="nav2"><a href="#experiences">Experiences</a></li>

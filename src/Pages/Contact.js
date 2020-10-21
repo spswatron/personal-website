@@ -127,7 +127,8 @@ class Contact extends React.Component{
         // && this.state.message !== '') {
         ) {
       console.log("fetching python localhost");
-      fetch("https://ursas-backend.herokuapp.com/submit_form", {
+      fetch("https://ursas-backend.herokuapp.com/submit_personal_form", {
+        mode: 'cors',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
