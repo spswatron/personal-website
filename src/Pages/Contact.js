@@ -192,7 +192,7 @@ class Contact extends React.Component{
                                 </div>
                                 <div className={"row"}>
                                 </div>
-                                I'll be sure to respond.
+                                I'll be sure to respond!
 
                                 <div className={"row"} style={{color: 'transparent', lineHeight: '1rem'}}>
                                     <span> </span>

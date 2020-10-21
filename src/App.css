@@ -68,6 +68,10 @@ ul a {
   background-color: rgb(10,25,47);
 }
 
+.top {
+   height: 70px;
+}
+
 .navbar {
   position: fixed;
   display: flex;
@@ -75,8 +79,10 @@ ul a {
   margin: 0 auto;
   width: 90%;
   max-width: 1500px;
+  /*background-color: #0a192f;*/
   padding: 0;
   z-index: 4;
+  box-shadow: 0 10px 30px -10px rgb(2, 12, 27, 0.7);
 }
 
 .nav.back {
@@ -224,6 +230,15 @@ button.form-field {
   margin-bottom: 50px;
 }
 
+.inside{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin-bottom: 50px
+}
+
 .link {
   display: flex;
   flex-direction: column;
@@ -247,6 +262,15 @@ button.form-field {
     margin-bottom: 30px;
     padding: 30px;
     display: flex;
+}
+
+.inside-holder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    z-index: 4;
 }
 
 .container {
@@ -293,6 +317,11 @@ img {
   .socials {
     display: none;
   }
+
+  .inside-holder {
+    display: none;
+  }
+
   .nav.fa {
     display: block;
     z-index: 5;

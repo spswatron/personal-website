@@ -46,11 +46,11 @@ function SocialSideBar() {
 
 function EmailSideBar() {
     return(
-        <a>
-            <i className="fa fa-chevron-down"></i>
-            <i className="fa fa-chevron-down"></i>
-            <i className="fa fa-chevron-down"></i>
+        <div className={"navbar inside-holder empty two"}>
+        <a className="inside column" style={{display: 'flex', alignItems: 'flex-end'}}>
+            <h2><i className="fa fa-chevron-down"></i></h2>
         </a>
+        </div>
     );
 }
 
