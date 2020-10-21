@@ -6,7 +6,7 @@ import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import './stars.css'
 
-class Navbar extends React.Component {ƒ
+class Navbar extends React.Component {
   render(){
     return(
         <ul className="navbar" >
@@ -16,6 +16,8 @@ class Navbar extends React.Component {ƒ
               </div>
           </li>
           <li className="clickable">
+              <li className="nav2"><h1 style={{color:'none', margin: 0}}><i className="nav fa fa-bars"
+                           style={{fontSize:'35px'}}></i></h1></li>
               <li className="nav2"><a href="#about">About</a></li>
               <li className="nav2"><a href="#experiences">Experiences</a></li>
               <li className="nav2"><a href="#projects">Projects</a></li>
@@ -59,14 +61,14 @@ class Body extends React.Component {
             <div className="page" id="home">
                 <div>
                     <div className={"row"}>
-                    <h1 style = {{textAlign: "center", display: 'block'}}>
+                    <h1 style = {{textAlign: "center", display: 'block', marginTop: 0}}>
                         Hi, I'm
                     </h1>
-                    <h1 style = {{textAlign: "center", display: 'block'}}>
-                        <span style={{color: '#ccd6f6'}}> Ashley Chang</span>.
+                    <h1 style = {{textAlign: "center", display: 'block', marginTop: 0}}>
+                        <span style={{color: '#ccd6f6'}}> Ashley Chang</span>
                     </h1>
                     </div>
-                    <p style = {{textAlign: "center"}}>
+                    <p style = {{textAlign: "center", marginTop: 0, marginBottom: 0}}>
                         I'm an aspiring something-something.
                     </p>
                 {/*<h3 className="content">*/}
@@ -78,7 +80,7 @@ class Body extends React.Component {
             <Experiences />
             <Projects />
             <Contact />
-            <div className={"page row footer"} style = {{height: '10%', zIndex: '4'}}>
+            <div className={"page footer"} style = {{height: '10%', zIndex: '4'}}>
                 <label>
                     Designed, built, and made with <i className="fa fa-heart heart"></i> by Ashley Chang
                 </label>
@@ -99,15 +101,16 @@ function Stars() {
 
 function App() {
   return (
+    <>
     <div className="App">
         <div className={"top"}>Hi</div>
         <SocialSideBar />
         <EmailSideBar />
         <Stars/>
-        {/*<h1><i className="nav fa fa-bars"></i></h1>*/}
         <Navbar />
         <Body />
     </div>
+    </>
   );
 }
 

@@ -100,8 +100,8 @@ li {
 }
 
 .nav.fa {
+  flex: 0;
   display: none;
-  position: absolute;
 }
 
 .nav1 {
@@ -120,6 +120,7 @@ li {
 .clickable {
   display: flex;
   flex-direction: row;
+  margin-left: auto;
   flex: 3;
 }
 
@@ -223,6 +224,7 @@ button.form-field {
 }
 
 .footer {
+  margin-top: 1%;
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
@@ -275,13 +277,16 @@ img {
 }
 
 @media screen and (max-width: 1200px) {
-  .navbar {
+  .clickable {
+    display: none;
+  }
+
+  .socials {
     display: none;
   }
   .nav.fa {
-    position: absolute;
     display: block;
-    z-index: 10;
+    z-index: 5;
   }
   .container {
     width: 90%;
@@ -312,9 +317,11 @@ img {
     font-size: 15px;
   }
   h1 {
-    font-size: 2.6857rem;
+    /*font-size: 2.6857rem;*/
     line-height: 3.1rem;
     margin: 5px;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 600;
   }
 
   p {
