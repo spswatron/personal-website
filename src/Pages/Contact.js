@@ -52,23 +52,6 @@ function ContactForm(props) {
     );
 }
 
-class InfoBlock extends React.Component {
-    render(){
-        return(
-           <div className={"info-block"}>
-               <div className="row">
-               <div className={"column"}>
-                   <i className={"fa fa-" + this.props.icon}></i>
-               </div>
-               <div className={"column"}>
-               Phone:
-               </div>
-               </div>
-           </div>
-        );
-    }
-}
-
 class Contact extends React.Component{
     constructor(props){
         super(props);

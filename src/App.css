@@ -59,7 +59,10 @@ ul a {
   position: fixed;
   display: block;
   height: 70px;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
   z-index: 4;
+  background-color: black;
+  /*box-shadow: 0 10px 30px -10px rgb(2, 12, 27, 0.7);*/
 }
 
 .top.transparent{
@@ -68,14 +71,6 @@ ul a {
 
 .top.fill{
   /*background-color: rgb(10,25,47);*/
-}
-
-.top {
-  height: 70px;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
-  z-index: 4;
-  background-color: black;
-  /*box-shadow: 0 10px 30px -10px rgb(2, 12, 27, 0.7);*/
 }
 
 .navbar {
@@ -224,16 +219,6 @@ li {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
-}
-
-/*i {*/
-/*  align-self: center;*/
-/*}*/
-.info-block {
-    background: #191d2b;
-    margin-bottom: 30px;
-    padding: 30px;
-    display: flex;
 }
 
 .container {
