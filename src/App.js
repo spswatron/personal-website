@@ -54,11 +54,6 @@ class Body extends React.Component {
             <Experiences />
             <Projects />
             <Contact />
-            <div className={"page footer"} style = {{height: '10%', zIndex: '4'}}>
-                <label>
-                    Designed, built, and made with <i className="fa fa-heart heart"></i> by Ashley Chang
-                </label>
-         </div>
         </div>
     )
   }

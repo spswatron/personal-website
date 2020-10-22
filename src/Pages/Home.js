@@ -14,8 +14,8 @@ class Home extends React.Component {
                     </h1>
                     </div>
                     <p style = {{textAlign: "center", marginTop: 0, marginBottom: 0, maxWidth: '665px'}}>
-                        I'm a sophomore at Brown University studying Computer Science and English.
-                        I'm an aspiring back-end developer and fiction writer.
+                        I'm a sophomore at <span style={{color: '#ccd6f6'}}>Brown University</span> studying <span style={{color: '#ccd6f6'}}>Computer Science</span> and English.
+                        I'm an aspiring <span style={{color: '#ccd6f6'}}>back-end developer</span> and fiction writer.
                     </p>
                      <div className={"row"} style = {{justifyContent: "center", alignItems:'center'}}>
                          <a href="#contact">
