@@ -7,10 +7,10 @@ class Home extends React.Component {
                 <div>
                     <div className={"row"} style = {{justifyContent: "center"}}>
                     <h1 style = {{textAlign: "center", display: 'block', marginTop: 0}}>
-                        Hi, I'm
+                        <span style={{color: '#8892b0'}}>Hi, I'm </span>
                     </h1>
                     <h1 style = {{textAlign: "center", display: 'block', marginTop: 0}}>
-                        <span style={{color: '#ccd6f6'}}> Ashley Chang</span>
+                        Ashley Chang!
                     </h1>
                     </div>
                     <p style = {{textAlign: "center", marginTop: 0, marginBottom: 0, maxWidth: '665px'}}>

@@ -23,7 +23,7 @@ textarea {
 }
 
 input, select, textarea {
-    width: 100%;
+    width: 80%;
     font-size: 14px;
     vertical-align: middle;
 }
@@ -51,6 +51,12 @@ button.form-field {
   border: 1px solid #ccd6f6!important;
   color: #ccd6f6!important;
 }
+
+.contact.form-field {
+    width: 18%;
+    padding: 0;
+}
+
 
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
     cursor: pointer;

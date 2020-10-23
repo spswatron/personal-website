@@ -80,3 +80,7 @@ img{
   z-index: 0;
   right: 20px;
 }
+
+.container.wide {
+	width: 90%;
+}

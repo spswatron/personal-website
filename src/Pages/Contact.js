@@ -3,7 +3,6 @@ import React from "react";
 function ContactForm(props) {
     return(
         <div className="column">
-            <div className="container" style = {{marginLeft: 0}}>
                 <label>
                     Name*
                 </label>
@@ -44,10 +43,9 @@ function ContactForm(props) {
                            onKeyPress = {props.enterCheck}
                     />
                 </form>
-                <button className="form-field" type="submit"
+                <button className="contact form-field" type="submit"
                         onClick = {props.handleSubmit}
                 > Submit </button>
-            </div>
         </div>
     );
 }
@@ -134,13 +132,12 @@ class Contact extends React.Component{
             <div className="page" id="contact">
                 <div className="container">
                     <div className="row">
-                    <h1 className={"whiter"}>Contact </h1>
+                    <h1>Contact </h1>
                     </div>
                     <div className="row">
                         <div className="column">
                             <h2>Let's keep in touch! </h2>
                             <div className="row">
-                            <div className="column">
                             <ContactForm
                                 name = {this.state.name}
                                 email = {this.state.email}
@@ -154,12 +151,11 @@ class Contact extends React.Component{
                                 handleSubmit = {this.handleSubmit.bind(this)}
                             />
                             </div>
-                            </div>
                         </div>
-                        <div className="column">
+                        <div className="column" style = {{marginTop: '6px'}}>
                                <h3>The manual method</h3>
                         <div className="row">
-                            <div style = {{marginTop: '30px', fontSize: '17px', lineHeight: '2rem'}}>
+                            <div style = {{marginTop: '24px', fontSize: '17px', lineHeight: '2rem'}}>
                                 If you prefer, you can also
                                 <div className={"row"} style={{color: 'transparent', lineHeight: '1rem'}}>
                                     <span> </span>
@@ -185,9 +181,9 @@ class Contact extends React.Component{
                             </div>
                     </div>
                 </div>
-                <div className={"row page footer"} style = {{height: '10%', zIndex: '4'}}>
+                <div className="footer">
                 <label>
-                    Designed, built, and made with <i className="fa fa-heart heart"></i> by Ashley Chang
+                    Made with SASS and <i className="fa fa-heart heart"></i> by Ashley Chang
                 </label>
                 </div>
             </div>
