@@ -47,19 +47,6 @@ body {
   max-width: 100%;
 }
 
-h1 {
-  font-size: 3.2857rem;
-  line-height: 4rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-p {
-  margin-top: 15px;
-  font-size: 1.25rem;
-  line-height: 2rem;
-}
-
 a:-webkit-any-link {
   color: inherit;
   text-decoration: none;
@@ -76,7 +63,6 @@ span {
 .navbar {
   display: flex;
   position: fixed;
-  height: 340px;
   width: 90%;
   max-width: 1500px;
   left: 50%;
@@ -135,12 +121,12 @@ a {
 .socials {
   display: flex;
   position: fixed;
-  height: 340px;
   width: 90%;
   max-width: 1500px;
   left: 50%;
   transform: translate(-50%, 0);
   margin: 0;
+  height: 340px;
   flex-direction: column;
   top: calc(100% - 340px);
 }
@@ -148,12 +134,12 @@ a {
 .arrows {
   display: flex;
   position: fixed;
-  height: 340px;
   width: 90%;
   max-width: 1500px;
   left: 50%;
   transform: translate(-50%, 0);
   margin: 0;
+  height: 340px;
   flex-direction: column;
   top: calc(100% - 340px);
   text-align: right;
@@ -179,15 +165,20 @@ a {
   display: grid;
   grid-auto-rows: 1fr;
 }
+.page * {
+  background: rgba(0, 0, 0, 0.6);
+}
+.page div {
+  border-radius: 5px;
+}
 .page h1 {
   color: #ccd6f6;
 }
 .page .whiter {
   margin-bottom: 20px;
 }
-.page .container {
-  min-height: 65vh;
-  align-self: end;
+.page button:hover {
+  background: rgba(204, 214, 246, 0.08);
 }
 .page .no-top {
   margin-top: 0;
@@ -216,6 +207,28 @@ a {
 }
 
 @media screen and (min-width: 769px) {
+  h1 {
+    font-size: 3.2857rem;
+    line-height: 4rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-top: 15px;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .page .container.small {
+    border: 20px solid rgba(0, 0, 0, 0.6);
+  }
+  .page .container.big {
+    min-height: 65vh;
+    align-self: end;
+    border: 40px solid rgba(0, 0, 0, 0.6);
+  }
+
   .nav.fa {
     display: none;
   }
@@ -225,6 +238,19 @@ a {
   }
 }
 @media (max-width: 768px) {
+  h1 {
+    font-size: 2.6857rem;
+    line-height: 3.1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  p, h3 {
+    margin-top: 15px;
+    font-size: 1.08rem;
+    line-height: 1.55rem;
+  }
+
   .navbar .clickable {
     justify-content: flex-end;
     min-width: 0;
@@ -238,6 +264,10 @@ a {
 
   img {
     width: 100%;
+  }
+
+  .container {
+    border: none;
   }
 
   .socials {

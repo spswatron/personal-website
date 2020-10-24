@@ -10,7 +10,7 @@ class Projects extends React.Component {
     render() {
         return (
             <div className="page" id="projects">
-                <div className="container">
+                <div className="container big">
                     <h1 className={"whiter"}>Projects <i className="fa fa-dumbbell"></i></h1>
                 </div>
             </div>

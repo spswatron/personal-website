@@ -76,8 +76,11 @@
   outline: none;
 }
 
-.bm-burger-button button {
+.bm-burger-button button, .bm-cross-button button {
   border: none !important;
+}
+.bm-burger-button button:hover, .bm-cross-button button:hover {
+  background: #ccd6f6;
 }
 
 /*# sourceMappingURL=Sidebar.css.map */

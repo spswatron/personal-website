@@ -84,8 +84,11 @@
   outline: none;
 }
 
-.bm-burger-button{
+.bm-burger-button, .bm-cross-button {
   button {
-  border: none!important;
+    border: none!important;
+  }
+  button:hover{
+    background: $light;
   }
 }

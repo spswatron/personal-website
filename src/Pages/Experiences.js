@@ -5,7 +5,7 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 function Experiences() {
     return(
         <div className="page" id="experiences">
-            <div className="container">
+            <div className="container big">
                 <h1 className={"whiter"}>
                     My Experiences (A Snapshot)
                 </h1>

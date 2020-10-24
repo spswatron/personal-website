@@ -76,6 +76,11 @@ class Body extends React.Component {
             <Experiences />
             <Projects />
             <Contact />
+            <div className="page footer" id={"footer"}>
+                <label>
+                    Made with SASS and <i className="fa fa-heart heart"></i> by Ashley Chang
+                </label>
+                </div>
         </div>
     )
   }

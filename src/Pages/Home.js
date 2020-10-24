@@ -5,7 +5,7 @@ class Home extends React.Component {
     render(){
         return(
             <div className="page" id="home">
-                <div>
+                <div className={"container small"}>
                     <div className={"row"} style = {{justifyContent: "center"}}>
                     <h1 style = {{textAlign: "center", display: 'block', marginTop: 0}}>
                         <span style={{color: '#8892b0'}}>Hi, I'm </span>

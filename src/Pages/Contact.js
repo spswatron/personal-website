@@ -128,7 +128,7 @@ class Contact extends React.Component{
     render() {
         return (
             <div className="page" id="contact">
-                <div className="container">
+                <div className="container big">
                     <div className="row">
                     <h1>Contact </h1>
                     </div>
@@ -178,11 +178,6 @@ class Contact extends React.Component{
                             </div>
                             </div>
                     </div>
-                </div>
-                <div className="footer" id={"footer"}>
-                <label>
-                    Made with SASS and <i className="fa fa-heart heart"></i> by Ashley Chang
-                </label>
                 </div>
             </div>
         </div>

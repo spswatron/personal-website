@@ -8,7 +8,7 @@ function Face(){
 function About() {
     return(
         <div className="page" id="about">
-            <div className="container">
+            <div className="container big">
                 <h1 className="whiter">
                     About Me
                 </h1>
@@ -24,9 +24,7 @@ function About() {
                         </h2>
                         <h3 style = {{marginTop: '0'}}>
                             I'm Ashley, just another kiddo hailing from Forest, Virginia. I'm a
-                            student at Brown University, and I'm a self-taught beatboxer always on
-                            the lookout to learn other cool things. Like web design and software development.
-                            Dag nab that stuff's cool.
+                            student at Brown University, and I'm a self-taught beatboxer.
                         </h3>
 
                         <h3 style = {{marginTop: '0'}}>
