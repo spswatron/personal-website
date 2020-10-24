@@ -43,9 +43,8 @@ body {
 .column img {
   border-radius: 5px;
   position: static;
-  max-width: 100%;
-  width: 95%;
   height: auto;
+  max-width: 100%;
 }
 
 h1 {
@@ -127,6 +126,11 @@ a {
 .link:hover {
   color: #ccd6f6;
 }
+.link:hover a {
+  display: flex;
+  flex-direction: column;
+  padding: 8.5px;
+}
 
 .socials {
   display: flex;
@@ -154,6 +158,11 @@ a {
   top: calc(100% - 340px);
   text-align: right;
   align-items: flex-end;
+}
+.arrows a {
+  display: flex;
+  flex-direction: column;
+  padding: 8.5px;
 }
 
 .line {
@@ -210,6 +219,10 @@ a {
   .nav.fa {
     display: none;
   }
+
+  .column img {
+    width: 95%;
+  }
 }
 @media (max-width: 768px) {
   .navbar .clickable {
@@ -221,6 +234,10 @@ a {
   }
   .navbar .nav.fa {
     display: block;
+  }
+
+  img {
+    width: 100%;
   }
 
   .socials {

@@ -2,6 +2,8 @@ $font-stack: Montserrat, sans-serif;
 $light: #ccd6f6;
 $gray: #8892b0;
 $blue: #87cefa;
+$navy: rgb(10,25,47);
+
 @mixin bigFlex() {
   display: flex;
   height: 100%;
@@ -63,9 +65,8 @@ body {
   img {
     border-radius: 5px;
     position: static;
-    max-width: 100%;
-    width: 95%;
     height: auto;
+    max-width: 100%;
   }
 }
 
@@ -144,6 +145,11 @@ a {
 
 .link:hover {
   color: $light;
+  a {
+    display: flex;
+    flex-direction: column;
+    padding: 8.5px;
+  }
 }
 
 .socials {
@@ -154,6 +160,12 @@ a {
   @include sideBar();
   text-align: right;
   align-items: flex-end;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    padding: 8.5px;
+  }
 }
 
 .line {
@@ -214,6 +226,10 @@ a {
   .nav.fa {
     display: none;
   }
+
+  .column img{
+    width: 95%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -228,6 +244,10 @@ a {
     .nav.fa {
       display: block;
     }
+  }
+
+  img{
+    width: 100%;
   }
 
   .socials {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './CSS/App.scss';
-import './CSS/Contact.css'
+import './CSS/Contact.scss'
 import Navbar from "./Pages/NavBar";
 import Home from "./Pages/Home";
 import About from './Pages/About'
@@ -10,12 +10,14 @@ import Contact from "./Pages/Contact";
 import './CSS/stars.css'
 import Sidebar from "./Pages/Sidebar";
 import './Pages/Sidebar.scss'
+import {Link} from "react-scroll";
 
 
 function SocialSideBar() {
     return(
+
         <h3 className="socials">
-            <a className="link" href="https://github.com/spswatron"><i className="fa fa-github"></i></a>
+            <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>
             <a className="link"><i className="fa fa-linkedin"></i></a>
             <a className="link"><i className="fa fa-instagram"></i></a>
             <a className="link"><i className="fa fa-envelope"></i></a>
@@ -26,14 +28,44 @@ function SocialSideBar() {
 
 
 
-function ArrowSideBar() {
-    return(
-        <h3 className="arrows">
-                    <a style={{paddingBottom: 0}} className="link two"><i className="fa fa-chevron-down"></i></a>
-                    <a style={{paddingTop: '2px'}} className="link two"><i className="fa fa-chevron-down"></i></a>
-                    <div className={"line"}></div>
-        </h3>
-    );
+class ArrowSideBar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.setState ={
+            loc: document.getElementById("arrows"),
+            scroll: 'about',
+        }
+
+    }
+    componentDidMount(){
+        window.addEventListener('scroll', this.handleScroll)
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('scroll', this.handleScroll)
+    }
+
+    handleScroll() {
+        const loc = document.getElementById("arrows");
+        const elementClosest = require('element-closest');
+        const p = loc.closest('page')
+        console.log(p)
+        // this.setState({
+        //     scroll: p
+        // });
+    }
+
+    render() {
+        return (
+            <h3 className="arrows" id="arrows">
+                <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={300}>
+                    <i className="fa fa-chevron-down"></i>
+                    <i className="fa fa-chevron-down"></i>
+                </Link>
+                <div className={"line"}></div>
+            </h3>
+        );
+    }
 }
 
 class Body extends React.Component {

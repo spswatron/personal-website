@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-scroll";
 
 class Home extends React.Component {
     render(){
@@ -18,10 +19,8 @@ class Home extends React.Component {
                         I'm an aspiring <span style={{color: '#ccd6f6'}}>back-end developer</span> and fiction writer.
                     </p>
                      <div className={"row"} style = {{justifyContent: "center", alignItems:'center'}}>
-                         <a href="#contact">
-                    <button className="form-field" type="contact" style = {{borderRadius: '10px'}}
-                        href="#contact"> Contact Me </button>
-                         </a>
+                         <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={300}><button className="form-field" type="contact" style = {{borderRadius: '10px'}}
+                        href="#contact"> Contact Me </button></Link>
                      </div>
                 </div>
             </div>

@@ -105,9 +105,7 @@ class Contact extends React.Component{
 
     handleSubmit() {
     if( this.state.name !== '' && this.state.email !== ''
-        // && this.state.message !== '') {
         ) {
-      console.log("fetching python localhost");
       fetch("https://ursas-backend.herokuapp.com/submit_personal_form", {
         mode: 'cors',
         method: 'POST',
@@ -161,13 +159,13 @@ class Contact extends React.Component{
                                     <span> </span>
                                 </div>
                                 <div className={"row"}>
-                                    <span><span><i className={"fa fa-envelope"}></i>  </span>email me at <span style={{color: '#ccd6f6'}}>ashley_e_chang<span>@</span>brown.edu</span>,</span>
+                                    <span><span><a href="mailto:ashley_e_chang@brown.edu" target={"_blank"}><i className={"fa fa-envelope"}></i></a></span>  email me at <a href="mailto:ashley_e_chang@brown.edu" target={"_blank"}><span style={{color: '#ccd6f6'}}>ashley_e_chang<span>@</span>brown.edu</span></a>,</span>
                                 </div>
                                 <div className={"row"}>
-                                    <span><span><i className={"fa fa-phone"}></i>  </span>call me at <span style={{color: '#ccd6f6'}}>(434)<span> 849</span>-4438</span>, or</span>
+                                    <span><span><a href="tel:434-849-4438" target={"_blank"}><i className={"fa fa-phone"}></i></a>  </span>call me at <a href="tel:434-849-4438" target={"_blank"}><span style={{color: '#ccd6f6'}}>(434)<span> 849</span>-4438</span></a>, or</span>
                                 </div>
                                 <div className={"row"}>
-                                    <span><span><i className={"fa fa-linkedin"}></i>  </span>message me on linkedin <a href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'}><span style={{color: '#ccd6f6'}}>here</span></a>.</span>
+                                    <span><span><a href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank'><i className={"fa fa-linkedin"}></i></a>  </span>message me on linkedin <a href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank'><span style={{color: '#ccd6f6'}}>here</span></a>.</span>
                                 </div>
                                 <div className={"row"}>
                                 </div>
