@@ -72,4 +72,12 @@
   color: #ccd6f6;
 }
 
+.bm-item:focus {
+  outline: none;
+}
+
+button:hover {
+  border: none !important;
+}
+
 /*# sourceMappingURL=Sidebar.css.map */

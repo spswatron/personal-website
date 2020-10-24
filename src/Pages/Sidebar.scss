@@ -79,3 +79,11 @@
 .bm-item:hover {
   color: $light;
 }
+
+.bm-item:focus{
+  outline: none;
+}
+
+button:hover {
+  border: none!important;
+}

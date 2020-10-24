@@ -179,7 +179,7 @@ class Contact extends React.Component{
                             </div>
                     </div>
                 </div>
-                <div className="footer">
+                <div className="footer" id={"footer"}>
                 <label>
                     Made with SASS and <i className="fa fa-heart heart"></i> by Ashley Chang
                 </label>

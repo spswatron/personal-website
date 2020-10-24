@@ -9,7 +9,6 @@ import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import './CSS/stars.css'
 import Sidebar from "./Pages/Sidebar";
-import './Pages/Sidebar.scss'
 import {Link} from "react-scroll";
 
 
