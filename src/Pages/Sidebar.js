@@ -26,9 +26,9 @@ class Sidebar extends React.Component {
                 right>
                 <li className="nav3 nav fa"></li>
               <li className="nav2"> <a href={"/about"} onClick={() => this.closeMenu()}>About</a></li>
-              <li className="nav2"><Link activeClass="active" to="experiences" spy={true} smooth={true} offset={-70}  duration={300} onClick={() => this.closeMenu()}>Experiences</Link></li>
-              <li className="nav2"><Link activeClass="active" to="projects" spy={true} smooth={true} offset={-70} duration={300} onClick={() => this.closeMenu()}>Projects</Link></li>
-              <li className="nav2"><Link activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration={300} onClick={() => this.closeMenu()}>Contact</Link></li>
+              <li className="nav2"><a href={"/experiences"} onClick={() => this.closeMenu()}>Experiences</a></li>
+              <li className="nav2"><a href={"/projects"} onClick={() => this.closeMenu()}>Projects</a></li>
+              <li className="nav2"><a href={"/contact"} onClick={() => this.closeMenu()}>Contact</a></li>
             </Menu>
         );
     }
