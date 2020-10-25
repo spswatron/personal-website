@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-scroll";
+import myFace from './IMG_3441.jpg';
 
 class Home extends React.Component {
     render(){
@@ -7,6 +8,7 @@ class Home extends React.Component {
             <div className="page" id="home">
                 <div className={"container small"}>
                     <div className={"row"} style = {{justifyContent: "center"}}>
+                    <img src={myFace}/>
                     <h1 style = {{textAlign: "center", display: 'block', marginTop: 0}}>
                         <span style={{color: '#8892b0'}}>Hi, I'm </span>
                     </h1>

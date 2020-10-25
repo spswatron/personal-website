@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from "./NavBar";
+import Sidebar from "./Sidebar";
 
 function ContactForm(props) {
     return(
@@ -50,7 +52,7 @@ function ContactForm(props) {
     );
 }
 
-class Contact extends React.Component{
+class Core extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -129,6 +131,7 @@ class Contact extends React.Component{
         return (
             <div className="page" id="contact">
                 <div className="container big">
+                    <div className="container small">
                     <div className="row">
                     <h1>Contact </h1>
                     </div>
@@ -177,10 +180,37 @@ class Contact extends React.Component{
                                 Thanks a lot for visiting this site, and I hope you have a fantastic day :)
                             </div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        );
+    }
+}
+
+class Contact extends React.Component {
+    render(){
+        return(
+        <>
+            {/*<Stars/>*/}
+            <Navbar />
+            <div className="top"/>
+            <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
+            <div className="App">
+            {/*<SocialSideBar />*/}
+            {/*<ArrowSideBar />*/}
+            <div className="body">
+                <Core />
+                <h3 className="socials">
+            <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>
+            <a className="link"><i className="fa fa-linkedin"></i></a>
+            <a className="link"><i className="fa fa-instagram"></i></a>
+            <a className="link"><i className="fa fa-envelope"></i></a>
+        </h3>
+            </div>
+        </div>
+        </>
         );
     }
 }

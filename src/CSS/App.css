@@ -1,30 +1,30 @@
 html {
   display: flex;
-  height: 100%;
   width: 100%;
 }
 
 body {
   font: 100% Montserrat, sans-serif;
-  color: #8892b0;
-  background-color: black;
+  color: black;
+  background-color: #f8f9fa;
   display: flex;
-  height: 100%;
   width: 100%;
 }
 
 #root {
   display: flex;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
 }
 
 .App {
   display: flex;
-  height: 100%;
   width: 100%;
   z-index: 4;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .row {
@@ -60,6 +60,16 @@ span {
   white-space: pre-wrap;
 }
 
+.top {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background: #f8f9fa;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
 .navbar {
   display: flex;
   position: fixed;
@@ -67,12 +77,11 @@ span {
   max-width: 1500px;
   left: 50%;
   transform: translate(-50%, 0);
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
-  background-color: black;
   padding: 0;
+  background-color: #f8f9fa;
   margin: 0;
   height: 70px;
-  z-index: 5;
+  z-index: 6;
 }
 .navbar a {
   font-size: 1rem;
@@ -94,7 +103,7 @@ span {
 }
 
 .link i {
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .link {
@@ -119,29 +128,17 @@ a {
 }
 
 .socials {
-  display: flex;
-  position: fixed;
-  width: 90%;
-  max-width: 1500px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  position: relative;
   margin: 0;
-  height: 340px;
-  flex-direction: column;
-  top: calc(100% - 340px);
+  flex-direction: row;
+  text-align: center;
+  margin-top: 5vh;
 }
 
 .arrows {
-  display: flex;
-  position: fixed;
-  width: 90%;
-  max-width: 1500px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  position: relative;
   margin: 0;
-  height: 340px;
-  flex-direction: column;
-  top: calc(100% - 340px);
+  flex-direction: row;
   text-align: right;
   align-items: flex-end;
 }
@@ -151,28 +148,12 @@ a {
   padding: 8.5px;
 }
 
-.line {
-  content: "";
-  display: flex;
-  width: 1px;
-  background-color: #8892b0;
-  flex: 1;
-  margin-right: 17px;
-  margin-left: 17px;
-}
-
 .page {
   display: grid;
   grid-auto-rows: 1fr;
 }
-.page * {
-  background: rgba(0, 0, 0, 0.6);
-}
 .page div {
   border-radius: 5px;
-}
-.page h1 {
-  color: #ccd6f6;
 }
 .page .whiter {
   margin-bottom: 20px;
@@ -185,25 +166,71 @@ a {
   padding-top: 0;
 }
 
+#new-home {
+  margin-top: 70px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("IMG_0837.JPG");
+  height: 55vh;
+  min-height: 400px;
+  color: white;
+}
+#new-home img {
+  position: static;
+  width: 30vw;
+  height: auto;
+}
+#new-home .container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#new-home h1 {
+  font-size: 80px;
+  margin-bottom: 10vh;
+}
+
 #home {
   height: 100vh;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+#home img {
+  position: static;
+  width: 10vw;
+  border-radius: 5px;
+  height: auto;
+}
 
-.body {
-  width: 80%;
+#about {
+  background: linear-gradient(180deg, #F7FAF2, #ffffff);
+}
+#about .container.small {
   max-width: 1000px;
-  height: 100%;
+}
+#about h1 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.body .container.big {
+  margin-top: 8vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.body .container.small {
+  max-width: 1000px;
 }
 
 .footer {
-  height: 30vh;
+  position: relative;
   margin: 0;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  flex-direction: row;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 @media screen and (min-width: 769px) {
@@ -220,13 +247,9 @@ a {
     line-height: 2rem;
   }
 
-  .page .container.small {
-    border: 20px solid rgba(0, 0, 0, 0.6);
-  }
   .page .container.big {
     min-height: 65vh;
     align-self: end;
-    border: 40px solid rgba(0, 0, 0, 0.6);
   }
 
   .nav.fa {
@@ -238,11 +261,12 @@ a {
   }
 }
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2.6857rem;
-    line-height: 3.1rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  #new-home {
+    justify-content: center;
+  }
+  #new-home h1 {
+    text-align: center;
+    margin-top: 0;
   }
 
   p, h3 {
@@ -268,10 +292,6 @@ a {
 
   .container {
     border: none;
-  }
-
-  .socials {
-    display: none;
   }
 
   .arrows {
