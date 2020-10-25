@@ -29,24 +29,9 @@ html {
   @include bigFlex();
 }
 
-body {
-  font: 100% $font-stack;
-  color: black;
-  @include bigFlex();
-}
-
 #root{
   @include bigFlex();
   flex-wrap: wrap;
-}
-
-.App {
-  @include bigFlex();
-  z-index: 4;
-  justify-content: center;
-  min-height: 300px;
-  flex-direction: column;
-  align-items: center;
 }
 
 .row {
@@ -69,6 +54,13 @@ body {
     height: auto;
     max-width: 100%;
   }
+}
+
+.experiences {
+  background: linear-gradient(180deg,#F2FAFF,#ffffff);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 a:-webkit-any-link {
@@ -130,10 +122,6 @@ span {
 
 .link {
   padding: 8.5px;
-}
-
-a:hover {
-  color: $light;
 }
 
 a {
@@ -246,13 +234,6 @@ a {
   //}
 }
 
-
-.footer {
-  @include sideBar();
-  margin-top: 3vh;
-  margin-bottom: 3vh;
-}
-
 @media screen and (min-width: 769px) {
   h1 {
     font-size: 3.2857rem;
@@ -289,13 +270,6 @@ a {
 }
 
 @media (max-width: 768px) {
-  #new-home {
-    justify-content: center;
-    h1 {
-      text-align: center;
-      margin-top: 0;
-    }
-  }
   p, h3 {
     margin-top: 15px;
     font-size: 1.08rem;

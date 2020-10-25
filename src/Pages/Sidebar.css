@@ -31,7 +31,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #f8f9fa;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   font-family: Montserrat, sans-serif;
@@ -44,7 +44,7 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #8892b0;
+  color: black;
   padding: 0.8em;
 }
 
@@ -61,7 +61,7 @@
 /* Individual item */
 .bm-item {
   display: inline-block;
-  color: #8892b0;
+  color: black;
   margin-bottom: 10px;
   text-align: left;
   text-decoration: none;
@@ -69,7 +69,7 @@
 }
 
 .bm-item:hover {
-  color: #ccd6f6;
+  color: grey;
 }
 
 .bm-item:focus {

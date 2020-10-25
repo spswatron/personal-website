@@ -2,6 +2,7 @@
  $light: #ccd6f6;
  $navy: rgb(10,25,47);
  $font-stack: Montserrat, sans-serif;
+ $soft-white: #f8f9fa;
 
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -38,7 +39,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: $soft-white;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   font-family: $font-stack;
@@ -51,7 +52,7 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: $gray;
+  color: black;
   padding: 0.8em;
 }
 
@@ -69,7 +70,7 @@
 /* Individual item */
 .bm-item {
   display: inline-block;
-  color: $gray;
+  color: black;
   margin-bottom: 10px;
   text-align: left;
   text-decoration: none;
@@ -77,7 +78,7 @@
 }
 
 .bm-item:hover {
-  color: $light;
+  color: grey;
 }
 
 .bm-item:focus{

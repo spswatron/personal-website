@@ -6,6 +6,7 @@ html {
 body {
   font: 100% Montserrat, sans-serif;
   color: black;
+  min-height: 100vh;
   background-color: #f8f9fa;
   display: flex;
   width: 100%;
@@ -16,6 +17,14 @@ body {
   width: 100%;
   height: 100%;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects {
+  background: linear-gradient(180deg, #F7FAF2, #ffffff);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .App {
@@ -23,6 +32,7 @@ body {
   width: 100%;
   z-index: 4;
   justify-content: center;
+  height: calc(100vh - min(500px, 100vh) - 70px);
   flex-direction: column;
   align-items: center;
 }
@@ -111,7 +121,7 @@ span {
 }
 
 a:hover {
-  color: #ccd6f6;
+  color: grey !important;
 }
 
 a {
@@ -169,8 +179,7 @@ a {
 #new-home {
   margin-top: 70px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("IMG_0837.JPG");
-  height: 55vh;
-  min-height: 400px;
+  height: min(500px, 100vh);
   color: white;
 }
 #new-home img {
@@ -203,18 +212,6 @@ a {
   height: auto;
 }
 
-#about {
-  background: linear-gradient(180deg, #F7FAF2, #ffffff);
-}
-#about .container.small {
-  max-width: 1000px;
-}
-#about h1 {
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 40px;
-}
-
 .body .container.big {
   margin-top: 8vh;
   display: flex;
@@ -226,11 +223,19 @@ a {
 }
 
 .footer {
-  position: relative;
-  margin: 0;
-  flex-direction: row;
-  margin-top: 3vh;
+  margin-top: 1vh;
   margin-bottom: 3vh;
+}
+
+.big.footer {
+  margin: 0;
+  width: 100vw;
+  text-align: center;
+  background: linear-gradient(180deg, #F7FAF2, #ffffff);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 769px) {
@@ -262,11 +267,16 @@ a {
 }
 @media (max-width: 768px) {
   #new-home {
+    height: calc(100vh - 70px);
     justify-content: center;
   }
   #new-home h1 {
     text-align: center;
     margin-top: 0;
+  }
+
+  .App {
+    height: 200px;
   }
 
   p, h3 {

@@ -24,7 +24,7 @@ function Core() {
                         <h2 style = {{marginTop: '0'}}>
                         </h2>
                     </div>
-                    <div className="column" style = {{marginLeft: '12px', justifyContent: 'center', flex: 3}}>
+                    <div className="column" style = {{marginLeft: '12px', flex: 3}}>
                         <div>
                         <h2 style = {{marginTop:0, marginBottom:'15px', fontSize: '40px'}}>
                             Hi again!
@@ -65,12 +65,11 @@ function Core() {
 class About extends React.Component {
     render(){
         return(
-        <>
+        <div className={"about"}>
             {/*<Stars/>*/}
             <Navbar />
             <div className="top"/>
             <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
-            <div className="App">
             {/*<SocialSideBar />*/}
             {/*<ArrowSideBar />*/}
             <div className="body">
@@ -81,9 +80,8 @@ class About extends React.Component {
             <a className="link"><i className="fa fa-instagram"></i></a>
             <a className="link"><i className="fa fa-envelope"></i></a>
         </h3>
-            </div>
         </div>
-        </>
+        </div>
         );
     }
 }

@@ -3,29 +3,10 @@ html {
   width: 100%;
 }
 
-body {
-  font: 100% Montserrat, sans-serif;
-  color: black;
-  background-color: linear-gradient(180deg, #F7FAF2, #ffffff);
-  display: flex;
-  width: 100%;
-}
-
 #root {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-}
-
-.App {
-  display: flex;
-  width: 100%;
-  background: linear-gradient(180deg, #F7FAF2, #ffffff);
-  z-index: 4;
-  justify-content: center;
-  min-height: 300px;
-  flex-direction: column;
-  align-items: center;
 }
 
 .row {
@@ -111,10 +92,6 @@ span {
   padding: 8.5px;
 }
 
-a:hover {
-  color: #ccd6f6;
-}
-
 a {
   cursor: pointer;
 }
@@ -167,30 +144,6 @@ a {
   padding-top: 0;
 }
 
-#new-home {
-  margin-top: 70px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("IMG_0837.JPG");
-  height: 55vh;
-  min-height: 400px;
-  color: white;
-}
-#new-home img {
-  position: static;
-  width: 30vw;
-  height: auto;
-}
-#new-home .container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-#new-home h1 {
-  font-size: 80px;
-  margin-bottom: 10vh;
-}
-
 #home {
   height: 100vh;
   align-items: center;
@@ -213,6 +166,11 @@ a {
   margin-bottom: 40px;
 }
 
+.about {
+  width: 100vw;
+  background: linear-gradient(180deg, #F7FAF2, #ffffff);
+}
+
 .body {
   margin-top: 5vh;
 }
@@ -224,14 +182,6 @@ a {
 }
 .body .container.small {
   max-width: 1000px;
-}
-
-.footer {
-  position: relative;
-  margin: 0;
-  flex-direction: row;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
 }
 
 @media screen and (min-width: 769px) {
@@ -259,44 +209,6 @@ a {
 
   .column img {
     width: 95%;
-  }
-}
-@media (max-width: 768px) {
-  #new-home {
-    justify-content: center;
-  }
-  #new-home h1 {
-    text-align: center;
-    margin-top: 0;
-  }
-
-  p, h3 {
-    margin-top: 15px;
-    font-size: 1.08rem;
-    line-height: 1.55rem;
-  }
-
-  .navbar .clickable {
-    justify-content: flex-end;
-    min-width: 0;
-  }
-  .navbar .nav2 {
-    display: none;
-  }
-  .navbar .nav.fa {
-    display: block;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  .container {
-    border: none;
-  }
-
-  .row {
-    flex-direction: column;
   }
 }
 

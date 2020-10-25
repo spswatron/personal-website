@@ -104,13 +104,15 @@ function App() {
         <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
         <New_Home />
         <div className="App">
-            <div>
+            <div className = "big footer">
+                <div>
                 <div className="page footer" id={"footer"}>
-              <h2 style={{fontWeight:'normal', marginBottom: 0}}>
+              <h2 style={{fontWeight:'normal', margin:0}}>
                   Welcome to my digital home.
               </h2>
         </div>
         <SocialBar />
+        </div>
         {/*<div className="page footer" id={"footer"}>*/}
         {/*      <p>*/}
         {/*          Made with SASS and <i className="fa fa-heart heart"></i> by Ashley Chang*/}

@@ -192,12 +192,11 @@ class Core extends React.Component{
 class Contact extends React.Component {
     render(){
         return(
-        <>
+        <div className={"contact"}>
             {/*<Stars/>*/}
             <Navbar />
             <div className="top"/>
             <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
-            <div className="App">
             {/*<SocialSideBar />*/}
             {/*<ArrowSideBar />*/}
             <div className="body">
@@ -208,9 +207,8 @@ class Contact extends React.Component {
             <a className="link"><i className="fa fa-instagram"></i></a>
             <a className="link"><i className="fa fa-envelope"></i></a>
         </h3>
-            </div>
         </div>
-        </>
+        </div>
         );
     }
 }

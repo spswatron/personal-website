@@ -5,6 +5,10 @@ $blue: #87cefa;
 $navy: rgb(10,25,47);
 $soft-white: #f8f9fa;
 
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
 @mixin bigFlex() {
   display: flex;
   width: 100%;
@@ -32,6 +36,7 @@ html {
 body {
   font: 100% $font-stack;
   color: black;
+  min-height: 100vh;
   background-color: $soft-white;
   @include bigFlex();
 }
@@ -40,12 +45,21 @@ body {
   @include bigFlex();
   height: 100%;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects{
+  background: linear-gradient(180deg,#F7FAF2,#ffffff);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .App {
   @include bigFlex();
   z-index: 4;
   justify-content: center;
+  height: calc(100vh - min(500px, 100vh) - 70px);
   flex-direction: column;
   align-items: center;
 }
@@ -134,7 +148,7 @@ span {
 }
 
 a:hover {
-  color: $light;
+  color: grey!important;
 }
 
 a {
@@ -201,8 +215,7 @@ a {
           rgba(0, 0, 0, 0.2),
           rgba(0, 0, 0, 0.2)
         ), url("IMG_0837.JPG");
-  height: 55vh;
-  min-height: 400px;
+  height: min(500px, 100vh);
   color: white;
   img {
     position: static;
@@ -236,19 +249,6 @@ a {
   }
 }
 
-#about {
-  background: linear-gradient(180deg,#F7FAF2,#ffffff);
-  .container.small{
-    max-width: 1000px;
-  }
-
-  h1 {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 40px;
-  }
-}
-
 .body {
   .container.big {
     margin-top: 8vh;
@@ -270,10 +270,21 @@ a {
 
 
 .footer {
-  @include sideBar();
-  margin-top: 3vh;
+  margin-top: 1vh;
   margin-bottom: 3vh;
 }
+
+.big.footer{
+  margin: 0;
+  width: 100vw;
+  text-align: center;
+  background: linear-gradient(180deg,#F7FAF2,#ffffff);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 @media screen and (min-width: 769px) {
   h1 {
@@ -312,11 +323,15 @@ a {
 
 @media (max-width: 768px) {
   #new-home {
+    height: calc(100vh - 70px);
     justify-content: center;
     h1 {
       text-align: center;
       margin-top: 0;
     }
+  }
+  .App {
+    height: 200px;
   }
   p, h3 {
     margin-top: 15px;

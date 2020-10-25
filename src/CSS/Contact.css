@@ -1,3 +1,10 @@
+.contact {
+  background: linear-gradient(180deg, #F2FAFF, #ffffff);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .form-field {
   position: relative;
 }
