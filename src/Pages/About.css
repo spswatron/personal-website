@@ -23,7 +23,6 @@ html {
   flex: 1;
 }
 .column img {
-  border-radius: 5px;
   position: static;
   height: auto;
   max-width: 100%;
@@ -103,14 +102,6 @@ a {
   display: flex;
   flex-direction: column;
   padding: 8.5px;
-}
-
-.socials {
-  position: relative;
-  margin: 0;
-  flex-direction: row;
-  text-align: center;
-  margin-top: 5vh;
 }
 
 .arrows {

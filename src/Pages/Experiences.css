@@ -23,7 +23,6 @@ html {
   flex: 1;
 }
 .column img {
-  border-radius: 5px;
   position: static;
   height: auto;
   max-width: 100%;
@@ -239,10 +238,6 @@ a {
 
   img {
     width: 100%;
-  }
-
-  .container {
-    border: none;
   }
 
   .row {

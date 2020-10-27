@@ -51,7 +51,6 @@ body {
   flex: 1;
 }
 .column img {
-  border-radius: 5px;
   position: static;
   height: auto;
   max-width: 100%;
@@ -300,8 +299,9 @@ a {
     width: 100%;
   }
 
-  .container {
+  .container.small {
     border: none;
+    width: 90%;
   }
 
   .arrows {

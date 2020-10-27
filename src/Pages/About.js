@@ -29,23 +29,35 @@ function Core() {
                         <h2 style = {{marginTop:0, marginBottom:'15px', fontSize: '40px'}}>
                             Hi again!
                         </h2>
-                            <br/>
-                            <br/>
-                            <br/>
+                        {/*<h3 style = {{marginTop: '0'}}>*/}
+                        {/*    I'm Ashley,*/}
+
+                        {/*</h3>*/}
+
                         <h3 style = {{marginTop: '0'}}>
-                            I'm Ashley, just another kiddo hailing from Forest, Virginia. I'm a
-                            student at Brown University, and I'm a self-taught beatboxer.
+                            My name's Ashley and I'm a student at Brown University studying Computer Science and English.
                         </h3>
 
                         <h3 style = {{marginTop: '0'}}>
-                            I'm Ashley, just another kiddo hailing from Forest, Virginia. I'm a
-                            student at Brown University, and I'm a self-taught beatboxer.
+                            I'm mainly interested in back-end development with a bit of full-stack juice thrown in, which is just
+                            coding-speak for wanting to make <span style={{fontStyle: "italic"}}>super cool website that do mega-awesome things</span>.
                         </h3>
 
                         <h3 style = {{marginTop: '0'}}>
-                            I'm mainly interested in backend development, but also the whole fullstack process is
-                            so gripping. CS is so cool because it enables you to sit down, think, and just work through
-                            these cool ideas in your head. And hopefully that makes me a little cool too. We'll see.
+                            So far, I've been able make a website for my acapella group, a book rating aggregator for comic books, and a few other things linked here.
+                        </h3>
+
+                         <h3 style = {{marginTop: '0'}}>
+                             After all, I spend my nights reading comic books (<span style={{fontStyle: "italic"}}>Y: The Last Man</span>, anyone?). My mornings are dedicated to
+                             beatboxing to the Taylor Swift songs my alarms are set to.
+                        </h3>
+
+                         <h3 style = {{marginTop: '0'}}>
+                             If you'd like to, you can contact me here. 'Twould be delightful :)
+                        </h3>
+
+                        <h3 style = {{marginTop: '0'}}>
+                            Thanks a whole ton for visiting my site!
                         </h3>
 
                         {/*<h3 style = {{marginTop: '0'}}>*/}

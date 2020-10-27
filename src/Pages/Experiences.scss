@@ -4,6 +4,7 @@ $gray: #8892b0;
 $blue: #87cefa;
 $navy: rgb(10,25,47);
 $soft-white: #f8f9fa;
+$white-blue: linear-gradient(180deg,#F2FAFF,#ffffff);
 
 @mixin bigFlex() {
   display: flex;
@@ -49,7 +50,6 @@ html {
   flex: 1;
 
   img {
-    border-radius: 5px;
     position: static;
     height: auto;
     max-width: 100%;
@@ -57,7 +57,7 @@ html {
 }
 
 .experiences {
-  background: linear-gradient(180deg,#F2FAFF,#ffffff);
+  background: $white-blue;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -292,9 +292,6 @@ a {
     width: 100%;
   }
 
-  .container{
-    border: none;
-  }
   .row {
     flex-direction: column;
   }

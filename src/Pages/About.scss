@@ -49,7 +49,6 @@ html {
   flex: 1;
 
   img {
-    border-radius: 5px;
     position: static;
     height: auto;
     max-width: 100%;
@@ -130,12 +129,6 @@ a {
   }
 }
 
-.socials {
-  @include sideBar();
-  text-align: center;
-  margin-top: 5vh;
-}
-
 .arrows {
   @include sideBar();
   text-align: right;
@@ -203,7 +196,7 @@ a {
 
 .about {
   width: 100vw;
-  background: linear-gradient(180deg,#F7FAF2,#ffffff);;
+  background: linear-gradient(180deg,#F7FAF2,#ffffff);
 }
 
 .body {
