@@ -12,8 +12,40 @@ class Core extends React.Component {
     render() {
         return (
             <div className="page" id="projects">
-                <div className="container big">
+                <div className="container big container small">
                     <h1 className={"whiter"}>Projects <i className="fa fa-dumbbell"></i></h1>
+                    <div className={"row"}>
+                        <div className={"column"}>
+                            insert image
+                        </div>
+                        <div className={"column"}>
+                            insert description
+                        </div>
+                    </div>
+                    <div className={"row"}>
+                        <div className={"column"}>
+                            insert image 2
+                        </div>
+                        <div className={"column"}>
+                            insert description 2
+                        </div>
+                    </div>
+                    <div className={"row"}>
+                        <div className={"column"}>
+                            insert image 3
+                        </div>
+                        <div className={"column"}>
+                            insert description 3
+                        </div>
+                    </div>
+                    <div className={"row"}>
+                        <div className={"column"}>
+                            insert image 4
+                        </div>
+                        <div className={"column"}>
+                            insert description 4
+                        </div>
+                    </div>
                 </div>
             </div>
         );

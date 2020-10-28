@@ -4,7 +4,7 @@ $gray: #8892b0;
 $blue: #87cefa;
 $navy: rgb(10,25,47);
 $soft-white: #f8f9fa;
-$white-blue: linear-gradient(180deg,#F2FAFF,#ffffff);
+$white-blue: linear-gradient(#F2FAFF,#ffffff);
 
 @mixin bigFlex() {
   display: flex;
@@ -141,6 +141,7 @@ a {
   @include sideBar();
   text-align: center;
   margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 .arrows {
@@ -180,6 +181,17 @@ a {
     margin-top: 0;
     padding-top: 0;
   }
+}
+
+.vertical-timeline-element-icon.bounce-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.vertical-timeline-element-date {
+  color: black;
 }
 
 .bigger {

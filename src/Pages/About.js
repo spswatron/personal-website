@@ -44,16 +44,16 @@ function Core() {
                         </h3>
 
                         <h3 style = {{marginTop: '0'}}>
-                            So far, I've been able make a website for my acapella group, a book rating aggregator for comic books, and a few other things linked here.
+                            So far, I've been able make a website for my acapella group, a book rating aggregator for comic books, and a few other things linked <a href={"/projects"}>here</a>.
                         </h3>
 
                          <h3 style = {{marginTop: '0'}}>
-                             After all, I spend my nights reading comic books (<span style={{fontStyle: "italic"}}>Y: The Last Man</span>, anyone?). My mornings are dedicated to
+                             I spend my nights reading comic books (<span style={{fontStyle: "italic"}}>Y: The Last Man</span>, anyone?). My mornings are dedicated to
                              beatboxing to the Taylor Swift songs my alarms are set to.
                         </h3>
 
                          <h3 style = {{marginTop: '0'}}>
-                             If you'd like to, you can contact me here. 'Twould be delightful :)
+                             If you'd like to, you can contact me <a href={"/contact"}>here</a>. 'Twould be delightful :)
                         </h3>
 
                         <h3 style = {{marginTop: '0'}}>
