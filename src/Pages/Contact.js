@@ -132,7 +132,7 @@ class Core extends React.Component{
             <div className="page" id="contact">
                 <div className="container big">
                     <div className="container small">
-                    <div className="row">
+                    <div className="row" style={{display: 'flex', justifyContent: 'center'}}>
                     <h1>Contact </h1>
                     </div>
                     <div className="row">
@@ -201,12 +201,12 @@ class Contact extends React.Component {
             {/*<ArrowSideBar />*/}
             <div className="body">
                 <Core />
-                <h3 className="socials">
-            <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>
-            <a className="link"><i className="fa fa-linkedin"></i></a>
-            <a className="link"><i className="fa fa-instagram"></i></a>
-            <a className="link"><i className="fa fa-envelope"></i></a>
-        </h3>
+        {/*        <h3 className="socials">*/}
+        {/*    <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-linkedin"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-instagram"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-envelope"></i></a>*/}
+        {/*</h3>*/}
         </div>
         </div>
         );

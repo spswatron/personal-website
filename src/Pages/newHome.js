@@ -7,12 +7,15 @@ import myFace from './newFace.png';
 
 function New_Home() {
     return(
-        <div className={"row"} id="new-home">
-            <div className="container">
+        <div className={""} id="new-home">
+            {/*<div className="container" >*/}
                 <h1 className="whiter">
                     Hi, I'm Ashley
                 </h1>
-            </div>
+                <h2 style={{fontWeight:'normal', margin:0}}>
+                        Welcome to my digital home.
+                </h2>
+            {/*</div>*/}
         </div>
     );
 }

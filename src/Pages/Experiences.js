@@ -2,13 +2,14 @@ import React from "react";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import Navbar from "./NavBar";
 import Sidebar from "./Sidebar";
-import './Experiences.scss'
 import 'react-vertical-timeline-component/style.min.css';
 
 
 function TimeLine() {
     return(
-        <VerticalTimeline>
+        <VerticalTimeline
+            animate={false}
+        >
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -103,7 +104,7 @@ function Core() {
     return(
         <div className="page" id="experiences">
             <div className="container big container small">
-                <h1 className={"whiter"}>
+                <h1>
                     My Experiences (A Snapshot)
                 </h1>
                 <div className="row">
@@ -125,19 +126,19 @@ class Experiences extends React.Component {
         return(
         <div className={"experiences"}>
             {/*<Stars/>*/}
-            <Navbar />
-            <div className="top"/>
+            {/*<Navbar />*/}
+            {/*<div className="top"/>*/}
             <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
             {/*<SocialSideBar />*/}
             {/*<ArrowSideBar />*/}
             <div className="body">
                 <Core />
-                <h3 className="socials">
-            <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>
-            <a className="link"><i className="fa fa-linkedin"></i></a>
-            <a className="link"><i className="fa fa-instagram"></i></a>
-            <a className="link"><i className="fa fa-envelope"></i></a>
-        </h3>
+        {/*        <h3 className="socials">*/}
+        {/*    <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-linkedin"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-instagram"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-envelope"></i></a>*/}
+        {/*</h3>*/}
         </div>
         </div>
         );

@@ -26,6 +26,11 @@ body {
   display: flex;
   justify-content: center;
 }
+.projects h1 {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  text-align: center;
+}
 
 .App {
   display: flex;
@@ -72,11 +77,24 @@ span {
 .top {
   content: "";
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 70px;
   background: #f8f9fa;
   box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
   z-index: 5;
+}
+
+.vertical-timeline-element-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vertical-timeline-element-icon i {
+  font-size: 30px;
+}
+
+.vertical-timeline::before {
+  background: #F0F0F0 !important;
 }
 
 .navbar {
@@ -142,6 +160,7 @@ a {
   flex-direction: row;
   text-align: center;
   margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 .arrows {
@@ -157,15 +176,22 @@ a {
   padding: 8.5px;
 }
 
+.experiences {
+  width: 100%;
+  background: linear-gradient(180deg, #F2FAFF, #ffffff);
+}
+
 .page {
-  display: grid;
-  grid-auto-rows: 1fr;
+  margin-top: 3.5vh;
+  margin-bottom: 5vh;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
 }
 .page div {
   border-radius: 5px;
-}
-.page .whiter {
-  margin-bottom: 20px;
 }
 .page button:hover {
   background: rgba(204, 214, 246, 0.08);
@@ -176,10 +202,15 @@ a {
 }
 
 #new-home {
-  margin-top: 70px;
+  width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("IMG_0837.JPG");
-  height: min(500px, 100vh);
+  height: 81vh;
   color: white;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #new-home img {
   position: static;
@@ -194,25 +225,19 @@ a {
   justify-content: center;
 }
 #new-home h1 {
-  font-size: 80px;
-  margin-bottom: 10vh;
+  font-size: 103px;
+  margin-top: 0;
+  margin-bottom: 4vh;
+}
+#new-home h2 {
+  font-size: 27.9px;
 }
 
-#home {
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-#home img {
-  position: static;
-  width: 10vw;
-  border-radius: 5px;
-  height: auto;
+#about {
+  background: linear-gradient(180deg, #F7FAF2, #ffffff);
 }
 
 .body .container.big {
-  margin-top: 8vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -240,20 +265,12 @@ a {
 @media screen and (min-width: 769px) {
   h1 {
     font-size: 3.2857rem;
-    line-height: 4rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
   }
 
   p {
     margin-top: 15px;
     font-size: 1.25rem;
     line-height: 2rem;
-  }
-
-  .page .container.big {
-    min-height: 65vh;
-    align-self: end;
   }
 
   .nav.fa {
@@ -266,8 +283,11 @@ a {
 }
 @media (max-width: 768px) {
   #new-home {
-    height: calc(100vh - 70px);
+    height: calc(100vh);
     justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
   }
   #new-home h1 {
     text-align: center;

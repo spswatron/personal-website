@@ -2,9 +2,6 @@ import React from "react";
 import myFace from './IMG_3441.jpg';
 import Navbar from "./NavBar";
 import Sidebar from "./Sidebar";
-import './About.scss'
-import New_Home from "./newHome";
-import Contact from "./Contact";
 
 function Face(){
     return <img src={myFace} />;
@@ -12,8 +9,7 @@ function Face(){
 
 function Core() {
     return(
-        <div className="page" id="about">
-            <div className="container big">
+            <div className="page container big" id = "about">
                 <div className={"container small"}>
                 <h1>
                     About Me
@@ -69,7 +65,6 @@ function Core() {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     );
 }
@@ -77,21 +72,20 @@ function Core() {
 class About extends React.Component {
     render(){
         return(
-        <div className={"about"}>
+        <div className={"projects"}>
             {/*<Stars/>*/}
-            <Navbar />
-            <div className="top"/>
-            <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
+            {/*<Navbar />*/}
+            {/*<div className="top"/>*/}
             {/*<SocialSideBar />*/}
             {/*<ArrowSideBar />*/}
             <div className="body">
                 <Core />
-                <h3 className="socials">
-            <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>
-            <a className="link"><i className="fa fa-linkedin"></i></a>
-            <a className="link"><i className="fa fa-instagram"></i></a>
-            <a className="link"><i className="fa fa-envelope"></i></a>
-        </h3>
+        {/*        <h3 className="socials">*/}
+        {/*    <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-linkedin"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-instagram"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-envelope"></i></a>*/}
+        {/*</h3>*/}
         </div>
         </div>
         );

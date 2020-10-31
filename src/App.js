@@ -103,6 +103,10 @@ function App() {
         <div className="top"/>
         <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
         <New_Home />
+        <About />
+        <Experiences />
+        <Projects />
+        <Contact />
         <div className="App">
             <div className = "big footer">
                 <div>

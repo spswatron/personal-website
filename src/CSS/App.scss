@@ -49,10 +49,18 @@ body {
 }
 
 .projects{
+  //margin-top: 2vh;
   background: linear-gradient(180deg,#F7FAF2,#ffffff);
   width: 100%;
   display: flex;
   justify-content: center;
+
+  h1 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    text-align: center;
+  }
+
 }
 
 .App {
@@ -101,11 +109,25 @@ span {
 .top {
   content: "";
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 70px;
   background: $soft-white;
   box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
   z-index: 5;
+}
+
+.vertical-timeline-element-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    font-size: 30px;
+  }
+}
+
+.vertical-timeline::before {
+  background: #F0F0F0!important;
 }
 
 .navbar {
@@ -167,6 +189,7 @@ a {
   @include sideBar();
   text-align: center;
   margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 .arrows {
@@ -181,10 +204,21 @@ a {
   }
 }
 
+.experiences {
+  width: 100%;
+  background: linear-gradient(180deg,#F2FAFF,#ffffff);
+  //background:;
+}
 
 .page {
-  display: grid;
-  grid-auto-rows: 1fr;
+  margin-top: 3.5vh;
+  margin-bottom: 5vh;
+}
+
+
+.page {
+  display: flex;
+  justify-content: center;
 
   * {
     //background: rgba(0,0,0,0.6);
@@ -192,10 +226,6 @@ a {
 
   div {
     border-radius: 5px;
-  }
-
-  .whiter {
-    margin-bottom: 20px;
   }
   button:hover {
     background: rgba(204, 214, 246, 0.08);
@@ -209,13 +239,19 @@ a {
 }
 
 #new-home{
-  margin-top: 70px;
+  //margin-top: 70px;
+  width: 100%;
   background-image: linear-gradient(
           rgba(0, 0, 0, 0.2),
           rgba(0, 0, 0, 0.2)
         ), url("IMG_0837.JPG");
-  height: min(500px, 100vh);
+  height: 81vh;
   color: white;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   img {
     position: static;
     width: 30vw;
@@ -229,28 +265,24 @@ a {
     justify-content: center;
   }
   h1 {
-      font-size: 80px;
-      margin-bottom: 10vh;
+      font-size: 103px;
+      margin-top: 0;
+      margin-bottom: 4vh;
+  }
+  h2 {
+    font-size: 27.9px;
   }
 }
 
-#home {
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  img {
-    position: static;
-    width: 10vw;
-    border-radius: 5px;
-    height: auto;
-  }
+#about {
+  background: linear-gradient(180deg,#F7FAF2,#ffffff);
+  //margin-bottom:6vh;
+  //margin-top: 2vh;
 }
 
 .body {
   .container.big {
-    margin-top: 8vh;
+    //margin-top: 8vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -288,11 +320,8 @@ a {
 @media screen and (min-width: 769px) {
   h1 {
     font-size: 3.2857rem;
-    line-height: 4rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    //line-height: 4rem;
   }
-
 
   p {
     margin-top: 15px;
@@ -300,17 +329,6 @@ a {
     line-height: 2rem;
   }
 
-  .page {
-    .container.small{
-      //border: 20px solid rgba(0,0,0,0.6);
-    }
-
-    .container.big {
-      min-height: 65vh;
-      align-self: end;
-      //border: 40px solid rgba(0,0,0,0.6);
-    }
-  }
   .nav.fa {
     display: none;
   }
@@ -322,8 +340,11 @@ a {
 
 @media (max-width: 768px) {
   #new-home {
-    height: calc(100vh - 70px);
+    height: calc(100vh);
     justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
     h1 {
       text-align: center;
       margin-top: 0;

@@ -64,12 +64,12 @@ class Projects extends React.Component {
             {/*<ArrowSideBar />*/}
             <div className="body">
                 <Core />
-                <h3 className="socials">
-            <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>
-            <a className="link"><i className="fa fa-linkedin"></i></a>
-            <a className="link"><i className="fa fa-instagram"></i></a>
-            <a className="link"><i className="fa fa-envelope"></i></a>
-        </h3>
+        {/*        <h3 className="socials">*/}
+        {/*    <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-linkedin"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-instagram"></i></a>*/}
+        {/*    <a className="link"><i className="fa fa-envelope"></i></a>*/}
+        {/*</h3>*/}
         </div>
         </div>
         );
