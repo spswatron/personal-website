@@ -107,6 +107,7 @@ function App() {
         <Experiences />
         <Projects />
         <Contact />
+        <div id={"footer"}>
         <div className={"big-foot"}>
             <div className="row footer" id={"footer"} style = {{marginTop: '3.5vh'}}>
                   <p>
@@ -114,6 +115,7 @@ function App() {
                   </p>
             </div>
             <SocialBar />
+        </div>
         </div>
         {/*<ArrowSideBar />*/}
         {/*<Body />*/}

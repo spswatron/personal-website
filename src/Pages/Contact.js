@@ -47,7 +47,7 @@ function ContactForm(props) {
                 </form>
                 <button className="contact form-field" type="submit"
                         onClick = {props.handleSubmit}
-                > Submit </button>
+                > Send </button>
         </div>
     );
 }
@@ -129,15 +129,14 @@ class Core extends React.Component{
 
     render() {
         return (
-            <div className="page" id="contact">
-                <div className="container big">
-                    <div className="container small">
+                <div className="page" id="contact">
+                    <div className="container big container small">
                     <div className="row" style={{display: 'flex', justifyContent: 'center'}}>
                     <h1>Contact </h1>
                     </div>
                     <div className="row">
                         <div className="column">
-                            <h2>Let's keep in touch! </h2>
+                            <h2 style={{marginTop:0}}>Let's keep in touch! </h2>
                             <div className="row">
                             <ContactForm
                                 name = {this.state.name}
@@ -182,7 +181,6 @@ class Core extends React.Component{
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
         );
@@ -192,21 +190,9 @@ class Core extends React.Component{
 class Contact extends React.Component {
     render(){
         return(
-        <div className={"contact"}>
-            {/*<Stars/>*/}
-            <Navbar />
-            <div className="top"/>
-            <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
-            {/*<SocialSideBar />*/}
-            {/*<ArrowSideBar />*/}
+        <div className={"experiences projects"}>
             <div className="body">
                 <Core />
-        {/*        <h3 className="socials">*/}
-        {/*    <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>*/}
-        {/*    <a className="link"><i className="fa fa-linkedin"></i></a>*/}
-        {/*    <a className="link"><i className="fa fa-instagram"></i></a>*/}
-        {/*    <a className="link"><i className="fa fa-envelope"></i></a>*/}
-        {/*</h3>*/}
         </div>
         </div>
         );

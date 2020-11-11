@@ -8,6 +8,9 @@ $soft-white: #f8f9fa;
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
 
 @mixin bigFlex() {
   display: flex;
@@ -17,8 +20,8 @@ $soft-white: #f8f9fa;
 @mixin fixedCenter() {
   display: flex;
   position: fixed;
-  width: 90%;
   max-width: 1500px;
+  width: 90%;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -61,6 +64,16 @@ body {
     text-align: center;
   }
 
+}
+
+#projects {
+  .column {
+    padding-bottom: 3vw;
+  }
+
+  img {
+    box-shadow: 0 2px 5px 0px grey;
+  }
 }
 
 .App {
@@ -196,8 +209,16 @@ a {
 }
 
 .big-foot {
+  margin-top: 1vh;
   display: flex;
   flex-direction: column;
+}
+
+#footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: mix(#f8f9fa, white, 60);
 }
 
 .arrows {
@@ -220,10 +241,11 @@ a {
 
 
 .page {
-  margin-top: 3.5vh;
-  margin-bottom: 3.5vh;
+  max-width: 1500px;
+  margin: 4.5vh 0 3.5vh 0;
   display: flex;
   justify-content: center;
+  height: max(calc(95vh + 70px), auto);
 
   * {
     //background: rgba(0,0,0,0.6);
@@ -281,11 +303,15 @@ a {
 
 #about {
   background: linear-gradient(180deg,#F7FAF2,#ffffff);
+  margin-bottom: 5vh;
   //margin-bottom:6vh;
   //margin-top: 2vh;
 }
 
+
 .body {
+  display: flex;
+  justify-content: center;
   .container.big {
     //margin-top: 8vh;
     display: flex;
@@ -293,15 +319,13 @@ a {
     justify-content: center;
   }
 
-  .container.small{
+
+  .container{
+    width: 100%;
     max-width: 1000px;
+    height: 100%;
+
   }
-  //.container{
-  //  width: 100%;
-  //  max-width: 1000px;
-  //  height: 100%;
-  //
-  //}
 }
 
 
@@ -321,8 +345,21 @@ a {
 //  justify-content: center;
 //}
 
+.column img {
+  width: auto;
+}
+
 
 @media screen and (min-width: 769px) {
+  #projects {
+    .column {
+      padding-right: 3vw;
+    }
+  }
+
+  .page {
+    width: 90%;
+  }
   h1 {
     font-size: 3.2857rem;
     //line-height: 4rem;
@@ -344,6 +381,11 @@ a {
 }
 
 @media (max-width: 768px) {
+  #projects {
+    .column {
+      padding-right: 0vw;
+    }
+  }
   #new-home {
     height: calc(100vh);
     justify-content: center;
@@ -381,8 +423,10 @@ a {
   }
 
   .container.small {
+    max-width: 1000px;
     border: none;
     width: 90%;
+    align-self: center;
   }
 
   .arrows {
@@ -390,5 +434,9 @@ a {
   }
   .row {
     flex-direction: column;
+  }
+
+  .projects h2 {
+    text-align: center;
   }
 }

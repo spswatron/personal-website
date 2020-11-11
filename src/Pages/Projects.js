@@ -1,6 +1,10 @@
 import React from "react";
 import Navbar from "./NavBar";
 import Sidebar from "./Sidebar";
+import ComixMatch from "../Images/comix-match.png";
+import GetBlueno from "../Images/get-blueno.png";
+import HomeworkTracker from "../Images/homework-tracker.png";
+import UrsaMinors from "../Images/ursa-minors.png";
 
 class Core extends React.Component {
     constructor(props) {
@@ -16,15 +20,15 @@ class Core extends React.Component {
                     <h1 className={"whiter"}>Projects <i className="fa fa-dumbbell"></i></h1>
                     <div className={"row"}>
                         <div className={"column"}>
-                            insert image
+                            <img src={ComixMatch} />
                         </div>
                         <div className={"column"}>
-                            insert description
+                            Super cool, uses flask and beautiful soup, etc
                         </div>
                     </div>
                     <div className={"row"}>
                         <div className={"column"}>
-                            insert image 2
+                            <img src={GetBlueno} />
                         </div>
                         <div className={"column"}>
                             insert description 2
@@ -32,7 +36,7 @@ class Core extends React.Component {
                     </div>
                     <div className={"row"}>
                         <div className={"column"}>
-                            insert image 3
+                            <img src={HomeworkTracker} />
                         </div>
                         <div className={"column"}>
                             insert description 3
@@ -40,7 +44,7 @@ class Core extends React.Component {
                     </div>
                     <div className={"row"}>
                         <div className={"column"}>
-                            insert image 4
+                            <img src={UrsaMinors} />
                         </div>
                         <div className={"column"}>
                             insert description 4

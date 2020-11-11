@@ -1,6 +1,6 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import {Link} from "react-scroll";
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import '../CSS/Sidebar.scss';
 
 class Sidebar extends React.Component {
@@ -11,9 +11,8 @@ class Sidebar extends React.Component {
     }
   }
   handleStateChange (state) {
-    this.setState({menuOpen: !state.isOpen})
+    this.setState({menuOpen: state.isOpen})
   }
-
     closeMenu () {
     this.setState({menuOpen: false})
   }
@@ -24,14 +23,13 @@ class Sidebar extends React.Component {
                 isOpen={this.state.menuOpen}
                 onStateChange={(state) => this.handleStateChange(state)}
                 right>
-              <li className="nav3 nav fa"></li>
-              <li className="nav2"> <a href={"/about"} onClick={() => this.closeMenu()}>About</a></li>
-              <li className="nav2"><a href={"/experiences"} onClick={() => this.closeMenu()}>Experiences</a></li>
-              <li className="nav2"><a href={"/projects"} onClick={() => this.closeMenu()}>Projects</a></li>
-              <li className="nav2"><a href={"/contact"} onClick={() => this.closeMenu()}>Contact</a></li>
+                <li className="nav3 nav fa"></li>
+              <li className="nav2"> <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={300} onClick={() => this.closeMenu()}>About</Link></li>
+              <li className="nav2"><Link activeClass="active" to="experiences" spy={true} smooth={true} offset={-70}  duration={300} onClick={() => this.closeMenu()}>Experiences</Link></li>
+              <li className="nav2"><Link activeClass="active" to="projects" spy={true} smooth={true} offset={-70} duration={300} onClick={() => this.closeMenu()}>Projects</Link></li>
+              <li className="nav2"><Link activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration={300} onClick={() => this.closeMenu()}>Contact</Link></li>
             </Menu>
         );
     }
 }
-
 export default Sidebar;

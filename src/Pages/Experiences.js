@@ -105,14 +105,14 @@ function Core() {
         <div className="page" id="experiences">
             <div className="container big container small">
                 <h1>
-                    My Experiences (A Snapshot)
+                    My Experiences
                 </h1>
                 <div className="row">
-                    <h2 className={"row"} style={{justifyContent: 'center'}}>
+                    <h2 className={"row"} style={{justifyContent: 'center', marginTop: 0, textAlign: 'center'}}>
                         <div>Here are some of the places I've worked (and studied!)</div>
                     </h2>
                     <TimeLine />
-                    <p className={"row"} style={{justifyContent: 'center'}}>
+                    <p className={"row"} style={{justifyContent: 'center', textAlign: 'center'}}>
                         <div>I hope some day to add a few more places to list, and perhaps there I will meet you!</div>
                     </p>
                 </div>
@@ -124,21 +124,9 @@ function Core() {
 class Experiences extends React.Component {
     render(){
         return(
-        <div className={"experiences"}>
-            {/*<Stars/>*/}
-            {/*<Navbar />*/}
-            {/*<div className="top"/>*/}
-            <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
-            {/*<SocialSideBar />*/}
-            {/*<ArrowSideBar />*/}
+        <div className={"experiences projects"}>
             <div className="body">
                 <Core />
-        {/*        <h3 className="socials">*/}
-        {/*    <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>*/}
-        {/*    <a className="link"><i className="fa fa-linkedin"></i></a>*/}
-        {/*    <a className="link"><i className="fa fa-instagram"></i></a>*/}
-        {/*    <a className="link"><i className="fa fa-envelope"></i></a>*/}
-        {/*</h3>*/}
         </div>
         </div>
         );
