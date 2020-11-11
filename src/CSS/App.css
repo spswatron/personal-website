@@ -130,7 +130,7 @@ span {
 }
 
 .link i {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .link {
@@ -158,9 +158,17 @@ a {
   position: relative;
   margin: 0;
   flex-direction: row;
+  align-self: center;
+  width: 94%;
+  display: flex;
+  justify-content: space-around;
   text-align: center;
-  margin-top: 5vh;
   margin-bottom: 5vh;
+}
+
+.big-foot {
+  display: flex;
+  flex-direction: column;
 }
 
 .arrows {
@@ -183,10 +191,7 @@ a {
 
 .page {
   margin-top: 3.5vh;
-  margin-bottom: 5vh;
-}
-
-.page {
+  margin-bottom: 3.5vh;
   display: flex;
   justify-content: center;
 }
@@ -204,7 +209,7 @@ a {
 #new-home {
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("IMG_0837.JPG");
-  height: 81vh;
+  height: 90vh;
   color: white;
   justify-content: center;
   text-align: center;
@@ -244,22 +249,6 @@ a {
 }
 .body .container.small {
   max-width: 1000px;
-}
-
-.footer {
-  margin-top: 1vh;
-  margin-bottom: 3vh;
-}
-
-.big.footer {
-  margin: 0;
-  width: 100vw;
-  text-align: center;
-  background: linear-gradient(180deg, #F7FAF2, #ffffff);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 @media screen and (min-width: 769px) {

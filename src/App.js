@@ -10,7 +10,7 @@ import Contact from "./Pages/Contact";
 import './CSS/stars.css'
 import Sidebar from "./Pages/Sidebar";
 import {Link} from "react-scroll";
-import New_Home from "./Pages/newHome";
+import NewHome from "./Pages/newHome";
 
 
 function SocialBar() {
@@ -102,30 +102,21 @@ function App() {
         <Navbar />
         <div className="top"/>
         <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
-        <New_Home />
+        <NewHome />
         <About />
         <Experiences />
         <Projects />
         <Contact />
-        <div className="App">
-            <div className = "big footer">
-                <div>
-                <div className="page footer" id={"footer"}>
-              <h2 style={{fontWeight:'normal', margin:0}}>
-                  Welcome to my digital home.
-              </h2>
+        <div className={"big-foot"}>
+            <div className="row footer" id={"footer"} style = {{marginTop: '3.5vh'}}>
+                  <p>
+                      Made with SASS and <i className="fa fa-heart heart"></i> by Ashley Chang
+                  </p>
+            </div>
+            <SocialBar />
         </div>
-        <SocialBar />
-        </div>
-        {/*<div className="page footer" id={"footer"}>*/}
-        {/*      <p>*/}
-        {/*          Made with SASS and <i className="fa fa-heart heart"></i> by Ashley Chang*/}
-        {/*      </p>*/}
-        {/*</div>*/}
-                </div>
         {/*<ArrowSideBar />*/}
         {/*<Body />*/}
-    </div>
     </>
   );
 }

@@ -5,7 +5,7 @@ import myFace from './newFace.png';
 //     return <img src={myFace} />;
 // }
 
-function New_Home() {
+function NewHome() {
     return(
         <div className={""} id="new-home">
             {/*<div className="container" >*/}
@@ -20,4 +20,4 @@ function New_Home() {
     );
 }
 
-export default New_Home;
+export default NewHome;
