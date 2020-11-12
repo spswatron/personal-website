@@ -20,18 +20,9 @@ body {
   justify-content: center;
 }
 
-.projects {
+#projects {
   background: linear-gradient(180deg, #F7FAF2, #ffffff);
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
-.projects h1 {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  text-align: center;
-}
-
 #projects .column {
   padding-bottom: 3vw;
 }
@@ -61,11 +52,6 @@ body {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-}
-.column img {
-  position: static;
-  height: auto;
-  max-width: 100%;
 }
 
 a:-webkit-any-link {
@@ -102,6 +88,10 @@ span {
 
 .vertical-timeline::before {
   background: #F0F0F0 !important;
+}
+
+.vertical-timeline.vertical-timeline--two-columns {
+  margin: 0;
 }
 
 .navbar {
@@ -152,15 +142,6 @@ a {
   cursor: pointer;
 }
 
-.link:hover {
-  color: #ccd6f6;
-}
-.link:hover a {
-  display: flex;
-  flex-direction: column;
-  padding: 8.5px;
-}
-
 .socials {
   position: relative;
   margin: 0;
@@ -186,40 +167,36 @@ a {
   background-color: #fbfbfc;
 }
 
-.arrows {
-  position: relative;
-  margin: 0;
-  flex-direction: row;
-  text-align: right;
-  align-items: flex-end;
-}
-.arrows a {
-  display: flex;
-  flex-direction: column;
-  padding: 8.5px;
+#experiences {
+  background: linear-gradient(180deg, #F2FAFF, #ffffff);
 }
 
-.experiences {
-  width: 100%;
+#about {
+  background: linear-gradient(180deg, #F7FAF2, #ffffff);
+}
+
+#contact {
   background: linear-gradient(180deg, #F2FAFF, #ffffff);
 }
 
 .page {
-  max-width: 1500px;
-  margin: 4.5vh 0 3.5vh 0;
+  width: 100%;
   display: flex;
   justify-content: center;
-  height: max(calc(95vh + 70px), auto);
 }
-.page div {
-  border-radius: 5px;
+.page .container {
+  margin-top: 4.5%;
+  margin-bottom: 4.5%;
+  max-width: 1000px;
+  width: 90%;
+  overflow-x: auto;
+  float: left;
+  clear: left;
 }
-.page button:hover {
-  background: rgba(204, 214, 246, 0.08);
-}
-.page .no-top {
-  margin-top: 0;
-  padding-top: 0;
+.page h1 {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  text-align: center;
 }
 
 #new-home {
@@ -235,8 +212,6 @@ a {
 }
 #new-home img {
   position: static;
-  width: 30vw;
-  height: auto;
 }
 #new-home .container {
   width: 100%;
@@ -254,37 +229,15 @@ a {
   font-size: 27.9px;
 }
 
-#about {
-  background: linear-gradient(180deg, #F7FAF2, #ffffff);
-  margin-bottom: 5vh;
-}
-
-.body {
-  display: flex;
-  justify-content: center;
-}
-.body .container.big {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.body .container {
+.page img {
+  position: static;
   width: 100%;
-  max-width: 1000px;
-  height: 100%;
-}
-
-.column img {
-  width: auto;
+  height: auto;
 }
 
 @media screen and (min-width: 769px) {
   #projects .column {
     padding-right: 3vw;
-  }
-
-  .page {
-    width: 90%;
   }
 
   h1 {
@@ -343,27 +296,8 @@ a {
     display: block;
   }
 
-  img {
-    width: 100%;
-  }
-
-  .container.small {
-    max-width: 1000px;
-    border: none;
-    width: 90%;
-    align-self: center;
-  }
-
-  .arrows {
-    display: none;
-  }
-
   .row {
     flex-direction: column;
-  }
-
-  .projects h2 {
-    text-align: center;
   }
 }
 

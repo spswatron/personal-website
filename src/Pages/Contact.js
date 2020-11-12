@@ -1,10 +1,60 @@
 import React from "react";
-import Navbar from "./NavBar";
-import Sidebar from "./Sidebar";
+import Page from "./Page";
+import '../CSS/spinkit.min.css'
+import { withAlert } from "react-alert";
+import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 
-function ContactForm(props) {
+function SuccessMessage (props) {
     return(
-        <div className="column">
+            <div className={"success message"}>
+           <div>
+               Yay! The message has been sent
+           </div>
+           <a className={"x"} onClick={() => props.changeStatus()}><i className="fa fa-times"></i></a>
+       </div>
+    );
+}
+
+function FailureMessage (props) {
+    return(
+            <div className={"failure message"}>
+           <div>
+               Aww shucks, there was a hiccup in the send :( You can try again or email me at <a href="mailto:ashley_e_chang@brown.edu" target={"_blank"}><span>ashley_e_chang<span>@</span>brown.edu</span></a>!
+           </div>
+           <a className={"x"} onClick={() => props.changeStatus()}><i className="fa fa-times"></i></a>
+       </div>
+    );
+}
+function ContactForm(props) {
+    let Spinner = require('react-spinkit');
+    let loading;
+    let success;
+    if(props.circle){
+        loading =
+            <div className="sk-circle-fade">
+                <div className="sk-circle-fade-dot"></div>
+                <div className="sk-circle-fade-dot"></div>
+                <div className="sk-circle-fade-dot"></div>
+                <div className="sk-circle-fade-dot"></div>
+                <div className="sk-circle-fade-dot"></div>
+                <div className="sk-circle-fade-dot"></div>
+                <div className="sk-circle-fade-dot"></div>
+                <div className="sk-circle-fade-dot"></div>
+                <div className="sk-circle-fade-dot"></div>
+                <div className="sk-circle-fade-dot"></div>
+                <div className="sk-circle-fade-dot"></div>
+                <div className="sk-circle-fade-dot"></div>
+            </div>
+
+    } else {
+        loading = <></>
+    }
+
+    const messages = props.statuses.map(
+        m => m ? <SuccessMessage changeStatus={() => props.changeStatus()}/> :
+            <FailureMessage changeStatus={() => props.changeStatus()}/>)
+    return(
+        <>
                 <label>
                     Name*
                 </label>
@@ -45,10 +95,17 @@ function ContactForm(props) {
                            onKeyPress = {props.enterCheck}
                     />
                 </form>
-                <button className="contact form-field" type="submit"
-                        onClick = {props.handleSubmit}
-                > Send </button>
-        </div>
+                <div className="row">
+                    <div className={"send"}>
+                        <button className="contact form-field" type="submit"
+                                onClick = {props.handleSubmit}
+                        > Send </button>
+                        {loading}
+                        {/*<i className="fa fa-spinner fa-spin"></i>*/}
+                    </div>
+                </div>
+                {messages}
+        </>
     );
 }
 
@@ -59,12 +116,13 @@ class Core extends React.Component{
             name: '',
             email: '',
             subject: '',
-            message: ''
+            message: '',
+            circle: false,
+            statuses: []
         }
     }
 
     nameChange(event) {
-        console.log(event.target.value)
         this.setState(
           {
             name: event.target.value,
@@ -73,7 +131,6 @@ class Core extends React.Component{
     }
 
     emailChange(event) {
-        console.log(event.target.value)
         this.setState(
           {
             email: event.target.value,
@@ -82,7 +139,6 @@ class Core extends React.Component{
     }
 
     subjectChange(event) {
-        console.log(event.target.value)
         this.setState(
           {
             subject: event.target.value,
@@ -91,7 +147,6 @@ class Core extends React.Component{
     }
 
     messageChange(event) {
-        console.log(event.target.value)
         this.setState(
           {
             message: event.target.value,
@@ -105,39 +160,52 @@ class Core extends React.Component{
       }
     }
 
-    handleSubmit() {
-    if( this.state.name !== '' && this.state.email !== ''
+    changeStatus() {
+        this.state.statuses.splice(0, 1)
+        this.setState(
+          {
+            statuses: this.state.statuses,
+            }
+        )
+    }
+    async handleSubmit() {
+      if( this.state.name !== '' && this.state.email !== '' && !this.state.circle
         ) {
-      fetch("https://ursas-backend.herokuapp.com/submit_personal_form", {
-        mode: 'cors',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(this.state),
-      })
-      .then(res => res.json())}
-      // .then(
-      //      this.setState({
-      //       name: "",
-      //       email: "",
-      //       subject: "",
-      //       message: ""
-      //   })
-
+          this.setState({circle: true}, () => {
+              fetch("https://ursas-backend.herokuapp.com/submit_personal_form", {
+                  mode: 'cors',
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(this.state),
+              })
+                  .then(res =>
+                      this.setState({statuses: [...[res.status===200], ...this.state.statuses], circle: false}))
+                  .catch(() => this.setState({statuses: [...[false], ...this.state.statuses], circle: false}))})
+          console.log(this.state)
+          // const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds))
+          // await sleep(10000)
+          // if(this.state.circle){
+          //     this.setState({statuses: this.state.statuses.concat(false), circle: false})
+          // }
+      }
   }
 
     render() {
+        // let Spinner = require('react-spinkit')
+        // let circleShape =<Async promiseFn={this.state.circle}>
+        //                 <Async.Loading><Spinner name='circle' /></Async.Loading>
+        //                 <Async.Fulfilled>
         return (
-                <div className="page" id="contact">
-                    <div className="container big container small">
-                    <div className="row" style={{display: 'flex', justifyContent: 'center'}}>
+            <>
+                <div className="row" style={{display: 'flex', justifyContent: 'center'}}>
                     <h1>Contact </h1>
-                    </div>
-                    <div className="row">
-                        <div className="column">
-                            <h2 style={{marginTop:0}}>Let's keep in touch! </h2>
-                            <div className="row">
+                </div>
+                <div className="row">
+                    <div className="column">
+                        <h2 style={{marginTop:0}}>Let's keep in touch! </h2>
+                        <div>
                             <ContactForm
                                 name = {this.state.name}
                                 email = {this.state.email}
@@ -149,12 +217,15 @@ class Core extends React.Component{
                                 messageChange = {this.messageChange.bind(this)}
                                 enterCheck ={this.enterCheck.bind(this)}
                                 handleSubmit = {this.handleSubmit.bind(this)}
+                                circle = {this.state.circle}
+                                statuses = {this.state.statuses}
+                                changeStatus = {() => this.changeStatus()}
                             />
-                            </div>
                         </div>
-                        <div className="column" style = {{marginTop: '6px'}}>
-                               <h3>The manual method</h3>
-                        <div className="row">
+                    </div>
+                    <div className="column" style = {{marginTop: '6px'}}>
+                        <h3>The manual method</h3>
+                        <div>
                             <div style = {{marginTop: '24px', fontSize: '17px', lineHeight: '2rem'}}>
                                 If you prefer, you can also
                                 <div className={"row"} style={{color: 'transparent', lineHeight: '1rem'}}>
@@ -178,11 +249,10 @@ class Core extends React.Component{
                                 </div>
                                 Thanks a lot for visiting this site, and I hope you have a fantastic day :)
                             </div>
-                            </div>
                         </div>
                     </div>
-            </div>
-        </div>
+                </div>
+            </>
         );
     }
 }
@@ -190,11 +260,10 @@ class Core extends React.Component{
 class Contact extends React.Component {
     render(){
         return(
-        <div className={"experiences projects"}>
-            <div className="body">
-                <Core />
-        </div>
-        </div>
+        <Page
+            id = {"contact"}
+            content = {<Core/>}
+        />
         );
     }
 }

@@ -1,19 +1,14 @@
 import React from "react";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import Navbar from "./NavBar";
-import Sidebar from "./Sidebar";
+import Page from "./Page"
 import 'react-vertical-timeline-component/style.min.css';
 
 
 function TimeLine() {
     return(
-        <VerticalTimeline
-            animate={false}
-        >
+        <VerticalTimeline animate={false}>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
             date= "August 2019 - May 2023"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<i className="fa fa-graduation-cap"></i>}
@@ -102,33 +97,30 @@ function TimeLine() {
 }
 function Core() {
     return(
-        <div className="page" id="experiences">
-            <div className="container big container small">
-                <h1>
-                    My Experiences
-                </h1>
-                <div className="row">
-                    <h2 className={"row"} style={{justifyContent: 'center', marginTop: 0, textAlign: 'center'}}>
-                        <div>Here are some of the places I've worked (and studied!)</div>
-                    </h2>
-                    <TimeLine />
-                    <p className={"row"} style={{justifyContent: 'center', textAlign: 'center'}}>
-                        <div>I hope some day to add a few more places to list, and perhaps there I will meet you!</div>
-                    </p>
-                </div>
+        <>
+            <h1>
+                My Experiences
+            </h1>
+            <div className="row">
+                <h2 className={"row"} style={{justifyContent: 'center', marginTop: 0, textAlign: 'center'}}>
+                    <div>Here are some of the places I've worked (and studied!)</div>
+                </h2>
+                <TimeLine />
+                <p className={"row"} style={{justifyContent: 'center', textAlign: 'center'}}>
+                    <div>I hope some day to add a few more places to list, and perhaps there I will meet you!</div>
+                </p>
             </div>
-        </div>
+        </>
     );
 }
 
 class Experiences extends React.Component {
     render(){
         return(
-        <div className={"experiences projects"}>
-            <div className="body">
-                <Core />
-        </div>
-        </div>
+        <Page
+            id = {"experiences"}
+            content = {<Core/>}
+        />
         );
     }
 }
