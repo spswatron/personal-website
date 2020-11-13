@@ -54,9 +54,11 @@ body {
 }
 #projects .project-links:hover i {
   display: block;
-  margin: 3%;
   z-index: 2;
   color: white;
+}
+#projects .project-links:hover a {
+  margin: 3%;
 }
 #projects .project-links:hover i:hover {
   cursor: pointer;
