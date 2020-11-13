@@ -1,5 +1,5 @@
 import React from "react";
-import Page from "./Page";
+import Pager from "./Page";
 import '../CSS/spinkit.min.css'
 import { Popover } from 'react-tiny-popover'
 
@@ -327,7 +327,7 @@ class Core extends React.Component{
 class Contact extends React.Component {
     render(){
         return(
-        <Page
+        <Pager
             id = {"contact"}
             content = {<Core/>}
         />

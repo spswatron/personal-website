@@ -1,6 +1,6 @@
 import React from "react";
 import myFace from './IMG_3441.jpg';
-import Page from "./Page"
+import Pager from "./Page"
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 function Face(){
@@ -66,7 +66,7 @@ function Core() {
 class About extends React.Component {
     render(){
         return(
-        <Page
+        <Pager
             id = {"about"}
             content = {<Core />}
         />

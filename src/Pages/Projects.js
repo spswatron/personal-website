@@ -4,7 +4,7 @@ import ComixMatch from "../Images/comix-match.png";
 import GetBlueno from "../Images/get-blueno.png";
 import HomeworkTracker from "../Images/homework-tracker.png";
 import UrsaMinors from "../Images/ursa-minors.png";
-import Page from "./Page";
+import Pager from "./Page";
 
 function Caption(props) {
     return(
@@ -22,8 +22,10 @@ function Image(props) {
     return(
         <div className={"column"}>
             <div className={"image-wrapper"}>
-                <i className="fa fa-link"></i>
-                <i className="fa fa-github"></i>
+                <div className={"project-links"}>
+                    <a href={props.deploy} target={"_blank"}><i className="fa fa-link"></i></a>
+                    <a href={props.git} target={"_blank"}><i className="fa fa-github"></i></a>
+                </div>
                 <img src={props.src} /></div>
         </div>
     )
@@ -44,7 +46,10 @@ class Core extends React.Component {
                 </h2>
                <div className={"row"}>
                    <Caption name={"Comix Match"} link={'https://comix-match.herokuapp.com/'} />
-                   <Image src={ComixMatch} />
+                   <Image src={ComixMatch}
+                          deploy={"http://comix-match.herokuapp.com/"}
+                          git={"https://github.com/spswatron/from-scratch"}
+                   />
                    <div className={"column"}>
                        <div><strong>Uses: </strong> python flask, selenium, html, and css</div>
                        <br/>
@@ -55,8 +60,11 @@ class Core extends React.Component {
                    </div>
                </div>
                <div className={"row"}>
-                  <Caption name={"Get Blueno"} link={'https://get-blueno.vercel.app/'}/>
-                   <Image src={GetBlueno} />
+                  <Caption name={"Get Blueno"} link={'https://get-blueno.ashley-chang.me/'}/>
+                   <Image src={GetBlueno}
+                          deploy={"https://get-blueno.ashley-chang.me/"}
+                          git={"https://github.com/spswatron/GetBlueno"}
+                   />
                    <div className={"column"}>
                        <div><strong>Uses: </strong> html, css, javascript </div>
                        <br/>
@@ -66,15 +74,21 @@ class Core extends React.Component {
                    </div>
                </div>
                <div className={"row"}>
-                  <Caption name={"Homework Tracker"} link={'https://homework-tracker.vercel.app/'}/>
-                   <Image src={HomeworkTracker} />
+                  <Caption name={"Homework Tracker"} link={'https://homework-tracker.ashley-chang.me/'}/>
+                   <Image src={HomeworkTracker}
+                          deploy={"https://homework-tracker.ashley-chang.me/"}
+                          git={"https://github.com/spswatron/homework-tracker"}
+                   />
                    <div className={"column"}>
                        insert description 3
                    </div>
                </div>
                <div className={"row"}>
-                   <Caption name={"Ursa Minors Website"} link={'https://ursas-site.vercel.app/'}/>
-                   <Image src={UrsaMinors} />
+                   <Caption name={"Ursa Minors Website"} link={'https://ursa-minors.ashley-chang.me/index'}/>
+                   <Image src={UrsaMinors}
+                          deploy={"https://ursa-minors.ashley-chang.me/index"}
+                          git={"https://github.com/spswatron/homework-tracker"}
+                   />
                    <div className={"column"}>
                        insert description 4
                    </div>
@@ -87,7 +101,7 @@ class Core extends React.Component {
 class Projects extends React.Component {
     render(){
         return(
-            <Page
+            <Pager
                 id={"projects"}
                 content={<Core />}
             />

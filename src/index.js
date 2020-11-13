@@ -8,12 +8,14 @@ import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import Experiences from "./Pages/Experiences";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
+import Resume from "./Pages/Resume";
 
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/index" render={(props) => <App {...props} />} />
+       <Route path="/r" render={(props) => <Resume {...props} />} />
       <Redirect to="/index" />
     </Switch>
   </BrowserRouter>,

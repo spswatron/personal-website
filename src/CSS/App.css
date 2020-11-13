@@ -30,23 +30,40 @@ body {
 #projects img {
   box-shadow: 0 2px 5px 0px grey;
   width: 100%;
+  display: block;
 }
 #projects .image-wrapper {
+  position: relative;
   width: 95%;
 }
-#projects .image-wrapper i {
+#projects .image-wrapper .project-links {
   position: absolute;
-  z-index: 10;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
-#projects .image-wrapper .fa-github {
-  left: 25%;
+#projects .image-wrapper .project-links i {
+  font-size: 30px;
+  display: none;
 }
-#projects .image-wrapper .fa-link {
-  right: 59%;
+#projects .project-links:hover {
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 100;
 }
-#projects img:hover {
-  filter: blur(0.5px) brightness(80%);
+#projects .project-links:hover i {
+  display: block;
+  margin: 3%;
+  z-index: 2;
+  color: white;
+}
+#projects .project-links:hover i:hover {
   cursor: pointer;
+  color: powderblue;
+}
+#projects .project-links:hover + img {
+  filter: blur(0.5px) brightness(80%);
 }
 #projects .caption > div {
   text-align: center;
@@ -62,6 +79,17 @@ body {
   margin: 0;
   width: 95%;
 }
+.react-pdf__Page__canvas {
+  max-width: 700px;
+  width: 95% !important;
+  height: auto !important;
+  margin: 0 auto;
+}
+
+#resume {
+  background: linear-gradient(180deg, #F7FAF2, #ffffff);
+}
+
 .App {
   display: flex;
   width: 100%;
@@ -137,7 +165,7 @@ span {
   background-color: #f8f9fa;
   margin: 0;
   height: 70px;
-  z-index: 6;
+  z-index: 200;
 }
 .navbar a {
   font-size: 1rem;
@@ -244,6 +272,19 @@ a {
 }
 #new-home img {
   position: static;
+}
+#new-home .socials i {
+  color: black;
+}
+#new-home .socials {
+  flex-direction: column;
+  width: auto;
+  margin: 0;
+}
+#new-home .caption {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 #new-home .container {
   width: 100%;

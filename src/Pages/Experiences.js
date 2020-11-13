@@ -1,6 +1,6 @@
 import React from "react";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import Page from "./Page"
+import Pager from "./Page"
 import 'react-vertical-timeline-component/style.min.css';
 
 
@@ -63,7 +63,7 @@ function TimeLine() {
             <p>
               I am the co-author of a university textbook about intercultural communication with
                 Chul Chang. Using the information gathered from many interviews, personal experiences,
-                and historical vantage points, I have written about how this fits in with global relationships
+                and historical vantage points, I have written about global relationships
                 and what it means to truly be a caring and thoughtful international citizen.
             </p>
         </VerticalTimelineElement>
@@ -126,7 +126,7 @@ function Core() {
 class Experiences extends React.Component {
     render(){
         return(
-        <Page
+        <Pager
             id = {"experiences"}
             content = {<Core/>}
         />

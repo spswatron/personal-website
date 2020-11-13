@@ -1,6 +1,6 @@
 import React from "react";
 
-class Page extends React.Component {
+class Pager extends React.Component {
     render(){
         return(
             <div className={"page"} id={this.props.id}>
@@ -12,4 +12,4 @@ class Page extends React.Component {
     }
 }
 
-export default Page;
+export default Pager;
