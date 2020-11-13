@@ -17,12 +17,11 @@ function TimeLine() {
             <h4 className="vertical-timeline-element-subtitle">Providence, RI</h4>
             <p>
               <p>
-              GPA 4.0/4.0; B.A. Computer Science, B.A English
+              B.A. Computer Science; B.A English <br/>GPA 4.0/4.0
               </p>
               <p>
-              Beatboxer for Ursa Minors acapella group, Meiklejohn peer advisor, Skorts sketch
-                  comedy writer, SEADD (Self Expression for Adults with Developmental Disabilities)
-                  instructor
+                  My wonderful university :) Over here I beatbox for the Ursa Minors acapella group, advise freshmen as a Meiklejohn, write sketch
+                  comedy skits for Skorts, teach with SEADD (Self Expression for Adults with Developmental Disabilities), and edit with Cornerstone Literary Magazine
               </p>
             </p>
           </VerticalTimelineElement>
@@ -35,7 +34,8 @@ function TimeLine() {
             <h3 className="vertical-timeline-element-title">Brown University Computer Science</h3>
             <h4 className="vertical-timeline-element-subtitle">Undergraduate Teaching Assistant</h4>
             <p>
-              I held office hours and lab hours while also x,y,z! I held office hours and lab hours while also x,y,z!
+              I TA for CS0111, Computing Foundations: Data. I spend about 8-9 hours every week holding TA hours,
+                grading assignments, and conducting labs for this 375-person class.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -47,7 +47,8 @@ function TimeLine() {
             <h3 className="vertical-timeline-element-title">Watson Institute for Public Affairs</h3>
             <h4 className="vertical-timeline-element-subtitle">Research Assistant</h4>
             <p>
-              Lots of python and scala and frickin' Abbby Finereader. What a poggers sort of thing to use
+              Using the wonders of pytesseract, scala, and Abby FineReader, I've transcribed and garnered metadata from
+                thousands of documents about the Chinese Ministry of Foreign Affairs during the 1960s.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -60,7 +61,10 @@ function TimeLine() {
           <h3 className="vertical-timeline-element-title">Kendall Hunt Publish Company</h3>
             <h4 className="vertical-timeline-element-subtitle">Author</h4>
             <p>
-              Lots of python and scala and frickin' Abbby Finereader. What a poggers sort of thing to use
+              I am the co-author of a university textbook about intercultural communication with
+                Chul Chang. Using the information gathered from many interviews, personal experiences,
+                and historical vantage points, I have written about how this fits in with global relationships
+                and what it means to truly be a caring and thoughtful international citizen.
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -73,7 +77,9 @@ function TimeLine() {
           <h3 className="vertical-timeline-element-title">Bedford Bulletin</h3>
             <h4 className="vertical-timeline-element-subtitle">Reporter</h4>
             <p>
-              Lots of python and scala and frickin' Abbby Finereader. What a poggers sort of thing to use
+              Over the course of two years, I've interviewed many different members of Bedford County on a range of topics,
+                including those related to school dynamics and sports, as well as how different members of the community have
+                adapted to the COVID pandemic.
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -88,8 +94,11 @@ function TimeLine() {
             <p>
               Salutatorian. 4.57/4.0 GPA.
                 </p>
-            <p>Founded an Avatar: The Last Airbender club with over thirty-five
-                members.
+            <p>
+                My high school! I ran cross-country here, founded an Avatar: The Last Airbender club with over
+                35 members (before the show came to Netflix), wrote papers as a Virginia Aerospace Science and Technology
+                Scholar, and was the highest scoring member of our Scholastic Bowl team (we were runner-up in States
+                my junior year!)
             </p>
         </VerticalTimelineElement>
         </VerticalTimeline>
@@ -107,7 +116,7 @@ function Core() {
                 </h2>
                 <TimeLine />
                 <p className={"row"} style={{justifyContent: 'center', textAlign: 'center'}}>
-                    <div>I hope some day to add a few more places to list, and perhaps there I will meet you!</div>
+                    <div>Thanks a whole lot for checking around on this tour!</div>
                 </p>
             </div>
         </>

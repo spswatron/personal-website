@@ -5,6 +5,7 @@ html {
 
 body {
   font: 100% Montserrat, sans-serif;
+  font-size: 17px;
   color: black;
   min-height: 100vh;
   background-color: #f8f9fa;
@@ -24,12 +25,43 @@ body {
   background: linear-gradient(180deg, #F7FAF2, #ffffff);
 }
 #projects .column {
-  padding-bottom: 3vw;
+  padding-bottom: 5vh;
 }
 #projects img {
   box-shadow: 0 2px 5px 0px grey;
+  width: 100%;
 }
-
+#projects .image-wrapper {
+  width: 95%;
+}
+#projects .image-wrapper i {
+  position: absolute;
+  z-index: 10;
+}
+#projects .image-wrapper .fa-github {
+  left: 25%;
+}
+#projects .image-wrapper .fa-link {
+  right: 59%;
+}
+#projects img:hover {
+  filter: blur(0.5px) brightness(80%);
+  cursor: pointer;
+}
+#projects .caption > div {
+  text-align: center;
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+}
+#projects .caption.column {
+  padding-bottom: 0;
+  margin: 0;
+  width: 95%;
+}
 .App {
   display: flex;
   width: 100%;
@@ -236,8 +268,15 @@ a {
 }
 
 @media screen and (min-width: 769px) {
+  .face.column {
+    flex: 2;
+  }
+
   #projects .column {
     padding-right: 3vw;
+  }
+  #projects img {
+    flex: 1.5;
   }
 
   h1 {
@@ -256,6 +295,11 @@ a {
 
   .column img {
     width: 95%;
+  }
+}
+@media (max-width: 1000px) {
+  .face.column {
+    flex: 3;
   }
 }
 @media (max-width: 768px) {

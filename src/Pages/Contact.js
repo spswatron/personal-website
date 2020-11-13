@@ -1,8 +1,7 @@
 import React from "react";
 import Page from "./Page";
 import '../CSS/spinkit.min.css'
-import { withAlert } from "react-alert";
-import { transitions, positions, Provider as AlertProvider } from 'react-alert'
+import { Popover } from 'react-tiny-popover'
 
 function SuccessMessage (props) {
     return(
@@ -25,6 +24,15 @@ function FailureMessage (props) {
        </div>
     );
 }
+
+function borderColor(bool){
+    if(bool){
+       return "red"
+    } else {
+       return "none"
+    }
+}
+
 function ContactForm(props) {
     let Spinner = require('react-spinkit');
     let loading;
@@ -59,49 +67,57 @@ function ContactForm(props) {
                     Name*
                 </label>
                 <form>
-                    <input className="form-field" type="text" name="name"
+                    <input className={borderColor(props.nameError) + " form-field"} type="text" name="name"
                            value = {props.name}
                            onChange = {props.nameChange}
                            onKeyPress = {props.enterCheck}
-                    />
+                    required />
                 </form>
                 <label>
                     Email*
                 </label>
                 <form>
-                    <input className="form-field" type="text" name="name"
+                    <input className={borderColor(props.emailError) + " form-field"} type="text" name="email"
                            value = {props.email}
                            onChange = {props.emailChange}
                            onKeyPress = {props.enterCheck}
-                    />
+                    required/>
                 </form>
                 <label>
                     Subject
                 </label>
                 <form>
-                    <input className="form-field" type="text" name="name"
+                    <input className={borderColor(props.subjectError) + " form-field"} type="text" name="subject"
                            value = {props.subject}
                            onChange = {props.subjectChange}
                            onKeyPress = {props.enterCheck}
                     />
+                    {/*<Popover*/}
+                    {/*  isOpen={props.subjectError}*/}
+                    {/*  position={'right'} // preferred position*/}
+                    {/*  content={<div>Hi! I'm popover content.</div>}*/}
+                    {/*/>*/}
                 </form>
                 <label>
                     Message*
                 </label>
-                <form>
-                    <textarea className= "form-field" type="text" name="name"
+                    <textarea className={borderColor(props.messageError) + " form-field"}
+                           name="message"
                            value = {props.message}
                            onChange = {props.messageChange}
                            onKeyPress = {props.enterCheck}
-                    />
-                </form>
+                    required/>
+                    {/*<Popover*/}
+                    {/*  isOpen={props.messageError}*/}
+                    {/*  position={'right'} // preferred position*/}
+                    {/*  content={<div>Hi! I'm popover content.</div>}*/}
+                    {/*/>*/}
                 <div className="row">
                     <div className={"send"}>
                         <button className="contact form-field" type="submit"
                                 onClick = {props.handleSubmit}
                         > Send </button>
                         {loading}
-                        {/*<i className="fa fa-spinner fa-spin"></i>*/}
                     </div>
                 </div>
                 {messages}
@@ -117,40 +133,71 @@ class Core extends React.Component{
             email: '',
             subject: '',
             message: '',
+            nameError: false,
+            emailError: false,
+            subjectError: false,
+            messageError: false,
             circle: false,
+            checked: false,
             statuses: []
         }
     }
 
     nameChange(event) {
+        let nameStatus = this.state.nameError
+        if(this.state.checked){
+            nameStatus = this.state.name.length > 0 && this.state.name.length < 600
+            nameStatus = !nameStatus
+        }
         this.setState(
           {
             name: event.target.value,
+            nameError: nameStatus
             }
         )
     }
 
     emailChange(event) {
+        let emailStatus = this.state.emailError
+        console.log(this.state)
+        if(this.state.checked){
+            emailStatus =
+             /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.email)
+            emailStatus = !emailStatus
+        }
         this.setState(
           {
             email: event.target.value,
+            emailError: emailStatus
             }
         )
     }
 
     subjectChange(event) {
+        let subjectStatus = this.state.subjectError
+        if(this.state.checked){
+             subjectStatus = this.state.subject.length < 998
+             subjectStatus = !subjectStatus
+        }
         this.setState(
           {
             subject: event.target.value,
+            subjectError: subjectStatus
             }
         )
     }
 
     messageChange(event) {
+        let messageStatus = this.state.messageError
+        if(this.state.checked){
+             messageStatus = this.state.message.length > 0
+             messageStatus = !messageStatus
+        }
         this.setState(
           {
             message: event.target.value,
-            }
+              messageError: messageStatus
+           }
         )
     }
 
@@ -168,9 +215,25 @@ class Core extends React.Component{
             }
         )
     }
+
+    validForm(state){
+        const email_check =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.email)
+        const name_check = state.name.length > 0 && state.name.length < 600
+        const message_check = state.message.length > 0
+        const subject_check = state.subject.length < 1000
+        this.setState({
+            nameError: !name_check,
+            messageError: !message_check,
+            subjectError: !subject_check,
+            emailError: !email_check,
+            checked: true
+        })
+        return email_check && name_check && message_check && subject_check
+    }
+
     async handleSubmit() {
-      if( this.state.name !== '' && this.state.email !== '' && !this.state.circle
-        ) {
+      if(this.validForm(this.state)) {
           this.setState({circle: true}, () => {
               fetch("https://ursas-backend.herokuapp.com/submit_personal_form", {
                   mode: 'cors',
@@ -220,6 +283,10 @@ class Core extends React.Component{
                                 circle = {this.state.circle}
                                 statuses = {this.state.statuses}
                                 changeStatus = {() => this.changeStatus()}
+                                nameError = {this.state.nameError}
+                                emailError = {this.state.emailError}
+                                subjectError = {this.state.subjectError}
+                                messageError = {this.state.messageError}
                             />
                         </div>
                     </div>

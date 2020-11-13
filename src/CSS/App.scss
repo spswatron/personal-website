@@ -38,6 +38,7 @@ html {
 
 body {
   font: 100% $font-stack;
+  font-size: 17px;
   color: black;
   min-height: 100vh;
   background-color: $soft-white;
@@ -54,11 +55,63 @@ body {
 #projects {
   background: linear-gradient(180deg,#F7FAF2,#ffffff);
   .column {
-    padding-bottom: 3vw;
+    padding-bottom: 5vh;
   }
 
   img {
     box-shadow: 0 2px 5px 0px grey;
+    width: 100%;
+  }
+
+  .image-wrapper {
+    width: 95%;
+
+    i {
+      position:absolute;
+      z-index: 10;
+    }
+
+    .fa-github {
+      left: 25%;
+    }
+
+    .fa-link {
+      right: 59%;
+    }
+  }
+  //.image-wrapper:hover {
+  //  cursor: pointer;
+  //  content: "";
+  //  background: rgba(45, 88, 35, 0.7);
+  //  z-index: 2;
+  //}
+
+  img:hover {
+    filter: blur(0.5px) brightness(80%);
+    cursor: pointer;
+  }
+
+  .caption > div {
+    text-align: center;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+  }
+  .caption.row {
+    //width: calc(95% - 3vw);
+  }
+  .caption.column {
+    //padding: 0;
+    padding-bottom: 0;
+    margin: 0;
+    width: 95%;
+  }
+
+  .column img {
+    //width: 100%;
   }
 }
 
@@ -271,9 +324,18 @@ a {
 
 
 @media screen and (min-width: 769px) {
+  .face.column {
+    flex: 2;
+  }
+
   #projects {
     .column {
       padding-right: 3vw;
+    }
+
+    img {
+      flex: 1.5;
+      //height: auto;
     }
   }
 
@@ -293,6 +355,12 @@ a {
 
   .column img{
     width: 95%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .face.column {
+    flex: 3;
   }
 }
 

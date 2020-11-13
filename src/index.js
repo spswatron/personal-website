@@ -14,46 +14,6 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/index" render={(props) => <App {...props} />} />
-      {/*<Route*/}
-      {/*  path="/nucleo-icons"*/}
-      {/*  render={(props) => <NucleoIcons {...props} />}*/}
-      {/*/>*/}
-      {/*<Route*/}
-      {/*  path="/landing-page"*/}
-      {/*  render={(props) => <LandingPage {...props} />}*/}
-      {/*/>*/}
-      {/*<Route*/}
-      {/*  path="/profile-page"*/}
-      {/*  render={(props) => <ProfilePage {...props} />}*/}
-      {/*/>*/}
-      {/*<Route*/}
-      {/*  path="/register-page"*/}
-      {/*  render={(props) => <RegisterPage {...props} />}*/}
-      {/*/>*/}
-      <Route
-        path="/about"
-        render={(props) => <About {...props} />}
-      />
-      <Route
-        path="/experiences"
-        render={(props) => <Experiences {...props} />}
-      />
-      <Route
-        path="/projects"
-        render={(props) => <Projects {...props} />}
-      />
-      <Route
-        path="/contact"
-        render={(props) => <Contact {...props} />}
-      />
-      {/*<Route*/}
-      {/*  path="/alumni"*/}
-      {/*  render={(props) => <Alumni {...props} />}*/}
-      {/*/>*/}
-      {/*<Route*/}
-      {/*  path="/repertoire"*/}
-      {/*  render={(props) => <Repertoire {...props} />}*/}
-      {/*/>*/}
       <Redirect to="/index" />
     </Switch>
   </BrowserRouter>,
