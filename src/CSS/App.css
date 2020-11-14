@@ -242,6 +242,7 @@ a {
 }
 
 .page {
+  overflow: auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -301,7 +302,7 @@ a {
   margin-bottom: 4vh;
 }
 #new-home h2 {
-  font-size: 27.9px;
+  font-size: 28px;
 }
 
 .page img {

@@ -18,6 +18,14 @@ input, textarea, button.form-field {
   border-radius: 5px;
 }
 
+button.form-field {
+  background: #f8f8f8;
+  border-color: #d3d3d3;
+  border: 1px solid #d3d3d3;
+  color: #2b2b2b;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
 textarea {
   padding: 15px 15px;
 }
@@ -57,8 +65,10 @@ button:focus, input:focus, textarea:focus, select:focus {
 }
 
 button:hover {
-  border: 1px solid grey;
-  color: grey;
+  border-color: #c6c6c6;
+  background-color: #f0f0f0;
+  color: #606060;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 label {

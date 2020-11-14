@@ -292,7 +292,7 @@ class Core extends React.Component{
                     <div className="column" style = {{marginTop: '6px'}}>
                         <h3 style = {{marginTop: 0}}>The manual method</h3>
                         <div>
-                            <div style = {{marginTop: '32px', fontSize: '17px', lineHeight: '2rem'}}>
+                            <div style = {{marginTop: '18.2px', fontSize: '17px', lineHeight: '2rem'}}>
                                 If you prefer, you can also
                                 <div className={"row"} style={{color: 'transparent', lineHeight: '1rem'}}>
                                     <span> </span>

@@ -52,7 +52,7 @@ class NewHome extends React.Component {
                         Welcome to my digital <Link activeClass="active" to="about"
                                            spy={true} smooth={true} offset={-25} d
                                            uration={50} >
-                <i className="fa fa-home"></i>.</Link>
+               home.</Link>
                     </h2>
                     {socials}
                 </div>

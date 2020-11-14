@@ -51,12 +51,17 @@ class Core extends React.Component {
                           git={"https://github.com/spswatron/from-scratch"}
                    />
                    <div className={"column"}>
-                       <div><strong>Uses: </strong> python flask, selenium, html, and css</div>
+                       <div><strong>Tech pool: </strong> flask, pandas, selenium, html, and css</div>
                        <br/>
-                       My first foray into the world of webscraping. I used Selenium to acquire the goodreads rating information for
-                       over 7000 books (especially comic books).
-                       <br /><br />Since goodreads doesn't allow users to sort the books in their shelves
-                       by traits such as total reviews, average review, or random, I DIY-ed that.
+                       {/*My first foray into the world of webscraping. I used Selenium to acquire the goodreads rating information for*/}
+                       {/*over 7000 books (especially comic books).*/}
+                       {/*<br /><br />Since goodreads doesn't allow users to sort the books in their shelves*/}
+                       {/*by traits such as total reviews, average review, or random, I DIY-ed that.*/}
+                       This summer, I dedicated a chunk of time to finding more comic books to read.
+                       <br /><br />
+                       Using data I webscraped from goodreads' book shelves, I created a website in which this information
+                       could now finally be sorted by total reviews, average reviews, random, and other fun things. I love
+                       Calvin Hobbes, so this was delightful.
                    </div>
                </div>
                <div className={"row"}>

@@ -21,7 +21,7 @@ function TimeLine() {
               </p>
               <p>
                   My wonderful university :) Over here I beatbox for the Ursa Minors acapella group, advise freshmen as a Meiklejohn, write sketch
-                  comedy skits for Skorts, teach with SEADD (Self Expression for Adults with Developmental Disabilities), and edit with Cornerstone Literary Magazine
+                  comedy skits for Skorts, teach with SEADD (Self Expression for Adults with Developmental Disabilities), and edit for Cornerstone Literary Magazine
               </p>
             </p>
           </VerticalTimelineElement>
@@ -47,8 +47,8 @@ function TimeLine() {
             <h3 className="vertical-timeline-element-title">Watson Institute for Public Affairs</h3>
             <h4 className="vertical-timeline-element-subtitle">Research Assistant</h4>
             <p>
-              Using the wonders of pytesseract, scala, and Abby FineReader, I've transcribed and garnered metadata from
-                thousands of documents about the Chinese Ministry of Foreign Affairs during the 1960s.
+              Using the wonders of pytesseract, scala, and Abby FineReader, I've transcribed thousands of cables from the Chinese Ministry of the Foreign Affairs during the 1960s.
+                In the process, I've picked up all sorts of metadata.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -63,7 +63,7 @@ function TimeLine() {
             <p>
               I am the co-author of a university textbook about intercultural communication with
                 Chul Chang. Using the information gathered from many interviews, personal experiences,
-                and historical vantage points, I have written about global relationships
+                and historical vantage points, I've written about global relationships
                 and what it means to truly be a caring and thoughtful international citizen.
             </p>
         </VerticalTimelineElement>
@@ -79,7 +79,7 @@ function TimeLine() {
             <p>
               Over the course of two years, I've interviewed many different members of Bedford County on a range of topics,
                 including those related to school dynamics and sports, as well as how different members of the community have
-                adapted to the COVID pandemic.
+                adapted to the COVID-19 pandemic.
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -116,7 +116,7 @@ function Core() {
                 </h2>
                 <TimeLine />
                 <p className={"row"} style={{justifyContent: 'center', textAlign: 'center'}}>
-                    <div>Thanks a whole lot for checking around on this tour!</div>
+                    <div>Woo hoo! Thanks for stopping by this part of the tour :)</div>
                 </p>
             </div>
         </>

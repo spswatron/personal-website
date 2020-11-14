@@ -294,6 +294,7 @@ a {
 }
 
 .page {
+  overflow: auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -363,7 +364,7 @@ a {
       margin-bottom: 4vh;
   }
   h2 {
-    font-size: 27.9px;
+    font-size: 28px;
   }
 }
 

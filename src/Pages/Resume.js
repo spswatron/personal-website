@@ -26,7 +26,7 @@ class Resume extends React.Component{
         return (
             <>
             <Navbar/>
-            <Sidebar />
+            <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
                 <div className="top"/>
             <Pager
                 id={"projects"}
