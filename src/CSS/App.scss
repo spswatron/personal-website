@@ -150,6 +150,12 @@ body {
 #resume {
    background: linear-gradient(180deg,#F7FAF2,#ffffff);
 }
+//:target::before {
+//  content: "";
+//  display: block;
+//  height: 60px; /* fixed header height*/
+//  margin: -60px 0 0; /* negative fixed header height */
+//}
 
 .App {
   @include bigFlex();
@@ -377,6 +383,10 @@ a {
 
 
 @media screen and (min-width: 769px) {
+  iframe {
+    height: 1150px;
+  }
+
   .face.column {
     flex: 2;
   }
@@ -418,6 +428,10 @@ a {
 }
 
 @media (max-width: 768px) {
+  iframe {
+    height: 650px;
+  }
+
   #projects {
     .column {
       padding-right: 0vw;

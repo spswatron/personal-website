@@ -4,23 +4,25 @@ import '../CSS/spinkit.min.css'
 import { Popover } from 'react-tiny-popover'
 
 function SuccessMessage (props) {
+    console.log("success:" + props.i.toString())
     return(
             <div className={"success message"}>
            <div>
                Yay! The message has been sent
            </div>
-           <a className={"x"} onClick={() => props.changeStatus()}><i className="fa fa-times"></i></a>
+           <a className={"x"} onClick={() => props.changeStatus(props.i)}><i className="fa fa-times"></i></a>
        </div>
     );
 }
 
 function FailureMessage (props) {
+    console.log("failure:" + props.i.toString())
     return(
             <div className={"failure message"}>
            <div>
                Aww shucks, there was a hiccup in the send :( You can try again or email me at <a href="mailto:ashley_e_chang@brown.edu" target={"_blank"}><span>ashley_e_chang<span>@</span>brown.edu</span></a>!
            </div>
-           <a className={"x"} onClick={() => props.changeStatus()}><i className="fa fa-times"></i></a>
+           <a className={"x"} onClick={() => props.changeStatus(props.i)}><i className="fa fa-times"></i></a>
        </div>
     );
 }
@@ -58,9 +60,12 @@ function ContactForm(props) {
         loading = <></>
     }
 
-    const messages = props.statuses.map(
-        m => m ? <SuccessMessage changeStatus={() => props.changeStatus()}/> :
-            <FailureMessage changeStatus={() => props.changeStatus()}/>)
+
+    var _ = require('lodash');
+    const ranger = _.range(props.statuses.length)
+    const messages = ranger.map(
+        i => props.statuses[i] ? <SuccessMessage i={i} changeStatus={props.changeStatus}/> :
+            <FailureMessage i={i} changeStatus={props.changeStatus}/>)
     return(
         <>
                 <label>
@@ -146,7 +151,7 @@ class Core extends React.Component{
     nameChange(event) {
         let nameStatus = this.state.nameError
         if(this.state.checked){
-            nameStatus = !(this.state.name.length > 0 && this.state.name.length < 600)
+            nameStatus = !(event.target.value.length > 0 && event.target.value.length < 600)
         }
         this.setState(
           {
@@ -162,7 +167,7 @@ class Core extends React.Component{
         console.log(this.state)
         if(this.state.checked){
             emailStatus =
-             !(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.email))
+             !(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(event.target.value))
         }
         this.setState(
           {
@@ -176,7 +181,7 @@ class Core extends React.Component{
     subjectChange(event) {
         let subjectStatus = this.state.subjectError
         if(this.state.checked){
-             subjectStatus = !(this.state.subject.length < 998)
+             subjectStatus = !(event.target.value.length < 998)
         }
         this.setState(
           {
@@ -190,7 +195,7 @@ class Core extends React.Component{
     messageChange(event) {
         let messageStatus = this.state.messageError
         if(this.state.checked){
-             messageStatus = !(this.state.message.length > 0)
+             messageStatus = !(event.target.value.length > 0)
         }
         this.setState(
           {
@@ -206,8 +211,11 @@ class Core extends React.Component{
       }
     }
 
-    changeStatus() {
-        this.state.statuses.splice(0, 1)
+    changeStatus(i) {
+        console.log(this.state.statuses)
+        this.state.statuses.splice(i, 1);
+        console.log(i)
+        console.log(this.state.statuses)
         this.setState(
           {
             statuses: this.state.statuses,
@@ -281,7 +289,7 @@ class Core extends React.Component{
                                 handleSubmit = {this.handleSubmit.bind(this)}
                                 circle = {this.state.circle}
                                 statuses = {this.state.statuses}
-                                changeStatus = {() => this.changeStatus()}
+                                changeStatus = {this.changeStatus.bind(this)}
                                 nameError = {this.state.nameError}
                                 emailError = {this.state.emailError}
                                 subjectError = {this.state.subjectError}

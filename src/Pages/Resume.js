@@ -62,13 +62,15 @@ class Core extends React.Component{
     render() {
         return (
             <>
-                {/*<h1>My Resume </h1>*/}
-                <div className="row" style={{display: 'flex', justifyContent: 'center'}}>
-                    <h1 style={{marginTop: '2%'}}>My Resume </h1>
-                </div>
-                {/*<object data={resume} type="application/pdf" style={{width:'100%', height:'100%'}}>*/}
-                <iframe src={resume} style={{width:'100%', height:'1150px', overflow: 'auto'}}/>
-            </>
+                {/*/!*<h1>My Resume </h1>*!/*/}
+                {/*<div className="row" style={{display: 'flex', justifyContent: 'center'}}>*/}
+                {/*    <h1 style={{marginTop: '2%'}}>My Resume </h1>*/}
+                {/*</div>*/}
+                {/*/!*<object data={resume} type="application/pdf" style={{width:'100%', height:'100%'}}>*!/*/}
+                {/*<div className={"row"}>*/}
+                <iframe src={resume} style={{position: 'absolute', width:'100%', height: '100%', overflow: 'auto'}} allowFullScreen/>
+                {/*</div>*/}
+                </>
         );
     }
 }
@@ -76,15 +78,17 @@ class Core extends React.Component{
 class Resume extends React.Component{
     render() {
         return (
-            <>
-            <Navbar/>
-            <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
-                <div className="top"/>
-            <Pager
-                id={"projects"}
-                content={<Core/>}
-            />
-            </>
+            // <>
+            // <Navbar/>
+            // <div className={"nav fa"}><Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /></div>
+            //     <div className="top"/>
+            // <Pager
+            //     id={"projects"}
+            //     content={<Core/>}
+            // />
+            // </>
+            //  <iframe src={resume} style={{width:'100%', overflow: 'auto'}} allowFullScreen/>
+            <embed src={resume}  style={{width:'100%'}} type="application/pdf"/>
         );
     }
 }

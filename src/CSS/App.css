@@ -312,6 +312,10 @@ a {
 }
 
 @media screen and (min-width: 769px) {
+  iframe {
+    height: 1150px;
+  }
+
   .face.column {
     flex: 2;
   }
@@ -347,6 +351,10 @@ a {
   }
 }
 @media (max-width: 768px) {
+  iframe {
+    height: 650px;
+  }
+
   #projects .column {
     padding-right: 0vw;
   }
