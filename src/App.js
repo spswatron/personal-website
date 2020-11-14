@@ -18,10 +18,10 @@ function SocialBar() {
 
         <h3 className="socials">
             <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>
-            <a className="link"><i className="fa fa-linkedin"></i></a>
-            <a className="link"><i className="fa fa-instagram"></i></a>
-            <a className="link"><i className="fa fa-envelope"></i></a>
-            <a className="link"><i className="fa fa-file"></i></a>
+            <a className="link" href={"https://www.linkedin.com/in/ashley-chang-1080b81a2/"}><i className="fa fa-linkedin"></i></a>
+            <a className="link" href="https://www.instagram.com/spswatron/" target={"_blank"}><i className="fa fa-instagram"></i></a>
+            <a className="link" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}><i className="fa fa-envelope"></i></a>
+            <a className="link" href="/r" target={"_blank"}><i className="fa fa-file"></i></a>
         </h3>
     );
 }

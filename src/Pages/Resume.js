@@ -3,6 +3,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import resume from '../Ashley_Chang_Resume.pdf';
 import Navbar from "./NavBar";
 import Pager from "./Page"
+import Sidebar from "./Sidebar";
 
 class Core extends React.Component{
     render() {
@@ -11,11 +12,10 @@ class Core extends React.Component{
             <>
                 {/*<h1>My Resume </h1>*/}
                 <div className="row" style={{display: 'flex', justifyContent: 'center'}}>
-                    <h1>My Resume </h1>
+                    <h1 style={{marginTop: '2%'}}>My Resume </h1>
                 </div>
-                <Document file={resume}>
-                    <Page pageNumber={1}/>
-                </Document>
+                {/*<object data={resume} type="application/pdf" style={{width:'100%', height:'100%'}}>*/}
+                <iframe src={resume} style={{width:'100%', height:'100%', overflow: 'auto'}}/>
             </>
         );
     }
@@ -26,6 +26,7 @@ class Resume extends React.Component{
         return (
             <>
             <Navbar/>
+            <Sidebar />
                 <div className="top"/>
             <Pager
                 id={"projects"}

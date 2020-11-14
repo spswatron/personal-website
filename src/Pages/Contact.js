@@ -146,8 +146,7 @@ class Core extends React.Component{
     nameChange(event) {
         let nameStatus = this.state.nameError
         if(this.state.checked){
-            nameStatus = this.state.name.length > 0 && this.state.name.length < 600
-            nameStatus = !nameStatus
+            nameStatus = !(this.state.name.length > 0 && this.state.name.length < 600)
         }
         this.setState(
           {
@@ -155,6 +154,7 @@ class Core extends React.Component{
             nameError: nameStatus
             }
         )
+        console.log(this.state)
     }
 
     emailChange(event) {
@@ -162,8 +162,7 @@ class Core extends React.Component{
         console.log(this.state)
         if(this.state.checked){
             emailStatus =
-             /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.email)
-            emailStatus = !emailStatus
+             !(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.email))
         }
         this.setState(
           {
@@ -171,13 +170,13 @@ class Core extends React.Component{
             emailError: emailStatus
             }
         )
+        console.log(this.state)
     }
 
     subjectChange(event) {
         let subjectStatus = this.state.subjectError
         if(this.state.checked){
-             subjectStatus = this.state.subject.length < 998
-             subjectStatus = !subjectStatus
+             subjectStatus = !(this.state.subject.length < 998)
         }
         this.setState(
           {
@@ -185,13 +184,13 @@ class Core extends React.Component{
             subjectError: subjectStatus
             }
         )
+        console.log(this.state)
     }
 
     messageChange(event) {
         let messageStatus = this.state.messageError
         if(this.state.checked){
-             messageStatus = this.state.message.length > 0
-             messageStatus = !messageStatus
+             messageStatus = !(this.state.message.length > 0)
         }
         this.setState(
           {
@@ -291,9 +290,9 @@ class Core extends React.Component{
                         </div>
                     </div>
                     <div className="column" style = {{marginTop: '6px'}}>
-                        <h3>The manual method</h3>
+                        <h3 style = {{marginTop: 0}}>The manual method</h3>
                         <div>
-                            <div style = {{marginTop: '24px', fontSize: '17px', lineHeight: '2rem'}}>
+                            <div style = {{marginTop: '32px', fontSize: '17px', lineHeight: '2rem'}}>
                                 If you prefer, you can also
                                 <div className={"row"} style={{color: 'transparent', lineHeight: '1rem'}}>
                                     <span> </span>
