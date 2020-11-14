@@ -11,7 +11,8 @@ function Caption(props) {
     return(
         <div className={"caption row"}>
             <div className={"caption column"}>
-                <a href={props.link} target={"_blank"}><h4><div>{props.name}</div></h4></a>
+                {/*<a href={props.link} target={"_blank"}></a>*/}
+                <h4><div>{props.name}</div></h4>
             </div>
             <div className={"caption column"}>
             </div>
