@@ -4,6 +4,7 @@ import ComixMatch from "../Images/comix-match.png";
 import GetBlueno from "../Images/get-blueno.png";
 import HomeworkTracker from "../Images/homework-tracker.png";
 import UrsaMinors from "../Images/ursa-minors.png";
+import Shell from "../Images/shell.png";
 import Pager from "./Page";
 
 function Caption(props) {
@@ -62,6 +63,20 @@ class Core extends React.Component {
                        Using data I webscraped from goodreads' book shelves, I created a website in which this information
                        could now finally be sorted by total reviews, average reviews, random, and other fun things. I love
                        Calvin Hobbes, so this was delightful.
+                   </div>
+               </div>
+               <div className={"row"}>
+                  <Caption name={"Shell"} link={'https://get-blueno.ashley-chang.me/'}/>
+                   <Image src={Shell}
+                          deploy={"https://get-blueno.ashley-chang.me/"}
+                          git={"https://github.com/spswatron/GetBlueno"}
+                   />
+                   <div className={"column"}>
+                       <div><strong>Uses: </strong> html, css, javascript </div>
+                       <br/>
+                       A 2048 clone that uses brunonian bears rather than numbers. Not much to
+                       say here, except that everyone I show this game to plays it for more than 20
+                       minutes.
                    </div>
                </div>
                <div className={"row"}>
