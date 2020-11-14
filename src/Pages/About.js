@@ -33,7 +33,7 @@ function Core() {
                         </div>
                         <br />
                         <div style = {{marginTop: '0'}}>
-                            These days, I've been living it up while studying remotely in Forest, Virginia, although the great art (and loss) of Zoom is not lost on me.
+                            These days, I've been living it up while studying remotely in Forest, Virginia, where the great art (and loss) of Zoom is quite present.
                             {/*So far, I've been able make a website for my acapella group, a book rating aggregator for comic books, and a few other things linked*/}
                             {/*<span> </span><Link activeClass="active" to="projects"*/}
                             {/*               spy={true} smooth={true} offset={-25} d*/}
