@@ -129,7 +129,7 @@ button {
 
 @media (max-width: 768px) {
   input, select, textarea, .message {
-    width: 90%;
+    width: 92.2%;
   }
 
   #contact h2 {

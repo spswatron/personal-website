@@ -67,7 +67,6 @@ body {
 
   .image-wrapper {
     position: relative;
-    width: 95%;
 
     .project-links {
       position: absolute;
@@ -383,6 +382,9 @@ a {
 
 
 @media screen and (min-width: 769px) {
+  .image-wrapper{
+    width: 95%;
+  }
   iframe {
     height: 1150px;
   }
@@ -428,6 +430,9 @@ a {
 }
 
 @media (max-width: 768px) {
+  .image-wrapper{
+    width: 100%;
+  }
   iframe {
     height: 650px;
   }
