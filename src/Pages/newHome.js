@@ -1,5 +1,4 @@
 import React from "react";
-import myFace from './newFace.png';
 import {Link} from "react-scroll";
 
 // function Face(){

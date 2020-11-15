@@ -1,7 +1,6 @@
 import React from "react";
 import Pager from "./Page";
 import '../CSS/spinkit.min.css'
-import { Popover } from 'react-tiny-popover'
 
 function SuccessMessage (props) {
     console.log("success:" + props.i.toString())
@@ -38,7 +37,6 @@ function borderColor(bool){
 function ContactForm(props) {
     let Spinner = require('react-spinkit');
     let loading;
-    let success;
     if(props.circle){
         loading =
             <div className="sk-circle-fade">
@@ -306,13 +304,13 @@ class Core extends React.Component{
                                     <span> </span>
                                 </div>
                                 <div className={"row"}>
-                                    <span><span><a href="mailto:ashley_e_chang@brown.edu" target={"_blank"}><i className={"fa fa-envelope"}></i></a></span>  email me at <a href="mailto:ashley_e_chang@brown.edu" target={"_blank"}><span>ashley_e_chang<span>@</span>brown.edu</span></a>,</span>
+                                    <span><span><a href="mailto:ashley_e_chang@brown.edu" target={"_blank"}  rel="noopener noreferrer"><i className={"fa fa-envelope"}></i></a></span>  email me at <a rel="noopener noreferrer" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}><span>ashley_e_chang<span>@</span>brown.edu</span></a>,</span>
                                 </div>
                                 <div className={"row"}>
-                                    <span><span><a href="tel:434-849-4438" target={"_blank"}><i className={"fa fa-phone"}></i></a>  </span>call me at <a href="tel:434-849-4438" target={"_blank"}><span>(434)<span> 849</span>-4438</span></a>, or</span>
+                                    <span><span><a href="tel:434-849-4438" target={"_blank"}  rel="noopener noreferrer"><i className={"fa fa-phone"}></i></a>  </span>call me at <a rel="noopener noreferrer" href="tel:434-849-4438" target={"_blank"}><span>(434)<span> 849</span>-4438</span></a>, or</span>
                                 </div>
                                 <div className={"row"}>
-                                    <span><span><a href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank'><i className={"fa fa-linkedin"}></i></a>  </span>message me on linkedin <a href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank'><span>here</span></a>.</span>
+                                    <span><span><a href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank' rel="noopener noreferrer"><i className={"fa fa-linkedin"}></i></a>  </span>message me on linkedin <a rel="noopener noreferrer" href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank'><span>here</span></a>.</span>
                                 </div>
                                 <div className={"row"}>
                                 </div>

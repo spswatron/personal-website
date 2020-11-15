@@ -1,5 +1,4 @@
 import React from "react";
-import Sidebar from "./Sidebar";
 import ComixMatch from "../Images/comix-match.png";
 import GetBlueno from "../Images/get-blueno.png";
 import HomeworkTracker from "../Images/homework-tracker.png";
@@ -25,8 +24,8 @@ function Image(props) {
         <div className={"column"}>
             <div className={"image-wrapper"}>
                 <div className={"project-links"}>
-                    <a href={props.deploy} target={"_blank"}><i className="fa fa-link"></i></a>
-                    <a href={props.git} target={"_blank"}><i className="fa fa-github"></i></a>
+                    <a href={props.deploy} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-link"></i></a>
+                    <a href={props.git} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-github"></i></a>
                 </div>
                 <img src={props.src} /></div>
         </div>

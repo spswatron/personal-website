@@ -320,7 +320,7 @@ a {
   }
 
   .face.column {
-    flex: 2;
+    flex: 1.5;
   }
 
   #projects .column {

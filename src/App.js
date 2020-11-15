@@ -2,25 +2,23 @@ import React from 'react';
 import './CSS/App.scss';
 import './CSS/Contact.scss'
 import Navbar from "./Pages/NavBar";
-import Home from "./Pages/Home";
 import About from './Pages/About'
 import Experiences from "./Pages/Experiences";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import './CSS/stars.css'
 import Sidebar from "./Pages/Sidebar";
-import {Link} from "react-scroll";
 import NewHome from "./Pages/newHome";
 
 
 function SocialBar() {
     return(
         <h3 className="socials">
-            <a className="link" href="https://github.com/spswatron" target={"_blank"}><i className="fa fa-github"></i></a>
-            <a className="link" href={"https://www.linkedin.com/in/ashley-chang-1080b81a2/"} target={"_blank"}><i className="fa fa-linkedin"></i></a>
-            <a className="link" href="https://www.instagram.com/spswatron/" target={"_blank"}><i className="fa fa-instagram"></i></a>
-            <a className="link" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}><i className="fa fa-envelope"></i></a>
-            <a className="link" href="/resume" target={"_blank"}><i className="fa fa-file"></i></a>
+            <a className="link" href="https://github.com/spswatron" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-github"></i></a>
+            <a className="link" href={"https://www.linkedin.com/in/ashley-chang-1080b81a2/"} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
+            <a className="link" href="https://www.instagram.com/spswatron/" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-instagram"></i></a>
+            <a className="link" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-envelope"></i></a>
+            <a className="link" href="/resume" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-file"></i></a>
         </h3>
     );
 }
