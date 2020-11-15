@@ -7,7 +7,7 @@ class Navbar extends React.Component {
     return(
         <ul className="navbar" >
           <li className="nav1"><Link activeClass="active" to="new-home"
-                                           spy={true} smooth={true} offset={-70} d
+                                           spy={true} smooth={true} offset={0} d
                                            uration={50}>
                   Ashley Chang</Link></li>
           <li className="clickable">

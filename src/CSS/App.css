@@ -235,6 +235,9 @@ a {
 #about {
   background: linear-gradient(180deg, #F7FAF2, #ffffff);
 }
+#about .container {
+  margin-top: 10vh;
+}
 
 #contact {
   background: linear-gradient(180deg, #F2FAFF, #ffffff);
@@ -248,7 +251,7 @@ a {
 }
 .page .container {
   margin-top: 4.5%;
-  margin-bottom: 4.5%;
+  margin-bottom: 3.5vh;
   max-width: 1000px;
   width: 90%;
   overflow-x: auto;
@@ -311,6 +314,14 @@ a {
 }
 
 @media screen and (min-width: 769px) {
+  .not-mobile {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
   .image-wrapper {
     width: 95%;
   }
@@ -354,6 +365,36 @@ a {
   }
 }
 @media (max-width: 768px) {
+  .not-mobile {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+  .mobile h1 {
+    margin-bottom: 0;
+  }
+
+  .mobile > h1::after {
+    content: "";
+    display: block;
+    border-top: 6px solid blue;
+    margin-top: 0.5em;
+    margin-bottom: 2%;
+  }
+
+  #about .row {
+    flex-direction: column-reverse;
+  }
+  #about img {
+    width: 60%;
+    margin: 0 auto;
+  }
+  #about .container {
+    margin: 5vh;
+  }
+
   .image-wrapper {
     width: 100%;
   }

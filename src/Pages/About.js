@@ -12,11 +12,11 @@ function Core() {
             <div className="row">
                 <div className="column" style = {{marginRight: '3rem', flex: 3}}>
                     <div>
-                        <h1 style={{textAlign: 'left'}}>
+                        <h1 className={"not-mobile"} style={{textAlign: 'left'}}>
                             About Me
                         </h1>
                         <div style = {{marginTop: '0'}}>
-                            My name's Ashley and I'm a sophomore at Brown University studying Computer Science and English.
+                            Hi, my name's Ashley and I'm a sophomore at Brown University studying Computer Science and English.
                         </div>
                         <br />
                         <div style = {{marginTop: '0'}}>
@@ -24,7 +24,7 @@ function Core() {
                         </div>
                         <br />
                         <div style = {{marginTop: '0'}}>
-                            These days, I've been living it up while studying remotely in Forest, Virginia, where the great art (and loss) of Zoom is quite real to me.
+                            These days, I've been living it up while studying remotely in Forest, Virginia, where the great art (and loss) of Zoom is no stranger.
                             {/*So far, I've been able make a website for my acapella group, a book rating aggregator for comic books, and a few other things linked*/}
                             {/*<span> </span><Link activeClass="active" to="projects"*/}
                             {/*               spy={true} smooth={true} offset={-25} d*/}
@@ -55,6 +55,10 @@ function Core() {
                     <h2 style = {{marginTop: '0'}}>
                     </h2>
                 </div>
+                <h1 className={"mobile"} style={{textAlign: 'c'}}>
+                                About Me
+                </h1>
+
             </div>
         </>
     );
