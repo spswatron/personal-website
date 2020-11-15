@@ -66,8 +66,8 @@ class TimeLine extends React.Component {
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     date="August 2019 - May 2023"
-                    iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
-                    icon={<i className="fa fa-graduation-cap"></i>}
+                    iconStyle={{background: 'rgb(33, 150, 243)', color: '#F0F0F0'}}
+                    icon={<i style={{color: '#F0F0F0'}} className="fa fa-graduation-cap"></i>}
                 >
                     <h3 className="vertical-timeline-element-title">Brown University</h3>
                     <h4 className="vertical-timeline-element-subtitle">Providence, RI</h4>

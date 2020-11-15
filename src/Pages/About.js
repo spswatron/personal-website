@@ -10,7 +10,10 @@ function Core() {
     return(
         <>
             <div className="row">
-                <div className="column" style = {{marginRight: '3rem', flex: 3}}>
+                <h1 className={"mobile"} style={{textAlign: 'c'}}>
+                                About Me <br/>
+                </h1>
+                <div className="words column" style = {{flex: 3}}>
                     <div>
                         <h1 className={"not-mobile"} style={{textAlign: 'left'}}>
                             About Me
@@ -38,7 +41,7 @@ function Core() {
                             {/*               spy={true} smooth={true} offset={-25} d*/}
                             {/*               uration={50}>*/}
                             {/*    here</Link>. 'Twould be delightful :)*/}
-                            Now, without further ado, let's get this ship rolling!
+                            Thanks a whole ton for visiting my site :)
                         </div>
                         <br />
                         <div style = {{marginTop: '0'}}>
@@ -46,7 +49,7 @@ function Core() {
                             {/*               spy={true} smooth={true} offset={-25} d*/}
                             {/*               uration={50}>*/}
                             {/*    here</Link>. 'Twould be delightful :)*/}
-                            Thanks a whole ton for visiting my site :)
+                            Let's get this ship rolling!
                         </div>
                     </div>
                 </div>
@@ -55,9 +58,6 @@ function Core() {
                     <h2 style = {{marginTop: '0'}}>
                     </h2>
                 </div>
-                <h1 className={"mobile"} style={{textAlign: 'c'}}>
-                                About Me
-                </h1>
 
             </div>
         </>
