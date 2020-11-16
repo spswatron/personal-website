@@ -53,6 +53,7 @@ function Image(props) {
                     <a href={props.deploy} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-link"></i></a>
                     <a href={props.git} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-github"></i></a>
                 </div>
+
                 <img src={props.src} /></div>
         </div>
     )
