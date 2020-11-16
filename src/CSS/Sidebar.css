@@ -33,7 +33,7 @@
 .bm-menu {
   background: #f8f9fa;
   padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  font-size: 17px;
   font-family: Montserrat, sans-serif;
 }
 
@@ -76,11 +76,17 @@
   outline: none;
 }
 
+.bm-cross-button:hover {
+  color: grey;
+}
+
 .bm-burger-button button, .bm-cross-button button {
   border: none !important;
+  box-shadow: none !important;
 }
 .bm-burger-button button:hover, .bm-cross-button button:hover {
   background: #ccd6f6;
+  color: #ccd6f6;
 }
 
 /*# sourceMappingURL=Sidebar.css.map */

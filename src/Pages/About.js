@@ -13,6 +13,11 @@ function Core() {
                 <h1 className={"mobile"} style={{textAlign: 'c'}}>
                                 About Me <br/>
                 </h1>
+                <div className="face mobile column">
+                    <Face />
+                    <h2 style = {{marginTop: '0'}}>
+                    </h2>
+                </div>
                 <div className="words column" style = {{flex: 3}}>
                     <div>
                         <h1 className={"not-mobile"} style={{textAlign: 'left'}}>
@@ -53,7 +58,7 @@ function Core() {
                         </div>
                     </div>
                 </div>
-                <div className="face column">
+                <div className="face not-mobile column">
                     <Face />
                     <h2 style = {{marginTop: '0'}}>
                     </h2>

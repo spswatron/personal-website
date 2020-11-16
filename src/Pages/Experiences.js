@@ -61,11 +61,18 @@ class TimeLine extends React.Component {
         }
     }
     render() {
+        const captions = this.state.long_array.map
         return (
-            <VerticalTimeline animate={false}>
+            // <>
+            //     {this.state.long_array}
+            // </>
+            <VerticalTimeline animate={false}
+                              // layout={'1-column-left'}
+            >
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     date="August 2019 - May 2023"
+                    style={{background:'transparent'}}
                     iconStyle={{background: 'rgb(33, 150, 243)', color: '#F0F0F0'}}
                     icon={<i style={{color: '#F0F0F0'}} className="fa fa-graduation-cap"></i>}
                 >
@@ -142,13 +149,13 @@ function Core() {
                 My Experiences
             </h1>
             <div className="row">
-                <h2 className={"row"} style={{justifyContent: 'center', marginTop: 0, textAlign: 'center'}}>
-                    <div>Here are some of the places I've worked (and studied!)</div>
-                </h2>
+                {/*<h2 className={"row"} style={{justifyContent: 'center', marginTop: 0, textAlign: 'center'}}>*/}
+                {/*    <div>Here are some of the places I've worked (and studied!)</div>*/}
+                {/*</h2>*/}
                 <TimeLine />
-                <p className={"row"} style={{justifyContent: 'center', textAlign: 'center'}}>
-                    <div>Woo hoo! Thanks for stopping by this part of the tour :)</div>
-                </p>
+                {/*<p className={"row"} style={{justifyContent: 'center', textAlign: 'center'}}>*/}
+                {/*    <div>Woo hoo! Thanks for stopping by this part of the tour :)</div>*/}
+                {/*</p>*/}
             </div>
         </>
     );

@@ -10,7 +10,16 @@ import './CSS/stars.css'
 import Sidebar from "./Pages/Sidebar";
 import NewHome from "./Pages/newHome";
 
-
+const bottom = <div className="bottom">
+    {"\u00A9"} {new Date().getFullYear()} Ashley Chang. Made with SASS and Love
+                    <ul>
+                        <li><a className="link" href="https://github.com/spswatron" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-github"></i></a></li>
+                        <li><a className="link" href={"https://www.linkedin.com/in/ashley-chang-1080b81a2/"} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a></li>
+                        <li><a className="link" href="https://www.instagram.com/spswatron/" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-instagram"></i></a></li>
+                        <li><a className="link" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-envelope"></i></a></li>
+                        <li><a className="link" href="/resume" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-file"></i></a></li>
+                    </ul>
+                </div>
 function SocialBar() {
     return(
         <h3 className="socials">
@@ -38,7 +47,7 @@ function App() {
         <Contact />
         <div id={"footer"}>
         <div className={"big-foot"}>
-            <div className="row footer" id={"footer"} style = {{marginTop: '3.5vh'}}>
+            <div className="row footer" id={"footer"}>
                   <p>
                       Made with SASS and <i className="fa fa-heart heart"></i> by Ashley Chang
                   </p>
@@ -46,8 +55,7 @@ function App() {
             <SocialBar />
         </div>
         </div>
-        {/*<ArrowSideBar />*/}
-        {/*<Body />*/}
+        {/*{bottom}*/}
     </>
   );
 }

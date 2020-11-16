@@ -41,7 +41,7 @@
 .bm-menu {
   background: $soft-white;
   padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  font-size: 17px;
   font-family: $font-stack;
 }
 
@@ -84,12 +84,19 @@
 .bm-item:focus{
   outline: none;
 }
-
+.bm-cross-button:hover {
+  color: grey;
+}
 .bm-burger-button, .bm-cross-button {
   button {
     border: none!important;
+    box-shadow: none!important;
   }
   button:hover{
     background: $light;
+    color:$light;
   }
+  //.bm-cross-button:hover {
+  //  color:$light;
+  //}
 }

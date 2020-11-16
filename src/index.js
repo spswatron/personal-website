@@ -11,12 +11,13 @@ import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 // import Resume from "./Pages/Resume";
 import resume from "./Ashley_Chang_Resume.pdf";
 
+const a = <embed src={resume}  style={{width:'100%'}} type="application/pdf"/>
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/index" render={(props) => <App {...props} />} />
-       <Route path="/resume" render={() => <embed src={resume}  style={{width:'100%'}} type="application/pdf"/>} />
+       <Route path="/resume" render={() => <embed src={resume}  style={{width:'100%', height: 'auto'}} type="application/pdf"/>} />
       <Redirect to="/index" />
     </Switch>
   </BrowserRouter>,
