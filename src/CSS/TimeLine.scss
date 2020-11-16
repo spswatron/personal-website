@@ -78,8 +78,14 @@ $border-color: rgba(black, .3);
 	color: rgba(black, .7);
 	border-left: 2px solid $border-color;
 
+	h2 {
+		margin-top: 2vh;
+		margin-bottom: 0;
+	}
+
 	p {
 		font-size: 1rem;
+		margin-bottom: 0;
 	}
 
 	&::before {
@@ -144,6 +150,7 @@ $border-color: rgba(black, .3);
 	}
 	.tab-name {
 		width: auto;
+		padding: 0.5em 0.7em;
 	}
   .react-tabs__tab-list {
 	  margin-top: 1rem;

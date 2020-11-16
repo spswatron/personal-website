@@ -10,7 +10,7 @@ import '../CSS/TimeLine.scss'
 const SchoolCaption =
                     <>
                         <p>
-                            B.A. Computer Science; B.A English <br/>GPA 4.0/4.0
+                            B.A. Computer Science; B.A English <br />GPA 4.0/4.0
                         </p>
                         <p>
                             My wonderful university :) Over here I beatbox for the Ursa Minors acapella group, advise
@@ -95,12 +95,12 @@ class TimeLineWriting extends React.Component {
        return(
            <>
 
-               <div className="timeline-item" date-is='20-07-1990'>
+               <div className="timeline-item" date-is="08/2019 - Present">
                    <h2>Kendall Hunt Publishing</h2>
                    {KendallHuntCaption}
                </div>
 
-               <div className="timeline-item" date-is='20-07-1990'>
+               <div className="timeline-item" date-is="05/2018 - 08/2020">
                    <h2>Bedford Bulletin</h2>
                    {BedfordBulletinCaption}
                </div>
@@ -115,12 +115,12 @@ class TimeLineEducation extends React.Component {
        return(
            <>
 
-               <div className="timeline-item" date-is='20-07-1990'>
+               <div className="timeline-item" date-is="08/2019 - 05/2023">
                    <h2>Brown University</h2>
                    {SchoolCaption}
                </div>
 
-               <div className="timeline-item" date-is='20-07-1990'>
+               <div className="timeline-item" date-is="08/2015 - 05/2019">
                    <h2>Jefferson Forest High School</h2>
                    {JFHSCaption}
                </div>
@@ -134,128 +134,25 @@ class TimeLineWork extends React.Component {
    render() {
        return(
            <>
-
-               <div className="timeline-item" date-is='20-07-1990'>
+               <div className="timeline-item" date-is="08/2020 - Present">
                    <h2>Brown University Computer Science</h2>
                    {TACaption}
                </div>
-
-               <div className="timeline-item" date-is='20-07-1990'>
+               <div className="timeline-item" date-is="01/2020 - Present">
                    <h2>Watson Institute for Public Affairs</h2>
                    {ChineseResearchCaption}
                </div>
-
            </>
        );
    }
 }
 
-class TimeLine extends React.Component {
-    constructor(props){
-        const empty = <></>
-        super(props);
-        this.state = {
-            long: false,
-            long_array: [SchoolCaption, TACaption, ChineseResearchCaption,
-                KendallHuntCaption, BedfordBulletinCaption, JFHSCaption],
-            short_array: [empty, empty, empty, empty, empty, empty]
-        }
-    }
-    render() {
-        const captions = this.state.long_array.map
-        return (
-            // <>
-            //     {this.state.long_array}
-            // </>
-            <VerticalTimeline animate={false}
-                              // layout={'1-column-left'}
-            >
-                <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    date="August 2019 - May 2023"
-                    style={{background:'transparent'}}
-                    iconStyle={{background: 'rgb(33, 150, 243)', color: '#F0F0F0'}}
-                    icon={<i style={{color: '#F0F0F0'}} className="fa fa-graduation-cap"></i>}
-                >
-                    <h3 className="vertical-timeline-element-title">Brown University</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Providence, RI</h4>
-                    <p>
-                        <p>
-                            B.A. Computer Science; B.A English <br/>GPA 4.0/4.0
-                        </p>
-                        {this.state.long_array[0]}
-                    </p>
-                </VerticalTimelineElement>
-                <VerticalTimelineElement
-                    className="Brown University Computer Science"
-                    date="August 2020-Present"
-                    iconStyle={{background: 'rgb(233, 30, 99)', color: '#fff'}}
-                    icon={<i className="fa fa-briefcase"></i>}
-                >
-                    <h3 className="vertical-timeline-element-title">Brown University Computer Science</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Undergraduate Teaching Assistant</h4>
-                    {this.state.long_array[1]}
-                </VerticalTimelineElement>
-                <VerticalTimelineElement
-                    className="vertical-timeline-element--education"
-                    date="January 2020-Present"
-                    iconStyle={{background: 'rgb(233, 30, 99)', color: '#fff'}}
-                    icon={<i className="fa fa-briefcase"></i>}
-                >
-                    <h3 className="vertical-timeline-element-title">Watson Institute for Public Affairs</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Research Assistant</h4>
-                    {this.state.long_array[2]}
-                </VerticalTimelineElement>
-                <VerticalTimelineElement
-                    iconStyle={{background: 'rgb(16, 204, 82)', color: '#fff'}}
-                    className="vertical-timeline-element--education"
-                    date="August 2010-Present"
-                    icon={<i className="fa fa-briefcase"></i>}
-                    // icon={<StarIcon />}
-                >
-                    <h3 className="vertical-timeline-element-title">Kendall Hunt Publish Company</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Author</h4>
-                    {this.state.long_array[3]}
-                </VerticalTimelineElement>
-                <VerticalTimelineElement
-                    iconStyle={{background: 'rgb(16, 204, 82)', color: '#fff'}}
-                    className="vertical-timeline-element--education"
-                    date="August 2010-Present"
-                    icon={<i className="fa fa-briefcase"></i>}
-                    // icon={<StarIcon />}
-                >
-                    <h3 className="vertical-timeline-element-title">Bedford Bulletin</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Reporter</h4>
-                    {this.state.long_array[4]}
-                </VerticalTimelineElement>
-                <VerticalTimelineElement
-                    // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                    date="August 2019 - May 2023"
-                    iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
-                    icon={<i className="fa fa-graduation-cap"></i>}
-                >
-                    <h3 className="vertical-timeline-element-title">Jefferson Forest High School</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Forest, VA</h4>
-                    {this.state.long_array[5]}
-                </VerticalTimelineElement>
-            </VerticalTimeline>
-        );
-    }
-}
 function Core() {
     return(
         <>
             <h1>My Experiences</h1>
             <div className="row">
-                {/*<h2 className={"row"} style={{justifyContent: 'center', marginTop: 0, textAlign: 'center'}}>*/}
-                {/*    <div>Here are some of the places I've worked (and studied!)</div>*/}
-                {/*</h2>*/}
                 <TimeLineTab />
-                {/*<TimeLine />*/}
-                {/*<p className={"row"} style={{justifyContent: 'center', textAlign: 'center'}}>*/}
-                {/*    <div>Woo hoo! Thanks for stopping by this part of the tour :)</div>*/}
-                {/*</p>*/}
             </div>
         </>
     );

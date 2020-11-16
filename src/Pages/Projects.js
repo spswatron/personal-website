@@ -5,32 +5,165 @@ import HomeworkTracker from "../Images/homework-tracker.png";
 import UrsaMinors from "../Images/ursa-minors.png";
 import Shell from "../Images/shell.png";
 import Pager from "./Page";
+import '../CSS/modal.scss'
+import ReactDOM from 'react-dom';
+import ReactModal from 'react-modal';
 
-const UrsasImage = <Image src={UrsaMinors}
+
+class ImageModal extends React.Component {
+    constructor () {
+        super();
+        this.state = {
+          showModal: false
+        };
+
+        this.handleOpenModal = this.handleOpenModal.bind(this);
+        this.handleCloseModal = this.handleCloseModal.bind(this);
+      }
+
+      handleOpenModal () {
+        this.setState({ showModal: true });
+      }
+
+      handleCloseModal () {
+        this.setState({ showModal: false });
+      }
+    render() {
+        return (
+            <div className={"image column"}>
+                <div className={"image-wrapper"}>
+                    <div className={"project-links"}>
+                        <a onClick={this.handleOpenModal}><i
+                            className="fa fa-search-plus"></i></a>
+                        {/*<a href={this.props.git} target={"_blank"} rel="noopener noreferrer"><i className="fa fa-github"></i></a>*/}
+                    </div>
+                   {/*<button onClick={this.handleOpenModal}>Trigger Modal</button>*/}
+                    <ReactModal
+                       isOpen={this.state.showModal}
+                    >
+                      <div className={"modal"}>
+                            <button className={"exit"} onClick={this.handleCloseModal}><i className="fa fa-times"></i></button>
+                            <div className={"content"}>
+                                <h2>
+                                    {this.props.project}
+                                </h2>
+                                <div className={"row"}>
+                                    <div className={"column"}>
+                                        <img src={this.props.src}/>
+                                    </div>
+                                </div>
+                                <div className={"caption"}><strong>Tech pool: </strong> flask, pandas, selenium, html, and css</div>
+                                       <br/>
+                                       {/*My first foray into the world of webscraping. I used Selenium to acquire the goodreads rating information for*/}
+                                       {/*over 7000 books (especially comic books).*/}
+                                       {/*<br /><br />Since goodreads doesn't allow users to sort the books in their shelves*/}
+                                       {/*by traits such as total reviews, average review, or random, I DIY-ed that.*/}
+                                       This summer, I dedicated a chunk of time to finding more comic books to read.
+                                       <br /><br />
+                                       Using data I webscraped from goodreads' book shelves, I created a website in which this information
+                                       could now finally be sorted by total reviews, average reviews, random, and other fun things. I love
+                                       Calvin Hobbes, so this was delightful.
+                                </div>
+                      </div>
+                    </ReactModal>
+                    <img src={this.props.src}/></div>
+            </div>
+        )
+    }
+}
+
+class ProjectModal extends React.Component {
+  constructor () {
+    super();
+    this.state = {
+      showModal: false
+    };
+
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+  handleOpenModal () {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal () {
+    this.setState({ showModal: false });
+  }
+
+  render () {
+    return (
+      <div>
+        <button onClick={this.handleOpenModal}>Trigger Modal</button>
+        <ReactModal
+           isOpen={this.state.showModal}
+           contentLabel="Minimal Modal Example"
+        >
+          <button onClick={this.handleCloseModal}>Close Modal</button>
+        </ReactModal>
+      </div>
+    );
+  }
+}
+
+class Image extends React.Component {
+    render() {
+        return (
+            <div className={"image column"}>
+                <div className={"image-wrapper"}>
+                    <div className={"project-links"}>
+                        <a href={this.props.deploy} target={"_blank"} rel="noopener noreferrer"><i
+                            className="fa fa-link"></i></a>
+                        <a href={this.props.git} target={"_blank"} rel="noopener noreferrer"><i className="fa fa-github"></i></a>
+                    </div>
+
+                    <img src={this.props.src}/></div>
+            </div>
+        )
+    }
+}
+
+
+const UrsasImage = <ImageModal
+                            project={"Ursa Minors Website"}
+                            src={UrsaMinors}
                           deploy={"https://ursa-minors.ashley-chang.me/index"}
                           git={"https://github.com/spswatron/homework-tracker"}
                    />
-const HomeworkTrackerImage= <Image src={HomeworkTracker}
+const HomeworkTrackerImage= <ImageModal
+                          project={"Homework Tracker"}
+                            src={HomeworkTracker}
                           deploy={"https://homework-tracker.ashley-chang.me/"}
                           git={"https://github.com/spswatron/homework-tracker"}
                    />
-const GetBluenoImage = <Image src={GetBlueno}
+const GetBluenoImage = <ImageModal
+                        project={"GetBlueno"}
+                        src={GetBlueno}
                           deploy={"https://get-blueno.ashley-chang.me/"}
                           git={"https://github.com/spswatron/GetBlueno"}
                    />
 
-const ShellImage = <Image src={ComixMatch}
+const ShellImage = <ImageModal src={Shell}
+                          project={"Shell"}
                           deploy={"http://comix-match.herokuapp.com/"}
                           git={"https://github.com/spswatron/from-scratch"}
                    />
 
-const ComixMatchImage =  <Image src={ComixMatch}
+const ComixMatchImage =  <ImageModal src={ComixMatch}
+                        project={"Comix Match"}
                           deploy={"http://comix-match.herokuapp.com/"}
                           git={"https://github.com/spswatron/from-scratch"}
                    />
 
+const SearchImage =  <ImageModal src={ComixMatch}
+                        project={"Comix Match"}
+                          deploy={"http://comix-match.herokuapp.com/"}
+                          git={"https://github.com/spswatron/from-scratch"}
+                   />
 
-const ImageList = [ComixMatchImage, ShellImage, UrsasImage, HomeworkTrackerImage, GetBluenoImage]
+const LastTwo = <div className={"bottom section"}>{HomeworkTrackerImage}{GetBluenoImage}</div>
+
+const ImageList = [ComixMatchImage, ShellImage, UrsasImage, HomeworkTrackerImage, GetBluenoImage, SearchImage]
 
 function Caption(props) {
     return(
@@ -45,19 +178,6 @@ function Caption(props) {
     );
 }
 
-function Image(props) {
-    return(
-        <div className={"image column"}>
-            <div className={"image-wrapper"}>
-                <div className={"project-links"}>
-                    <a href={props.deploy} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-link"></i></a>
-                    <a href={props.git} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-github"></i></a>
-                </div>
-
-                <img src={props.src} /></div>
-        </div>
-    )
-}
 class Core extends React.Component {
     constructor(props) {
         super(props);
@@ -79,19 +199,6 @@ class Core extends React.Component {
                {/*           deploy={"http://comix-match.herokuapp.com/"}*/}
                {/*           git={"https://github.com/spswatron/from-scratch"}*/}
                {/*    />*/}
-               {/*    <div className={"column"}>*/}
-               {/*        <div><strong>Tech pool: </strong> flask, pandas, selenium, html, and css</div>*/}
-               {/*        <br/>*/}
-               {/*        /!*My first foray into the world of webscraping. I used Selenium to acquire the goodreads rating information for*!/*/}
-               {/*        /!*over 7000 books (especially comic books).*!/*/}
-               {/*        /!*<br /><br />Since goodreads doesn't allow users to sort the books in their shelves*!/*/}
-               {/*        /!*by traits such as total reviews, average review, or random, I DIY-ed that.*!/*/}
-               {/*        This summer, I dedicated a chunk of time to finding more comic books to read.*/}
-               {/*        <br /><br />*/}
-               {/*        Using data I webscraped from goodreads' book shelves, I created a website in which this information*/}
-               {/*        could now finally be sorted by total reviews, average reviews, random, and other fun things. I love*/}
-               {/*        Calvin Hobbes, so this was delightful.*/}
-               {/*    </div>*/}
                {/*</div>*/}
                {/*<div className={"row"}>*/}
                {/*   <Caption name={"Shell"} link={'https://get-blueno.ashley-chang.me/'}/>*/}

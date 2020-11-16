@@ -40,6 +40,14 @@ body {
 #projects .column {
   padding-bottom: 5vh;
 }
+#projects .row {
+  align-items: center;
+  justify-content: center;
+}
+#projects .column {
+  align-items: center;
+  justify-content: center;
+}
 #projects img {
   box-shadow: 0 2px 5px 0px grey;
   width: 100%;
@@ -48,7 +56,7 @@ body {
 }
 #projects .image-wrapper {
   position: relative;
-  max-height: 150px;
+  max-height: 120px;
   overflow: hidden;
   box-shadow: 0 2px 5px 0px grey;
 }
@@ -364,6 +372,13 @@ a {
     flex: 1;
     width: 30%;
     flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
   }
 
   h1 {
@@ -382,6 +397,10 @@ a {
 
   .column img {
     width: 95%;
+  }
+
+  .bottom.section {
+    display: flex;
   }
 }
 .face.column {
@@ -488,6 +507,10 @@ a {
 
   .row {
     flex-direction: column;
+  }
+
+  .bottom.section {
+    display: block;
   }
 }
 
