@@ -93,13 +93,6 @@ body {
   margin: 0;
   width: 95%;
 }
-.react-pdf__Page__canvas {
-  max-width: 700px;
-  width: 95% !important;
-  height: auto !important;
-  margin: 0 auto;
-}
-
 #resume {
   background: linear-gradient(180deg, #F7FAF2, #ffffff);
 }
@@ -244,6 +237,10 @@ a {
 #experiences {
   background: linear-gradient(180deg, #F2FAFF, #ffffff);
 }
+#experiences .container {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 
 #about {
   background: linear-gradient(180deg, #F7FAF2, #ffffff);
@@ -359,6 +356,11 @@ a {
   }
   #projects img {
     flex: 1.5;
+  }
+
+  .image.column {
+    flex: 1;
+    flex-basis: 25%;
   }
 
   h1 {

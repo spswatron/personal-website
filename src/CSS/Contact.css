@@ -67,7 +67,6 @@ button:focus, input:focus, textarea:focus, select:focus {
 button:hover {
   border-color: #c6c6c6;
   background-color: #f0f0f0;
-  color: #606060;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 

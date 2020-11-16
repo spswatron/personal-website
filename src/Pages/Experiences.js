@@ -1,14 +1,24 @@
 import React from "react";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+// import 'react-tabs/style/react-tabs.css';
+
 import Pager from "./Page"
 import 'react-vertical-timeline-component/style.min.css';
+import '../CSS/TimeLine.scss'
 
-const SchoolCaption = <p>
+const SchoolCaption =
+                    <>
+                        <p>
+                            B.A. Computer Science; B.A English <br/>GPA 4.0/4.0
+                        </p>
+                        <p>
                             My wonderful university :) Over here I beatbox for the Ursa Minors acapella group, advise
                             freshmen as a Meiklejohn, write sketch
                             comedy skits for Skorts, teach with SEADD (Self Expression for Adults with Developmental
                             Disabilities), and edit for Cornerstone Literary Magazine
                         </p>
+                    </>
 const TACaption = <p>
                         I TA for CS0111, Computing Foundations: Data. I spend about 8-9 hours every week holding TA
                         hours,
@@ -17,7 +27,7 @@ const TACaption = <p>
 const ChineseResearchCaption = <p>
                                     Using the wonders of pytesseract, scala, and Abby FineReader, I've transcribed thousands of
                                     cables from the Chinese Ministry of the Foreign Affairs during the 1960s.
-                                    In the process, I've picked up all sorts of metadata.
+                                    In the process, I've collected all sorts of metadata.
                                 </p>
 
 const KendallHuntCaption = <p>
@@ -48,6 +58,97 @@ const JFHSCaption = <>
                         my junior year!)
                     </p>
                     </>
+
+class TimeLineTab extends React.Component {
+    render() {
+        return(
+          <Tabs>
+            <TabList>
+            {/*    <div className={"not-mobile"} style={{width: '100%'}}>*/}
+            {/*     <h1 style={{margin:0, textAlign:'center', width: '100%'}}>*/}
+            {/*    My*/}
+            {/*</h1>*/}
+            {/*    <h1 style={{margin: 0, textAlign:'center', width: '100%'}}>*/}
+            {/*    Experiences*/}
+            {/*</h1>*/}
+            {/*    </div>*/}
+              <Tab><div className={"tab-name"}><i className="fa fa-graduation-cap"/><span> </span> Education</div></Tab>
+              <Tab><div className={"tab-name"}><i className="fa fa-briefcase"/><span> </span> Work</div></Tab>
+              <Tab><div className={"tab-name"}><i className="fa fa-pencil"/><span> </span> Writing</div></Tab>
+            </TabList>
+            <TabPanel>
+             <TimeLineEducation />
+            </TabPanel>
+            <TabPanel>
+              <TimeLineWork />
+            </TabPanel>
+              <TabPanel>
+              <TimeLineWriting />
+            </TabPanel>
+          </Tabs>
+        );
+    }
+}
+
+class TimeLineWriting extends React.Component {
+   render() {
+       return(
+           <>
+
+               <div className="timeline-item" date-is='20-07-1990'>
+                   <h2>Kendall Hunt Publishing</h2>
+                   {KendallHuntCaption}
+               </div>
+
+               <div className="timeline-item" date-is='20-07-1990'>
+                   <h2>Bedford Bulletin</h2>
+                   {BedfordBulletinCaption}
+               </div>
+
+           </>
+       );
+   }
+}
+
+class TimeLineEducation extends React.Component {
+   render() {
+       return(
+           <>
+
+               <div className="timeline-item" date-is='20-07-1990'>
+                   <h2>Brown University</h2>
+                   {SchoolCaption}
+               </div>
+
+               <div className="timeline-item" date-is='20-07-1990'>
+                   <h2>Jefferson Forest High School</h2>
+                   {JFHSCaption}
+               </div>
+
+           </>
+       );
+   }
+}
+
+class TimeLineWork extends React.Component {
+   render() {
+       return(
+           <>
+
+               <div className="timeline-item" date-is='20-07-1990'>
+                   <h2>Brown University Computer Science</h2>
+                   {TACaption}
+               </div>
+
+               <div className="timeline-item" date-is='20-07-1990'>
+                   <h2>Watson Institute for Public Affairs</h2>
+                   {ChineseResearchCaption}
+               </div>
+
+           </>
+       );
+   }
+}
 
 class TimeLine extends React.Component {
     constructor(props){
@@ -145,14 +246,13 @@ class TimeLine extends React.Component {
 function Core() {
     return(
         <>
-            <h1>
-                My Experiences
-            </h1>
+            <h1>My Experiences</h1>
             <div className="row">
                 {/*<h2 className={"row"} style={{justifyContent: 'center', marginTop: 0, textAlign: 'center'}}>*/}
                 {/*    <div>Here are some of the places I've worked (and studied!)</div>*/}
                 {/*</h2>*/}
-                <TimeLine />
+                <TimeLineTab />
+                {/*<TimeLine />*/}
                 {/*<p className={"row"} style={{justifyContent: 'center', textAlign: 'center'}}>*/}
                 {/*    <div>Woo hoo! Thanks for stopping by this part of the tour :)</div>*/}
                 {/*</p>*/}
