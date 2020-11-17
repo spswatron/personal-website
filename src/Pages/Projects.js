@@ -9,12 +9,21 @@ import '../CSS/modal.scss'
 import ReactDOM from 'react-dom';
 import ReactModal from 'react-modal';
 
+function nextSlide(n) {
+    if(n < 0){
+        return 3 - ((-n) % 3)
+    }
+    else {
+        return n % 3
+    }
+}
 
 class ImageModal extends React.Component {
     constructor () {
         super();
         this.state = {
-          showModal: false
+          showModal: false,
+          current: 0
         };
 
         this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -25,10 +34,27 @@ class ImageModal extends React.Component {
         this.setState({ showModal: true });
       }
 
+      moveBack() {
+        this.setState( {
+            current: nextSlide(this.state.current + 1)
+          })
+      }
+
+      moveForward() {
+        this.setState( {
+            current: nextSlide(this.state.current - 1)
+          })
+      }
+
       handleCloseModal () {
         this.setState({ showModal: false });
       }
     render() {
+        const slideImage = this.props.images[this.state.current]
+        const git = <a href={this.props.git} target={"_blank"} rel="noopener noreferrer">
+            <i className="fa fa-github"></i></a>
+        const deploy = <a href={this.props.deploy} target={"_blank"} rel="noopener noreferrer">
+            <i className="fa fa-link"></i></a>
         return (
             <div className={"image column"}>
                 <div className={"image-wrapper"}>
@@ -43,15 +69,18 @@ class ImageModal extends React.Component {
                     >
                       <div className={"modal"}>
                             <button className={"exit"} onClick={this.handleCloseModal}><i className="fa fa-times"></i></button>
-                            <div className={"content"}>
                                 <h2>
                                     {this.props.project}
                                 </h2>
-                                <div className={"row"}>
-                                    <div className={"column"}>
-                                        <img src={this.props.src}/>
+                                <hr/>
+                                <div className={"img row"}>
+                                    <div className={"slideshow arrow"}><a onClick={() => this.moveBack()}><i className="fa fa-chevron-left"></i></a></div>
+                                    <div className={"img column"}>
+                                        <img src={slideImage}/>
                                     </div>
+                                    <div className={"slideshow arrow"}><a onClick={() => this.moveForward()}><i className="fa fa-chevron-right"></i></a></div>
                                 </div>
+                            <div className={"content"}>
                                 <div className={"caption"}><strong>Tech pool: </strong> flask, pandas, selenium, html, and css</div>
                                        <br/>
                                        {/*My first foray into the world of webscraping. I used Selenium to acquire the goodreads rating information for*/}
@@ -63,6 +92,7 @@ class ImageModal extends React.Component {
                                        Using data I webscraped from goodreads' book shelves, I created a website in which this information
                                        could now finally be sorted by total reviews, average reviews, random, and other fun things. I love
                                        Calvin Hobbes, so this was delightful.
+                                    <div className={"i row"}>{git} {deploy}</div>
                                 </div>
                       </div>
                     </ReactModal>
@@ -72,90 +102,45 @@ class ImageModal extends React.Component {
     }
 }
 
-class ProjectModal extends React.Component {
-  constructor () {
-    super();
-    this.state = {
-      showModal: false
-    };
-
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
-  }
-
-  handleOpenModal () {
-    this.setState({ showModal: true });
-  }
-
-  handleCloseModal () {
-    this.setState({ showModal: false });
-  }
-
-  render () {
-    return (
-      <div>
-        <button onClick={this.handleOpenModal}>Trigger Modal</button>
-        <ReactModal
-           isOpen={this.state.showModal}
-           contentLabel="Minimal Modal Example"
-        >
-          <button onClick={this.handleCloseModal}>Close Modal</button>
-        </ReactModal>
-      </div>
-    );
-  }
-}
-
-class Image extends React.Component {
-    render() {
-        return (
-            <div className={"image column"}>
-                <div className={"image-wrapper"}>
-                    <div className={"project-links"}>
-                        <a href={this.props.deploy} target={"_blank"} rel="noopener noreferrer"><i
-                            className="fa fa-link"></i></a>
-                        <a href={this.props.git} target={"_blank"} rel="noopener noreferrer"><i className="fa fa-github"></i></a>
-                    </div>
-
-                    <img src={this.props.src}/></div>
-            </div>
-        )
-    }
-}
-
 
 const UrsasImage = <ImageModal
                             project={"Ursa Minors Website"}
+                            images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
                             src={UrsaMinors}
                           deploy={"https://ursa-minors.ashley-chang.me/index"}
                           git={"https://github.com/spswatron/homework-tracker"}
                    />
 const HomeworkTrackerImage= <ImageModal
                           project={"Homework Tracker"}
+                          images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
                             src={HomeworkTracker}
                           deploy={"https://homework-tracker.ashley-chang.me/"}
                           git={"https://github.com/spswatron/homework-tracker"}
                    />
 const GetBluenoImage = <ImageModal
                         project={"GetBlueno"}
+                        images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
                         src={GetBlueno}
                           deploy={"https://get-blueno.ashley-chang.me/"}
                           git={"https://github.com/spswatron/GetBlueno"}
                    />
 
 const ShellImage = <ImageModal src={Shell}
+                          images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
                           project={"Shell"}
                           deploy={"http://comix-match.herokuapp.com/"}
                           git={"https://github.com/spswatron/from-scratch"}
                    />
 
 const ComixMatchImage =  <ImageModal src={ComixMatch}
+                        images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
                         project={"Comix Match"}
                           deploy={"http://comix-match.herokuapp.com/"}
                           git={"https://github.com/spswatron/from-scratch"}
                    />
 
 const SearchImage =  <ImageModal src={ComixMatch}
+                        images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
                         project={"Comix Match"}
                           deploy={"http://comix-match.herokuapp.com/"}
                           git={"https://github.com/spswatron/from-scratch"}
