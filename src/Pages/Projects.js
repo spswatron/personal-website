@@ -4,6 +4,9 @@ import ComixMatch1 from "../Images/Comix-Match-1.png";
 import ComixMatch2 from "../Images/Comix-Match-2.png";
 import ComixMatch3 from "../Images/Comix-Match-3.png";
 import GetBlueno from "../Images/get-blueno.png";
+import GetBlueno1 from "../Images/Get-Blueno-1.png";
+import GetBlueno2 from "../Images/Get-Blueno-2.png";
+import GetBlueno3 from "../Images/Get-Blueno-3.png";
 import HomeworkTracker from "../Images/homework-tracker.png";
 import UrsaMinors from "../Images/ursa-minors.png";
 import Shell from "../Images/shell.png";
@@ -122,7 +125,7 @@ const HomeworkTrackerImage= <ImageModal
                    />
 const GetBluenoImage = <ImageModal
                         project={"GetBlueno"}
-                        images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
+                        images = {[GetBlueno1, GetBlueno2, GetBlueno3]}
                         src={GetBlueno}
                           deploy={"https://get-blueno.ashley-chang.me/"}
                           git={"https://github.com/spswatron/GetBlueno"}
