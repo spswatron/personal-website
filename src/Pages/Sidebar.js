@@ -27,7 +27,7 @@ class Sidebar extends React.Component {
               <li className="nav2"> <Link activeClass="active" to="about" spy={true} smooth={true} offset={-35} duration={300} onClick={() => this.closeMenu()}>About</Link></li>
               <li className="nav2"><Link activeClass="active" to="experiences" spy={true} smooth={true} offset={-25}  duration={300} onClick={() => this.closeMenu()}>Experiences</Link></li>
               <li className="nav2"><Link activeClass="active" to="projects" spy={true} smooth={true} offset={-25} duration={300} onClick={() => this.closeMenu()}>Projects</Link></li>
-              <li className="nav2"><Link activeClass="active" to="contact" spy={true} smooth={true} offset={-25} duration={300} onClick={() => this.closeMenu()}>Contact</Link></li>
+              <li className="nav2"><Link activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={300} onClick={() => this.closeMenu()}>Contact</Link></li>
             </Menu>
         );
     }

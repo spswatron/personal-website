@@ -206,11 +206,11 @@ span {
 }
 
 .link i {
-  font-size: 30px;
+  font-size: 0.9rem;
 }
 
 .link {
-  padding: 8.5px;
+  padding: 8.5px 20px;
 }
 
 a:hover {
@@ -226,24 +226,30 @@ a {
   margin: 0;
   flex-direction: row;
   align-self: center;
-  width: 94%;
   display: flex;
   justify-content: space-around;
   text-align: center;
+  padding-left: 4px;
   margin-bottom: 5vh;
 }
 
 .big-foot {
-  margin-top: 2vh;
   display: flex;
   flex-direction: column;
+  background-color: #f8f9fa;
+}
+.big-foot p {
+  margin: 0;
+  padding: 8.5px;
 }
 
 #footer {
-  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
   display: flex;
-  justify-content: center;
-  background-color: #fbfbfc;
+  justify-content: space-between;
+  background-color: #f8f9fa;
 }
 
 #experiences {

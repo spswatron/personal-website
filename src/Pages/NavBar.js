@@ -24,7 +24,7 @@ class Navbar extends React.Component {
                                            uration={50}>
                   Projects</Link></li>
               <li className="nav2"><Link activeClass="active" to="contact"
-                                           spy={true} smooth={true} offset={-25} d
+                                           spy={true} smooth={true} offset={-90} d
                                            uration={50}>
                   Contact</Link></li>
           </li>

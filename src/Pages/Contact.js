@@ -1,6 +1,60 @@
 import React from "react";
 import Pager from "./Page";
 import '../CSS/spinkit.min.css'
+import ReactModal from 'react-modal';
+
+class ManualModal extends React.Component {
+    constructor () {
+        super();
+        this.state = {
+          showModal: false,
+          current: 0
+        };
+
+        this.handleOpenModal = this.handleOpenModal.bind(this);
+        this.handleCloseModal = this.handleCloseModal.bind(this);
+      }
+
+      handleOpenModal () {
+        this.setState({ showModal: true });
+      }
+
+      handleCloseModal () {
+        this.setState({ showModal: false });
+      }
+    render() {
+        return (
+            <>
+                    <a onClick={this.handleOpenModal}><div className={"manual caption"}>
+                        <strong>
+                            Want to send messages manually?
+                        </strong>
+                    </div></a>
+                   {/*<button onClick={this.handleOpenModal}>Trigger Modal</button>*/}
+                    <ReactModal
+                       isOpen={this.state.showModal}
+                    >
+                      <div className={"modal"} style={{maxWidth: '470px'}}>
+                            <button className={"exit"} onClick={this.handleCloseModal}><i className="fa fa-times"></i></button>
+                                <h2>
+                                    My Contact Information
+                                </h2>
+                          <br/>
+                            <div className={"content"} style={{width: '24rem'}}>
+                                <strong>Email: </strong> ashley_e_chang@brown.edu
+                                <br/><br style={{fontSize: '0.5rem'}}/>
+                                <strong>Phone Number: </strong> 434-849-4438
+                                <br/><br style={{fontSize: '0.5rem'}}/>
+                                <strong>Github: </strong> spswatron <a href="https://github.com/spswatron" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-external-link"></i></a>
+                                <br/><br style={{fontSize: '0.5rem'}}/>
+                                <strong>Linkedin: </strong> Ashley Chang <a href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank' rel="noopener noreferrer"><i className="fa fa-external-link"></i></a>
+                            </div>
+                      </div>
+                    </ReactModal>
+            </>
+        )
+    }
+}
 
 function SuccessMessage (props) {
     console.log("success:" + props.i.toString())
@@ -69,27 +123,22 @@ function ContactForm(props) {
                 <label>
                     Name*
                 </label>
-                <form>
                     <input className={borderColor(props.nameError) + " form-field"} type="text" name="name"
                            value = {props.name}
                            onChange = {props.nameChange}
                            onKeyPress = {props.enterCheck}
                     required />
-                </form>
                 <label>
                     Email*
                 </label>
-                <form>
                     <input className={borderColor(props.emailError) + " form-field"} type="text" name="email"
                            value = {props.email}
                            onChange = {props.emailChange}
                            onKeyPress = {props.enterCheck}
                     required/>
-                </form>
                 <label>
                     Subject
                 </label>
-                <form>
                     <input className={borderColor(props.subjectError) + " form-field"} type="text" name="subject"
                            value = {props.subject}
                            onChange = {props.subjectChange}
@@ -100,7 +149,6 @@ function ContactForm(props) {
                     {/*  position={'right'} // preferred position*/}
                     {/*  content={<div>Hi! I'm popover content.</div>}*/}
                     {/*/>*/}
-                </form>
                 <label>
                     Message*
                 </label>
@@ -115,13 +163,14 @@ function ContactForm(props) {
                     {/*  position={'right'} // preferred position*/}
                     {/*  content={<div>Hi! I'm popover content.</div>}*/}
                     {/*/>*/}
-                <div className="row">
+                <div className="contact bottom row">
                     <div className={"send"}>
                         <button className="contact form-field" type="submit"
                                 onClick = {props.handleSubmit}
-                        > Send </button>
+                        > Send</button>
                         {loading}
                     </div>
+                    <ManualModal />
                 </div>
                 {messages}
         </>
@@ -204,9 +253,9 @@ class Core extends React.Component{
     }
 
     enterCheck(event) {
-    if(event.key === 'Enter'){
-      event.preventDefault();
-      }
+    // if(event.key === 'Enter'){
+    //   event.preventDefault();
+    //   }
     }
 
     changeStatus(i) {
@@ -267,13 +316,14 @@ class Core extends React.Component{
         //                 <Async.Fulfilled>
         return (
             <>
-                <div className="row" style={{display: 'flex', justifyContent: 'center'}}>
-                    <h1>Contact </h1>
+                <div className="column" style={{display: 'flex', justifyContent: 'center'}}>
+                    <h1 style={{marginBottom: '0rem'}}>Contact </h1>
+                    {/*<div style={{fontSize: '1.5rem', marginTop:0, textAlign: 'center', marginBottom: '0rem'}}>Let's keep in touch! </div>*/}
                 </div>
-                <div className="row">
-                    <div className="column">
-                        <h2 style={{marginTop:0}}>Let's keep in touch! </h2>
-                        <div>
+                <div className="form row">
+                    <div className="contact form">
+                        {/*<h2 style={{marginTop:0}}>Let's keep in touch! </h2>*/}
+                        {/*<div>*/}
                             <ContactForm
                                 name = {this.state.name}
                                 email = {this.state.email}
@@ -293,36 +343,36 @@ class Core extends React.Component{
                                 subjectError = {this.state.subjectError}
                                 messageError = {this.state.messageError}
                             />
-                        </div>
+                        {/*</div>*/}
                     </div>
-                    <div className="column" style = {{marginTop: '6px'}}>
-                        <h3 style = {{marginTop: 0}}>The manual method</h3>
-                        <div>
-                            <div style = {{marginTop: '18.2px', fontSize: '17px', lineHeight: '2rem'}}>
-                                If you prefer, you can also
-                                <div className={"row"} style={{color: 'transparent', lineHeight: '1rem'}}>
-                                    <span> </span>
-                                </div>
-                                <div className={"row"}>
-                                    <span><span><a href="mailto:ashley_e_chang@brown.edu" target={"_blank"}  rel="noopener noreferrer"><i className={"fa fa-envelope"}></i></a></span>  email me at <a rel="noopener noreferrer" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}><span>ashley_e_chang<span>@</span>brown.edu</span></a>,</span>
-                                </div>
-                                <div className={"row"}>
-                                    <span><span><a href="tel:434-849-4438" target={"_blank"}  rel="noopener noreferrer"><i className={"fa fa-phone"}></i></a>  </span>call me at <a rel="noopener noreferrer" href="tel:434-849-4438" target={"_blank"}><span>(434)<span> 849</span>-4438</span></a>, or</span>
-                                </div>
-                                <div className={"row"}>
-                                    <span><span><a href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank' rel="noopener noreferrer"><i className={"fa fa-linkedin"}></i></a>  </span>message me on linkedin <a rel="noopener noreferrer" href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank'><span>here</span></a>.</span>
-                                </div>
-                                <div className={"row"}>
-                                </div>
-                                I'll be sure to respond!
+                    {/*<div className="column" style = {{marginTop: '6px'}}>*/}
+                    {/*    <h3 style = {{marginTop: 0}}>The manual method</h3>*/}
+                    {/*    <div>*/}
+                    {/*        <div style = {{marginTop: '18.2px', fontSize: '17px', lineHeight: '2rem'}}>*/}
+                    {/*            If you prefer, you can also*/}
+                    {/*            <div className={"row"} style={{color: 'transparent', lineHeight: '1rem'}}>*/}
+                    {/*                <span> </span>*/}
+                    {/*            </div>*/}
+                    {/*            <div className={"row"}>*/}
+                    {/*                <span><span><a href="mailto:ashley_e_chang@brown.edu" target={"_blank"}  rel="noopener noreferrer"><i className={"fa fa-envelope"}></i></a></span>  email me at <a rel="noopener noreferrer" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}><span>ashley_e_chang<span>@</span>brown.edu</span></a>,</span>*/}
+                    {/*            </div>*/}
+                    {/*            <div className={"row"}>*/}
+                    {/*                <span><span><a href="tel:434-849-4438" target={"_blank"}  rel="noopener noreferrer"><i className={"fa fa-phone"}></i></a>  </span>call me at <a rel="noopener noreferrer" href="tel:434-849-4438" target={"_blank"}><span>(434)<span> 849</span>-4438</span></a>, or</span>*/}
+                    {/*            </div>*/}
+                    {/*            <div className={"row"}>*/}
+                    {/*                <span><span><a href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank' rel="noopener noreferrer"><i className={"fa fa-linkedin"}></i></a>  </span>message me on linkedin <a rel="noopener noreferrer" href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank'><span>here</span></a>.</span>*/}
+                    {/*            </div>*/}
+                    {/*            <div className={"row"}>*/}
+                    {/*            </div>*/}
+                    {/*            I'll be sure to respond!*/}
 
-                                <div className={"row"} style={{color: 'transparent', lineHeight: '1rem'}}>
-                                    <span> </span>
-                                </div>
-                                Thanks a lot for visiting this site, and I hope you have a fantastic day :)
-                            </div>
-                        </div>
-                    </div>
+                    {/*            <div className={"row"} style={{color: 'transparent', lineHeight: '1rem'}}>*/}
+                    {/*                <span> </span>*/}
+                    {/*            </div>*/}
+                    {/*            Thanks a lot for visiting this site, and I hope you have a fantastic day :)*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
             </>
         );

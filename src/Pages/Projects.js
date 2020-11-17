@@ -10,13 +10,19 @@ import GetBlueno3 from "../Images/Get-Blueno-3.png";
 import Shell1 from "../Images/Shell-1.png";
 import Shell2 from "../Images/Shell-2.png";
 import Shell3 from "../Images/Shell-3.png";
+import Shell4 from "../Images/Shell-4.png";
 import HomeworkTracker from "../Images/homework-tracker.png";
 import UrsaMinors from "../Images/ursa-minors.png";
+import UrsaMinors1 from "../Images/Ursa-Minors-1.png";
+import UrsaMinors2 from "../Images/Ursa-Minors-2.png";
+import UrsaMinors3 from "../Images/Ursa-Minors-3.png";
 import Shell from "../Images/shell.png";
 import Pager from "./Page";
 import '../CSS/modal.scss'
 import ReactDOM from 'react-dom';
 import ReactModal from 'react-modal';
+
+
 
 function nextSlide(n) {
     if(n < 0){
@@ -45,13 +51,13 @@ class ImageModal extends React.Component {
 
       moveBack() {
         this.setState( {
-            current: nextSlide(this.state.current + 1)
+            current: nextSlide(this.state.current - 1)
           })
       }
 
       moveForward() {
         this.setState( {
-            current: nextSlide(this.state.current - 1)
+            current: nextSlide(this.state.current + 1)
           })
       }
 
@@ -74,8 +80,10 @@ class ImageModal extends React.Component {
             <div className={"image"}>
                 <div className={"image-wrapper"}>
                     <div className={"project-links"}>
-                        <a onClick={this.handleOpenModal}><i
+                        <a className={"not-mobile"} onClick={this.handleOpenModal}><i
                             className="fa fa-search-plus"></i></a>
+                        <a className={"mobile"} onClick={this.handleOpenModal}><i
+                            className="fa fa-info-circle"></i></a>
                         {/*<a href={this.props.git} target={"_blank"} rel="noopener noreferrer"><i className="fa fa-github"></i></a>*/}
                     </div>
                    {/*<button onClick={this.handleOpenModal}>Trigger Modal</button>*/}
@@ -120,10 +128,10 @@ class ImageModal extends React.Component {
 
 const UrsasImage = <ImageModal
                             project={"Ursa Minors Website"}
-                            images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
-                            src={UrsaMinors}
+                            images = {[UrsaMinors1,UrsaMinors2, UrsaMinors3]}
+                            src={UrsaMinors1}
                           deploy={"https://ursa-minors.ashley-chang.me/index"}
-                          git={"https://github.com/spswatron/homework-tracker"}
+                          git={""}
                    />
 const HomeworkTrackerImage= <ImageModal
                           project={"Homework Tracker"}
@@ -156,14 +164,14 @@ const ComixMatchImage =  <ImageModal src={ComixMatch1}
 
 const SearchImage =  <ImageModal src={ComixMatch}
                         images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
-                        project={"Comix Match"}
-                          deploy={"http://comix-match.herokuapp.com/"}
-                          git={"https://github.com/spswatron/from-scratch"}
+                        project={"Search"}
+                          deploy={""}
+                          git={""}
                    />
 
 const LastTwo = <div className={"bottom section"}>{HomeworkTrackerImage}{GetBluenoImage}</div>
 
-const ImageList = [ComixMatchImage, ShellImage, UrsasImage, HomeworkTrackerImage, GetBluenoImage, SearchImage]
+const ImageList = [ComixMatchImage, UrsasImage, HomeworkTrackerImage, ShellImage, GetBluenoImage, SearchImage]
 
 function Caption(props) {
     return(

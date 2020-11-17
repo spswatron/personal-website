@@ -13,10 +13,13 @@
 
 .ReactModal__Content {
   background: transparent;
+  width: auto;
+  height: auto;
 }
 
 .ReactModal__Overlay {
   z-index: 300;
+  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -33,7 +36,6 @@ body.ReactModal__Body--open {
 }
 
 .modal {
-  overflow: scroll;
   border-radius: 5px;
   z-index: 500;
   background: #f8f9fa;
