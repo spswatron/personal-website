@@ -1,5 +1,8 @@
 import React from "react";
 import ComixMatch from "../Images/comix-match.png";
+import ComixMatch1 from "../Images/Comix-Match-1.png";
+import ComixMatch2 from "../Images/Comix-Match-2.png";
+import ComixMatch3 from "../Images/Comix-Match-3.png";
 import GetBlueno from "../Images/get-blueno.png";
 import HomeworkTracker from "../Images/homework-tracker.png";
 import UrsaMinors from "../Images/ursa-minors.png";
@@ -132,8 +135,8 @@ const ShellImage = <ImageModal src={Shell}
                           git={"https://github.com/spswatron/from-scratch"}
                    />
 
-const ComixMatchImage =  <ImageModal src={ComixMatch}
-                        images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
+const ComixMatchImage =  <ImageModal src={ComixMatch1}
+                        images = {[ComixMatch1,ComixMatch2, ComixMatch3]}
                         project={"Comix Match"}
                           deploy={"http://comix-match.herokuapp.com/"}
                           git={"https://github.com/spswatron/from-scratch"}
