@@ -59,7 +59,7 @@ class ImageModal extends React.Component {
         const deploy = <a href={this.props.deploy} target={"_blank"} rel="noopener noreferrer">
             <i className="fa fa-link"></i></a>
         return (
-            <div className={"image column"}>
+            <div className={"image"}>
                 <div className={"image-wrapper"}>
                     <div className={"project-links"}>
                         <a onClick={this.handleOpenModal}><i

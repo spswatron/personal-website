@@ -87,7 +87,7 @@ body {
 
   img {
     box-shadow: 0 2px 5px 0px grey;
-    width: 100%;
+    margin: 0 auto;
     object-fit: cover;
     display: block;
   }
@@ -95,6 +95,7 @@ body {
   .image-wrapper {
     position: relative;
     overflow: hidden;
+    //width: 100%;
     box-shadow: 0 2px 5px 0px grey;
 
     .project-links {
@@ -425,9 +426,9 @@ a {
     display: none;
   }
 
-  .image-wrapper{
-    width: max(18vw, 240px);
-  }
+  //.image-wrapper{
+  //  width: max(18vw, 240px);
+  //}
   iframe {
     height: 1150px;
   }
@@ -438,15 +439,15 @@ a {
 
   #projects {
     img {
-      flex: 1.5;
+      max-width: 260px;
+      max-height: 130px;
       //height: auto;
     }
   }
 
-  .image.column {
-    flex: 1;
-    width: 30%;
-    flex-basis: 33%;
+  .image {
+    flex-basis: 28%;
+    padding: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -498,7 +499,9 @@ a {
 
 
 @media (max-width: 768px) {
-
+  .image {
+    padding-bottom: 30px;
+  }
   .image-wrapper {
     max-height: 30vh;
   }
