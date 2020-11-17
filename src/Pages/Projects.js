@@ -7,6 +7,9 @@ import GetBlueno from "../Images/get-blueno.png";
 import GetBlueno1 from "../Images/Get-Blueno-1.png";
 import GetBlueno2 from "../Images/Get-Blueno-2.png";
 import GetBlueno3 from "../Images/Get-Blueno-3.png";
+import Shell1 from "../Images/Shell-1.png";
+import Shell2 from "../Images/Shell-2.png";
+import Shell3 from "../Images/Shell-3.png";
 import HomeworkTracker from "../Images/homework-tracker.png";
 import UrsaMinors from "../Images/ursa-minors.png";
 import Shell from "../Images/shell.png";
@@ -57,10 +60,16 @@ class ImageModal extends React.Component {
       }
     render() {
         const slideImage = this.props.images[this.state.current]
-        const git = <a href={this.props.git} target={"_blank"} rel="noopener noreferrer">
+        let git = <a href={this.props.git} target={"_blank"} rel="noopener noreferrer">
             <i className="fa fa-github"></i></a>
-        const deploy = <a href={this.props.deploy} target={"_blank"} rel="noopener noreferrer">
+        let deploy = <a href={this.props.deploy} target={"_blank"} rel="noopener noreferrer">
             <i className="fa fa-link"></i></a>
+        if (this.props.git === ""){
+            git = <></>
+        }
+        if (this.props.deploy === ""){
+            deploy = <></>
+        }
         return (
             <div className={"image"}>
                 <div className={"image-wrapper"}>
@@ -126,16 +135,16 @@ const HomeworkTrackerImage= <ImageModal
 const GetBluenoImage = <ImageModal
                         project={"GetBlueno"}
                         images = {[GetBlueno1, GetBlueno2, GetBlueno3]}
-                        src={GetBlueno}
+                        src={GetBlueno1}
                           deploy={"https://get-blueno.ashley-chang.me/"}
                           git={"https://github.com/spswatron/GetBlueno"}
                    />
 
-const ShellImage = <ImageModal src={Shell}
-                          images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
+const ShellImage = <ImageModal src={Shell1}
+                          images = {[Shell1,Shell2, Shell3]}
                           project={"Shell"}
-                          deploy={"http://comix-match.herokuapp.com/"}
-                          git={"https://github.com/spswatron/from-scratch"}
+                          deploy={""}
+                          git={""}
                    />
 
 const ComixMatchImage =  <ImageModal src={ComixMatch1}
