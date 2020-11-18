@@ -90,11 +90,13 @@ body {
     object-fit: cover;
     object-position: 0 0;
     display: block;
+    border-radius: 5px;
   }
 
   .image-wrapper {
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
     //width: 100%;
     box-shadow: 0 2px 5px 0px grey;
 

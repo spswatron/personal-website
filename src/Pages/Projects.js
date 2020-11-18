@@ -25,12 +25,7 @@ import ReactModal from 'react-modal';
 
 
 function nextSlide(n) {
-    if(n < 0){
-        return 3 - ((-n) % 3)
-    }
-    else {
-        return n % 3
-    }
+    return (n + 3) % 3
 }
 
 class ImageModal extends React.Component {
@@ -162,8 +157,8 @@ const ComixMatchImage =  <ImageModal src={ComixMatch1}
                           git={"https://github.com/spswatron/from-scratch"}
                    />
 
-const SearchImage =  <ImageModal src={ComixMatch}
-                        images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
+const SearchImage =  <ImageModal src={Shell1}
+                        images = {[Shell1,Shell2, Shell3]}
                         project={"Search"}
                           deploy={""}
                           git={""}
