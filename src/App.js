@@ -25,7 +25,7 @@ function SocialBar() {
         <div className="socials" style={{margin: 0}}>
             <a className="link" href="https://github.com/spswatron" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-github"></i></a>
             <a className="link" href={"https://www.linkedin.com/in/ashley-chang-1080b81a2/"} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
-            <a className="link" href="https://www.instagram.com/spswatron/" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-instagram"></i></a>
+            {/*<a className="link" href="https://www.instagram.com/spswatron/" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-instagram"></i></a>*/}
             <a className="link" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-envelope"></i></a>
             <a className="link" href="/resume" target={"_blank"}  rel="noopener noreferrer" style={{paddingRight: 0}}><i className="fa fa-file"></i></a>
         </div>
@@ -49,14 +49,14 @@ function App() {
         <div className={"big-foot"}>
             <div style={{display:'flex'}} id={"footer"}>
                   <p style={{fontSize: '0.9rem', whiteSpace: 'nowrap'}}>
-                      {"\u00A9 " + new Date().getFullYear().toString() + " Ashley Chang"}
+                      Ashley Chang
                   </p>
                 <SocialBar />
             </div>
 
         </div>
             <p style={{fontSize: '0.9rem', textAlign: 'center'}}>
-                       Made with <i style={{color: 'mix(maroon, red)'}}className="fa fa-heart heart"></i> and SASS
+                {"\u00A9 " + new Date().getFullYear().toString() + ", "}coded with with <i style={{color: 'mix(maroon, red)'}}className="fa fa-heart heart"></i> and SASS
             </p>
         </div>
         {/*{bottom}*/}
