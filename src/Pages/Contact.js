@@ -37,7 +37,7 @@ class ManualModal extends React.Component {
                       <div className={"modal"} style={{maxWidth: '470px'}}>
                             <button className={"exit"} onClick={this.handleCloseModal}><i className="fa fa-times"></i></button>
                                 <h2>
-                                    My Contact Information
+                                    Contact Information
                                 </h2>
                           <br/>
                             <div className={"content"} style={{width: '24rem'}}>
@@ -120,6 +120,8 @@ function ContactForm(props) {
             <FailureMessage i={i} changeStatus={props.changeStatus}/>)
     return(
         <>
+                <div className={"row"}>
+                {/*<div className={"column"}>*/}
                 <label>
                     Name*
                 </label>
@@ -128,6 +130,8 @@ function ContactForm(props) {
                            onChange = {props.nameChange}
                            onKeyPress = {props.enterCheck}
                     required />
+                    {/*</div>*/}
+                <div className={"column"}>
                 <label>
                     Email*
                 </label>
@@ -136,6 +140,8 @@ function ContactForm(props) {
                            onChange = {props.emailChange}
                            onKeyPress = {props.enterCheck}
                     required/>
+                </div>
+                </div>
                 <label>
                     Subject
                 </label>
