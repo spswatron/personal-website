@@ -9,25 +9,16 @@ import Contact from "./Pages/Contact";
 import './CSS/stars.css'
 import Sidebar from "./Pages/Sidebar";
 import NewHome from "./Pages/newHome";
+import { Link } from 'react-scroll'
 
-const bottom = <div className="bottom">
-    {"\u00A9"} {new Date().getFullYear()} Ashley Chang. Made with SASS and Love
-                    <ul>
-                        <li><a className="link" href="https://github.com/spswatron" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-github"></i></a></li>
-                        <li><a className="link" href={"https://www.linkedin.com/in/ashley-chang-1080b81a2/"} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a></li>
-                        <li><a className="link" href="https://www.instagram.com/spswatron/" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-instagram"></i></a></li>
-                        <li><a className="link" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-envelope"></i></a></li>
-                        <li><a className="link" href="/resume" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-file"></i></a></li>
-                    </ul>
-                </div>
 function SocialBar() {
     return(
         <div className="socials" style={{margin: 0}}>
-            <a className="link" href="https://github.com/spswatron" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-github"></i></a>
-            <a className="link" href={"https://www.linkedin.com/in/ashley-chang-1080b81a2/"} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
+            <a className="link" href="https://github.com/spswatron" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-github"/></a>
+            <a className="link" href={"https://www.linkedin.com/in/ashley-chang-1080b81a2/"} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-linkedin"/></a>
             {/*<a className="link" href="https://www.instagram.com/spswatron/" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-instagram"></i></a>*/}
-            <a className="link" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-envelope"></i></a>
-            <a className="link" href="/resume" target={"_blank"}  rel="noopener noreferrer" style={{paddingRight: 0}}><i className="fa fa-file"></i></a>
+            <a className="link" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-envelope"/></a>
+            <a className="link" href="/resume" target={"_blank"}  rel="noopener noreferrer" style={{paddingRight: 0}}><i className="fa fa-file"/></a>
         </div>
     );
 }
@@ -48,15 +39,17 @@ function App() {
         <div id={"footer"} className={"row"}>
         <div className={"big-foot"}>
             <div style={{display:'flex'}} id={"footer"}>
-                  <p style={{fontSize: '0.9rem', whiteSpace: 'nowrap'}}>
+                  <Link activeClass="active" to="new-home"
+                                           spy={true} smooth={true} offset={0} d
+                                           uration={50}><p style={{fontSize: '0.9rem', whiteSpace: 'nowrap'}}>
                       Ashley Chang
-                  </p>
+                  </p></Link>
                 <SocialBar />
             </div>
 
         </div>
             <p style={{fontSize: '0.9rem', textAlign: 'center'}}>
-                {"\u00A9 " + new Date().getFullYear().toString() + ", "}coded with with <i style={{color: 'mix(maroon, red)'}}className="fa fa-heart heart"></i> and SASS
+                {"\u00A9 " + new Date().getFullYear().toString() + ", "}coded with with <i style={{color: 'mix(maroon, red)'}} className="fa fa-heart heart"/> and SASS
             </p>
         </div>
         {/*{bottom}*/}

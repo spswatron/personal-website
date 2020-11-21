@@ -1,8 +1,5 @@
 import React from "react";
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import 'react-tabs/style/react-tabs.css';
-
 import Pager from "./Page"
 import 'react-vertical-timeline-component/style.min.css';
 import '../CSS/TimeLine.scss'

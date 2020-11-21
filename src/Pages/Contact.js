@@ -301,8 +301,10 @@ class Core extends React.Component{
                   headers: {
                       'Content-Type': 'application/json',
                   },
-                  body: JSON.stringify(this.state),
-              })
+                  body: JSON.stringify({name: this.state.name,
+                                                email: this.state.email,
+                                                subject: this.state.subject,
+                                                message: this.state.message.replace(/\n/g, "<br>")})})
                   .then(res =>
                       this.setState({statuses: [...[res.status===200], ...this.state.statuses], circle: false}))
                   .catch(() => this.setState({statuses: [...[false], ...this.state.statuses], circle: false}))})
