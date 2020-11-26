@@ -2,7 +2,6 @@ import React from "react";
 import ComixMatch1 from "../Images/Comix-Match-1.png";
 import ComixMatch2 from "../Images/Comix-Match-2.png";
 import ComixMatch3 from "../Images/Comix-Match-3.png";
-import GetBlueno from "../Images/get-blueno.png";
 import GetBlueno1 from "../Images/Get-Blueno-1.png";
 import GetBlueno2 from "../Images/Get-Blueno-2.png";
 import GetBlueno3 from "../Images/Get-Blueno-3.png";
@@ -177,14 +176,14 @@ class ImageModal extends React.Component {
                                 <div className={"img row"}>
                                     <div className={"slideshow arrow"}><button onClick={() => this.moveBack()}><i className="fa fa-chevron-left"></i></button></div>
                                     <div className={"img column"}>
-                                        <img src={slideImage}/>
+                                        <img src={slideImage} loading="lazy"/>
                                     </div>
                                     <div className={"slideshow arrow"}><button onClick={() => this.moveForward()}><i className="fa fa-chevron-right"></i></button></div>
                                 </div>
                           {this.props.caption}
                             </div>
                     </ReactModal>
-                    <img src={this.props.src}/></div>
+                    <img src={this.props.src} loading="lazy"/></div>
             </div>
         )
     }
