@@ -37,15 +37,11 @@ function ComixMatchCaption(props){
             <div className={"content"}>
                 <div className={"caption"}><strong>Tech pool: </strong> flask, pandas, selenium, html, and css</div>
                 <br/>
-                {/*My first foray into the world of webscraping. I used Selenium to acquire the goodreads rating information for*/}
-                {/*over 7000 books (especially comic books).*/}
-                {/*<br /><br />Since goodreads doesn't allow users to sort the books in their shelves*/}
-                {/*by traits such as total reviews, average review, or random, I DIY-ed that.*/}
-                This summer, I dedicated a chunk of time to finding more comic books to read.
+                Using the powers of selenium and flask, I created a website that contains the information of over seven thousand books from goodreads' shelves.
                 <br /><br />
-                Using data I webscraped from goodreads' book shelves, I created a website in which this information
-                could now finally be sorted by total reviews, average reviews, random, and other fun things. I love
-                Calvin Hobbes, so this was delightful.
+                This data can be sorted by total reviews, average reviews, random, and other fun things. Goodreads doesn't
+                let its users sort its data by these metrics, but I really wanted to find more comic books to read, so this seemed like the natural conclusion.
+                Learning that everyone loves Calvin and Hobbes was a delightful bonus.
                 <div className={"i row"}>{git} {deploy}</div>
             </div>
         );
@@ -65,16 +61,66 @@ function UrsaMinorsCaption(props){
         }
         return(
             <div className={"content"}>
-                <div className={"caption"}><strong>Tech pool: </strong> react, flask</div>
+                <div className={"caption"}><strong>Thanks to:</strong> react, flask, and the google sheets api</div>
                 <br/>
-                I developed a website for my acapella group with a react front-end and a flask back-end
-                (for emails and etcetera).
+                After staring at our old weebly site for so long, I obtained the blessing of our presidents and developed a new website for my acapella group.
                 <br /><br />
-                Although I removed the feature now for runtime sake, for a while, in order to encourage
-                the different members in my group to fill out the Google Form for member info, I
-                populated the Members Info sections with information from the Google Sheet with their form response.
-                Using the flask backend and the Google Sheets API, I made it so that if a person filled in a google form
-                and then reloaded the Members Info page, the information would automatically update on the site.
+                The site has a react front-end and a flask back-end for extra shenanigans, like the contact form. I have finished
+                designing the site, but am giving it extra time for the members to fill out a google form with their bios{"\u2014"}but when they do,
+                the information on the site will automatically update via the google sheets api. For runtime sake, I'll probably later
+                remove this feature, but for now it's fun.
+                <div className={"i row"}>{git} {deploy}</div>
+            </div>
+        );
+
+}
+
+function CarpeCaption(props){
+    let git = <a href={props.git} target={"_blank"} rel="noopener noreferrer">
+            <i className="fa fa-github"/></a>
+    let deploy = <a href={props.deploy} target={"_blank"} rel="noopener noreferrer">
+            <i className="fa fa-link"/></a>
+    if (props.git === ""){
+            git = <></>
+        }
+        if (props.deploy === ""){
+            deploy = <></>
+        }
+        return(
+            <div className={"content"}>
+                <div className={"caption"}><strong>Thanks to:</strong> react and the world of npm</div>
+                <br/>
+                Carpe is a productivity suite I built out as a pick-me-up during quarantine.
+                <br /><br />
+                I started with my idea for Elapsify, which starts a stopwatch every time a task is entered. I hoped to ramp up a bit of my stress and productivity (and it worked!).
+                Then I built out Homework Tracker and Message Center as my own special ways of listing those to-dos.
+                Through this personal project, I learned react. Quite fantastic, this library.
+                <div className={"i row"}>{git} {deploy}</div>
+            </div>
+        );
+
+}
+
+function ShellCaption(props){
+    let git = <a href={props.git} target={"_blank"} rel="noopener noreferrer">
+            <i className="fa fa-github"/></a>
+    let deploy = <a href={props.deploy} target={"_blank"} rel="noopener noreferrer">
+            <i className="fa fa-link"/></a>
+    if (props.git === ""){
+            git = <></>
+        }
+        if (props.deploy === ""){
+            deploy = <></>
+        }
+        return(
+            <div className={"content"}>
+                <div className={"caption"}><strong>Tech crew:</strong> c, gdb, and the linux man-pages</div>
+                <br/>
+                I remember when I first saw the characters "cd" I was so confused{"\u2014"}but that made building this
+                c-based shell clone even more freeing.
+                <br /><br />
+                Over the course of this project, I learned to implement the wonders of foreground and background processes,
+                input and output redirection, and of course, command execution. It only takes one "cd" to change everything.
                 <div className={"i row"}>{git} {deploy}</div>
             </div>
         );
@@ -94,9 +140,9 @@ function GetBluenoCaption(props){
         }
         return(
             <div className={"content"}>
-                <div className={"caption"}><strong>Uses: </strong> html, css, javascript</div>
+                <div className={"caption"}><strong>Using: </strong> html, css, javascript</div>
                  <br/>
-                 A 2048 clone that uses brunonian bears rather than numbers. Not much to
+                 Here lies a 2048 clone that uses brunonian bears rather than numbers. I don't have much to
                   say here, except that everyone I show this game to plays it for more than 20
                    minutes.
                 <div className={"i row"}>{git} {deploy}</div>
@@ -105,6 +151,31 @@ function GetBluenoCaption(props){
 
 }
 
+function SearchCaption(props){
+    let git = <a href={props.git} target={"_blank"} rel="noopener noreferrer">
+            <i className="fa fa-github"/></a>
+    let deploy = <a href={props.deploy} target={"_blank"} rel="noopener noreferrer">
+            <i className="fa fa-link"/></a>
+    if (props.git === ""){
+            git = <></>
+        }
+        if (props.deploy === ""){
+            deploy = <></>
+        }
+        return(
+            <div className={"content"}>
+                <div className={"caption"}><strong>Introducing:</strong> scala, xml, and sbt</div>
+                <br/>
+                When life gives you a big XML wikis, I guess you slap a little bit of TF-IDF on it and call it a search engine.
+                <br /><br />
+                Using scala and the pagerank algorithm, I implemented a search engine that takes the pages and pages of
+                information in given XML wikis and presents it in the format pictured above. In the process, I focused on time-complexity,
+                space complexity, and of course, (soul) searching.
+                <div className={"i row"}>{git} {deploy}</div>
+            </div>
+        );
+
+}
 
 function nextSlide(n) {
     return (n + 3) % 3
@@ -195,7 +266,7 @@ const CarpeImage = <ImageModal
                             src={Carpe1}
                           deploy={"https://carpe.ashley-chang.me/"}
                           git={"https://github.com/spswatron/homework-tracker"}
-                          caption={<ComixMatchCaption deploy={"https://carpe.ashley-chang.me/"}
+                          caption={<CarpeCaption deploy={"https://carpe.ashley-chang.me/"}
                           git={"https://github.com/spswatron/homework-tracker"}/>}
                    />
 const GetBluenoImage = <ImageModal
@@ -213,7 +284,7 @@ const ShellImage = <ImageModal src={Shell1}
                           project={"Shell"}
                           deploy={""}
                           git={""}
-                          caption={<ComixMatchCaption deploy={""}
+                          caption={<ShellCaption deploy={""}
                           git={""}/>}
                    />
 
@@ -231,7 +302,7 @@ const SearchImage =  <ImageModal src={Search1}
                         project={"Search"}
                           deploy={""}
                           git={""}
-                        caption={<ComixMatchCaption deploy={""} git={""}/>}
+                        caption={<SearchCaption deploy={""} git={""}/>}
                    />
 
 const ImageList = [ComixMatchImage, UrsasImage, CarpeImage, ShellImage, GetBluenoImage, SearchImage]
