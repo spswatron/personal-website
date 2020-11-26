@@ -6,14 +6,18 @@ import GetBlueno from "../Images/get-blueno.png";
 import GetBlueno1 from "../Images/Get-Blueno-1.png";
 import GetBlueno2 from "../Images/Get-Blueno-2.png";
 import GetBlueno3 from "../Images/Get-Blueno-3.png";
+import Carpe1 from "../Images/Carpe-1.png"
+import Carpe2 from "../Images/Carpe-2.png"
+import Carpe3 from "../Images/Carpe-3.png"
 import Shell1 from "../Images/Shell-1.png";
 import Shell2 from "../Images/Shell-2.png";
 import Shell3 from "../Images/Shell-3.png";
-import HomeworkTracker from "../Images/homework-tracker.png";
-import UrsaMinors from "../Images/ursa-minors.png";
 import UrsaMinors1 from "../Images/Ursa-Minors-1.png";
 import UrsaMinors2 from "../Images/Ursa-Minors-2.png";
 import UrsaMinors3 from "../Images/Ursa-Minors-3.png";
+import Search1 from "../Images/Search-1.png";
+import Search2 from "../Images/Search-2.png";
+import Search3 from "../Images/Search-3.png";
 import Pager from "./Page";
 import '../CSS/modal.scss'
 import ReactModal from 'react-modal';
@@ -196,13 +200,13 @@ const UrsasImage = <ImageModal
                             caption={<UrsaMinorsCaption deploy={"https://ursa-minors.ashley-chang.me/index"}
                           git={""}/>}
                    />
-const HomeworkTrackerImage= <ImageModal
-                          project={"Homework Tracker"}
-                          images = {[UrsaMinors,HomeworkTracker, GetBlueno]}
-                            src={HomeworkTracker}
-                          deploy={"https://homework-tracker.ashley-chang.me/"}
+const CarpeImage = <ImageModal
+                          project={"Carpe"}
+                          images = {[Carpe1,Carpe2, Carpe3]}
+                            src={Carpe1}
+                          deploy={"https://carpe.ashley-chang.me/"}
                           git={"https://github.com/spswatron/homework-tracker"}
-                          caption={<ComixMatchCaption deploy={"https://homework-tracker.ashley-chang.me/"}
+                          caption={<ComixMatchCaption deploy={"https://carpe.ashley-chang.me/"}
                           git={"https://github.com/spswatron/homework-tracker"}/>}
                    />
 const GetBluenoImage = <ImageModal
@@ -233,30 +237,17 @@ const ComixMatchImage =  <ImageModal src={ComixMatch1}
                           git={"https://github.com/spswatron/from-scratch"}/>}
                    />
 
-const SearchImage =  <ImageModal src={Shell1}
-                        images = {[Shell1,Shell2, Shell3]}
+const SearchImage =  <ImageModal src={Search1}
+                        images = {[Search1, Search2, Search3]}
                         project={"Search"}
                           deploy={""}
                           git={""}
                         caption={<ComixMatchCaption deploy={""} git={""}/>}
                    />
 
-const LastTwo = <div className={"bottom section"}>{HomeworkTrackerImage}{GetBluenoImage}</div>
+const LastTwo = <div className={"bottom section"}>{CarpeImage}{GetBluenoImage}</div>
 
-const ImageList = [ComixMatchImage, UrsasImage, HomeworkTrackerImage, ShellImage, GetBluenoImage, SearchImage]
-
-function Caption(props) {
-    return(
-        <div className={"caption row"}>
-            <div className={"caption column"}>
-                {/*<a href={props.link} target={"_blank"}></a>*/}
-                <h4><div>{props.name}</div></h4>
-            </div>
-            <div className={"caption column"}>
-            </div>
-        </div>
-    );
-}
+const ImageList = [ComixMatchImage, UrsasImage, CarpeImage, ShellImage, GetBluenoImage, SearchImage]
 
 class Core extends React.Component {
     constructor(props) {
@@ -268,65 +259,9 @@ class Core extends React.Component {
     render() {
         return (
            <>
-               <h1>Projects <i className="fa fa-dumbbell"></i></h1>
-               {/*<h2 className={"row"} style={{justifyContent: 'center', marginTop: 0, textAlign: 'center'}}>*/}
-               {/*     <div>The things I've done :) Hover over the images for links and repos! </div>*/}
-               {/* </h2>*/}
+               <h1>Projects</h1>
                <div className={"row"}>
                    {ImageList}
-               {/*    <Caption name={"Comix Match"} link={'https://comix-match.herokuapp.com/'} />*/}
-               {/*    <Image src={ComixMatch}*/}
-               {/*           deploy={"http://comix-match.herokuapp.com/"}*/}
-               {/*           git={"https://github.com/spswatron/from-scratch"}*/}
-               {/*    />*/}
-               {/*</div>*/}
-               {/*<div className={"row"}>*/}
-               {/*   <Caption name={"Shell"} link={'https://get-blueno.ashley-chang.me/'}/>*/}
-               {/*    <Image src={Shell}*/}
-               {/*           deploy={"https://get-blueno.ashley-chang.me/"}*/}
-               {/*           git={"https://github.com/spswatron/GetBlueno"}*/}
-               {/*    />*/}
-               {/*    <div className={"column"}>*/}
-               {/*        <div><strong>Uses: </strong> html, css, javascript </div>*/}
-               {/*        <br/>*/}
-               {/*        A 2048 clone that uses brunonian bears rather than numbers. Not much to*/}
-               {/*        say here, except that everyone I show this game to plays it for more than 20*/}
-               {/*        minutes.*/}
-               {/*    </div>*/}
-               {/*</div>*/}
-               {/*<div className={"row"}>*/}
-               {/*   <Caption name={"Get Blueno"} link={'https://get-blueno.ashley-chang.me/'}/>*/}
-               {/*    <Image src={GetBlueno}*/}
-               {/*           deploy={"https://get-blueno.ashley-chang.me/"}*/}
-               {/*           git={"https://github.com/spswatron/GetBlueno"}*/}
-               {/*    />*/}
-               {/*    <div className={"column"}>*/}
-               {/*        <div><strong>Uses: </strong> html, css, javascript </div>*/}
-               {/*        <br/>*/}
-               {/*        A 2048 clone that uses brunonian bears rather than numbers. Not much to*/}
-               {/*        say here, except that everyone I show this game to plays it for more than 20*/}
-               {/*        minutes.*/}
-               {/*    </div>*/}
-               {/*</div>*/}
-               {/*<div className={"row"}>*/}
-               {/*   <Caption name={"Homework Tracker"} link={'https://homework-tracker.ashley-chang.me/'}/>*/}
-               {/*    <Image src={HomeworkTracker}*/}
-               {/*           deploy={"https://homework-tracker.ashley-chang.me/"}*/}
-               {/*           git={"https://github.com/spswatron/homework-tracker"}*/}
-               {/*    />*/}
-               {/*    <div className={"column"}>*/}
-               {/*        insert description 3*/}
-               {/*    </div>*/}
-               {/*</div>*/}
-               {/*<div className={"row"}>*/}
-               {/*    <Caption name={"Ursa Minors Website"} link={'https://ursa-minors.ashley-chang.me/index'}/>*/}
-               {/*    <Image src={UrsaMinors}*/}
-               {/*           deploy={"https://ursa-minors.ashley-chang.me/index"}*/}
-               {/*           git={"https://github.com/spswatron/homework-tracker"}*/}
-               {/*    />*/}
-               {/*    <div className={"column"}>*/}
-               {/*        insert description 4*/}
-               {/*    </div>*/}
                </div>
             </>
         );
