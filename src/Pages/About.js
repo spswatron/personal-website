@@ -3,7 +3,7 @@ import myFace from './IMG_3441.jpg';
 import Pager from "./Page"
 
 function Face(){
-    return <img style={{borderRadius:'5px'}} src={myFace} />;
+    return <img alt="Ashley wearing a jean jacket and smiling in her backyard in Forest, VA" style={{borderRadius:'5px'}} src={myFace} />;
 }
 
 function Core() {
@@ -28,32 +28,18 @@ function Core() {
                         </div>
                         <br />
                         <div style = {{marginTop: '0'}}>
-                            I'm a kiddo who loves computers (and that specific snake species), comic books, poems about anthromorphic awakenings, and the great art of boots and cats.
+                            I'm a kiddo who loves computers (and that specific snake species), comic books, poems about anthropomorphic awakenings, and the great art of boots and cats.
                         </div>
                         <br />
                         <div style = {{marginTop: '0'}}>
                             These days, I've been living it up while studying remotely in Forest, Virginia, where the great art (and loss) of Zoom is no stranger.
-                            {/*So far, I've been able make a website for my acapella group, a book rating aggregator for comic books, and a few other things linked*/}
-                            {/*<span> </span><Link activeClass="active" to="projects"*/}
-                            {/*               spy={true} smooth={true} offset={-25} d*/}
-                            {/*               uration={50}>*/}
-                            {/*    here</Link>.*/}
-
                         </div>
                         <br />
                         <div style = {{marginTop: '0'}}>
-                            {/*If you'd like to, you can contact me <Link activeClass="active" to="contact"*/}
-                            {/*               spy={true} smooth={true} offset={-25} d*/}
-                            {/*               uration={50}>*/}
-                            {/*    here</Link>. 'Twould be delightful :)*/}
                             Thanks a whole ton for visiting my site :)
                         </div>
                         <br />
                         <div style = {{marginTop: '0'}}>
-                            {/*If you'd like to, you can contact me <Link activeClass="active" to="contact"*/}
-                            {/*               spy={true} smooth={true} offset={-25} d*/}
-                            {/*               uration={50}>*/}
-                            {/*    here</Link>. 'Twould be delightful :)*/}
                             Let's get this ship rolling!
                         </div>
                     </div>

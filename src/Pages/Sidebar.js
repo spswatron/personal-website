@@ -23,7 +23,7 @@ class Sidebar extends React.Component {
                 isOpen={this.state.menuOpen}
                 onStateChange={(state) => this.handleStateChange(state)}
                 right>
-                <li className="nav3 nav fa"></li>
+              <li className="nav3 nav fa"/>
               <li className="nav2"> <Link activeClass="active" to="about" spy={true} smooth={true} offset={-35} duration={300} onClick={() => this.closeMenu()}>About</Link></li>
               <li className="nav2"><Link activeClass="active" to="experiences" spy={true} smooth={true} offset={-25}  duration={300} onClick={() => this.closeMenu()}>Experiences</Link></li>
               <li className="nav2"><Link activeClass="active" to="projects" spy={true} smooth={true} offset={-25} duration={300} onClick={() => this.closeMenu()}>Projects</Link></li>

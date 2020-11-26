@@ -111,8 +111,8 @@ function nextSlide(n) {
 }
 
 class ImageModal extends React.Component {
-    constructor () {
-        super();
+    constructor (props) {
+        super(props);
         this.state = {
           showModal: false,
           current: 0
@@ -143,16 +143,6 @@ class ImageModal extends React.Component {
       }
     render() {
         const slideImage = this.props.images[this.state.current]
-        let git = <a href={this.props.git} target={"_blank"} rel="noopener noreferrer">
-            <i className="fa fa-github"/></a>
-        let deploy = <a href={this.props.deploy} target={"_blank"} rel="noopener noreferrer">
-            <i className="fa fa-link"/></a>
-        if (this.props.git === ""){
-            git = <></>
-        }
-        if (this.props.deploy === ""){
-            deploy = <></>
-        }
         return (
             <div className={"image"}>
                 <div className={"image-wrapper"}>
@@ -174,16 +164,16 @@ class ImageModal extends React.Component {
                                 </h2>
                                 <hr/>
                                 <div className={"img row"}>
-                                    <div className={"slideshow arrow"}><button onClick={() => this.moveBack()}><i className="fa fa-chevron-left"></i></button></div>
+                                    <div className={"slideshow arrow"}><button onClick={() => this.moveBack()}><i className="fa fa-chevron-left"/></button></div>
                                     <div className={"img column"}>
-                                        <img src={slideImage} loading="lazy"/>
+                                        <img src={slideImage} alt={""} loading="lazy"/>
                                     </div>
-                                    <div className={"slideshow arrow"}><button onClick={() => this.moveForward()}><i className="fa fa-chevron-right"></i></button></div>
+                                    <div className={"slideshow arrow"}><button onClick={() => this.moveForward()}><i className="fa fa-chevron-right"/></button></div>
                                 </div>
                           {this.props.caption}
                             </div>
                     </ReactModal>
-                    <img src={this.props.src} loading="lazy"/></div>
+                    <img src={this.props.src} alt={"Screenshot of " + this.props.project + " project"} loading="lazy"/></div>
             </div>
         )
     }
@@ -243,8 +233,6 @@ const SearchImage =  <ImageModal src={Search1}
                           git={""}
                         caption={<ComixMatchCaption deploy={""} git={""}/>}
                    />
-
-const LastTwo = <div className={"bottom section"}>{CarpeImage}{GetBluenoImage}</div>
 
 const ImageList = [ComixMatchImage, UrsasImage, CarpeImage, ShellImage, GetBluenoImage, SearchImage]
 

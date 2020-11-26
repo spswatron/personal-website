@@ -34,7 +34,6 @@ $soft-white: #f8f9fa;
 
 html {
   @include bigFlex();
-  //scroll-behavior: smooth;
 }
 
 body {
@@ -85,7 +84,7 @@ body {
   }
 
   img {
-    box-shadow: 0 2px 5px 0px grey;
+    box-shadow: 0 2px 5px 0 grey;
     margin: 0 auto;
     object-fit: cover;
     object-position: 0 0;
@@ -98,7 +97,7 @@ body {
     overflow: hidden;
     border-radius: 5px;
     //width: 100%;
-    box-shadow: 0 2px 5px 0px grey;
+    box-shadow: 0 2px 5px 0 grey;
 
     .project-links {
       position: absolute;
@@ -112,8 +111,6 @@ body {
         font-size: 30px;
         display: none;
       }
-
-      //z-index: -1;
     }
   }
 
@@ -161,7 +158,6 @@ body {
   }
 
   .column img {
-    //width: 100%;
   }
 }
 
@@ -169,12 +165,6 @@ body {
 #resume {
    background: linear-gradient(180deg,#F7FAF2,#ffffff);
 }
-//:target::before {
-//  content: "";
-//  display: block;
-//  height: 60px; /* fixed header height*/
-//  margin: -60px 0 0; /* negative fixed header height */
-//}
 
 .App {
   @include bigFlex();
@@ -315,6 +305,19 @@ a {
   background-color: $soft-white;
 }
 
+.clear {
+  font-family: $font-stack;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.clear:hover {
+  box-shadow: none;
+  background: transparent;
+  border: none;
+}
+
 #experiences {
   background: linear-gradient(180deg,#F2FAFF,#ffffff);
   .container {
@@ -436,9 +439,6 @@ a {
     display: none;
   }
 
-  //.image-wrapper{
-  //  width: max(18vw, 240px);
-  //}
   iframe {
     height: 1150px;
   }
@@ -539,14 +539,6 @@ a {
     margin-bottom: 2%;
   }
 
-  //.words.column::after{
-  //  content: '';
-  //  display: block;
-  //  border-top: 1px solid gray;
-  //  margin-top: 2vh;
-  //  margin-bottom: 2%;
-  //}
-
   #new-home h1 {
     font-size: 10vh;
   }
@@ -556,13 +548,6 @@ a {
   }
 
   #about {
-    //.row {
-    //  flex-direction: column-reverse;
-    //}
-    //img {
-    //  width: 60%;
-    //  margin: 0 auto;
-    //}
     .container {
       margin: 5vh;
     }
@@ -573,9 +558,6 @@ a {
     .face.column {
       margin-top: 3vh;
     }
-    //img {
-    //  display: none;
-    //}
   }
   .image-wrapper{
     width: 100%;
@@ -586,7 +568,7 @@ a {
 
   #projects {
     .column {
-      padding-right: 0vw;
+      padding-right: 0;
     }
   }
   #new-home {

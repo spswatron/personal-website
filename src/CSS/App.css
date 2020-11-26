@@ -49,7 +49,7 @@ body {
   justify-content: center;
 }
 #projects img {
-  box-shadow: 0 2px 5px 0px grey;
+  box-shadow: 0 2px 5px 0 grey;
   margin: 0 auto;
   object-fit: cover;
   object-position: 0 0;
@@ -60,7 +60,7 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0 2px 5px 0px grey;
+  box-shadow: 0 2px 5px 0 grey;
 }
 #projects .image-wrapper .project-links {
   position: absolute;
@@ -253,6 +253,19 @@ a {
   display: flex;
   justify-content: space-between;
   background-color: #f8f9fa;
+}
+
+.clear {
+  font-family: Montserrat, sans-serif;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.clear:hover {
+  box-shadow: none;
+  background: transparent;
+  border: none;
 }
 
 #experiences {
@@ -483,7 +496,7 @@ a {
   }
 
   #projects .column {
-    padding-right: 0vw;
+    padding-right: 0;
   }
 
   #new-home {
