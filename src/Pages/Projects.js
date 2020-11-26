@@ -214,6 +214,7 @@ class ImageModal extends React.Component {
       }
     render() {
         const slideImage = this.props.images[this.state.current]
+        const altTag = this.props.alts[this.state.current]
         return (
             <div className={"image"}>
                 <div className={"image-wrapper"}>
@@ -222,9 +223,7 @@ class ImageModal extends React.Component {
                             className="fa fa-search-plus"/></button>
                         <button className={"mobile"} onClick={this.handleOpenModal}><i
                             className="fa fa-info-circle"/></button>
-                        {/*<a href={this.props.git} target={"_blank"} rel="noopener noreferrer"><i className="fa fa-github"></i></a>*/}
                     </div>
-                   {/*<button onClick={this.handleOpenModal}>Trigger Modal</button>*/}
                     <ReactModal
                        isOpen={this.state.showModal}
                     >
@@ -244,7 +243,7 @@ class ImageModal extends React.Component {
                           {this.props.caption}
                             </div>
                     </ReactModal>
-                    <img src={this.props.src} alt={"Screenshot of " + this.props.project + " project"} loading="lazy"/></div>
+                    <img src={this.props.src} alt={altTag} loading="lazy"/></div>
             </div>
         )
     }
@@ -259,6 +258,8 @@ const UrsasImage = <ImageModal
                           git={""}
                             caption={<UrsaMinorsCaption deploy={"https://ursa-minors.ashley-chang.me/index"}
                           git={""}/>}
+                            alts={["Ursa Minors acapella group website landing page with photo of the group",
+                                "Member Info page for current Ursa Minors", "contact form for website"]}
                    />
 const CarpeImage = <ImageModal
                           project={"Carpe"}
@@ -268,6 +269,8 @@ const CarpeImage = <ImageModal
                           git={"https://github.com/spswatron/homework-tracker"}
                           caption={<CarpeCaption deploy={"https://carpe.ashley-chang.me/"}
                           git={"https://github.com/spswatron/homework-tracker"}/>}
+                          alts={["Carpe website with calendar that tasks can be inputted into and taken out of", "Page with" +
+                          "rich text editor for to-do list messages", "Elapsify to-do list that starts a stopwatch for every task entered"]}
                    />
 const GetBluenoImage = <ImageModal
                         project={"GetBlueno"}
@@ -277,6 +280,8 @@ const GetBluenoImage = <ImageModal
                           git={"https://github.com/spswatron/GetBlueno"}
                         caption={<GetBluenoCaption deploy={"https://get-blueno.ashley-chang.me/"}
                           git={"https://github.com/spswatron/GetBlueno"}/>}
+                        alts={["Picture of Brown University bears and president in 2048 clone game", "Game Over message with" +
+                        "even more bears in the margins of the site", "Success message for game that says 'You Brought Blueno Back!"]}
                    />
 
 const ShellImage = <ImageModal src={Shell1}
@@ -286,6 +291,9 @@ const ShellImage = <ImageModal src={Shell1}
                           git={""}
                           caption={<ShellCaption deploy={""}
                           git={""}/>}
+                          alts={["Screen shot of shell clone that executed the banner command as well as foreground and background" +
+                          "signal handling commands", "shell clone with input and output redirection involving usr/bin/calendar",
+                              "shell clone executing figlet and banner commands"]}
                    />
 
 const ComixMatchImage =  <ImageModal src={ComixMatch1}
@@ -295,6 +303,9 @@ const ComixMatchImage =  <ImageModal src={ComixMatch1}
                           git={"https://github.com/spswatron/from-scratch"}
                         caption={<ComixMatchCaption deploy={"http://comix-match.herokuapp.com/"}
                           git={"https://github.com/spswatron/from-scratch"}/>}
+                          alts={["Comix Match homepage with comic books sorted from highest " +
+                          "average rating to lowest", "Comix Match with comics sorted by random", "Chix match, " +
+                          "which is just Comix Match for chicklit, with books sorted by total reviews"]}
                    />
 
 const SearchImage =  <ImageModal src={Search1}
@@ -303,6 +314,11 @@ const SearchImage =  <ImageModal src={Search1}
                           deploy={""}
                           git={""}
                         caption={<SearchCaption deploy={""} git={""}/>}
+                           alts={["Results of search results for 'rock,' which are Stage, Nirvana, Granite, " +
+                           "Mountaineering, Kyanite, Men at Work, Jamming, Paleogne, and the Grateful Dead",
+                          "Results for for 'chocolate,' which are Pan flute, Malvales, Matzo, Merlot, Mandy Patinkin," +
+                          "Cuisine of the Midwestern United States, History of the Faroe Islands, Milk, Pennsylvania, and Lavender",
+                               "Results for 'california' search and a bit of the 'texas' search"]}
                    />
 
 const ImageList = [ComixMatchImage, UrsasImage, CarpeImage, ShellImage, GetBluenoImage, SearchImage]
