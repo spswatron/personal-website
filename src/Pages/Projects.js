@@ -266,9 +266,9 @@ const CarpeImage = <ImageModal
                           images = {[Carpe1,Carpe2, Carpe3]}
                             src={Carpe1}
                           deploy={"https://carpe.ashley-chang.me/"}
-                          git={"https://github.com/spswatron/homework-tracker"}
+                          git={"https://github.com/spswatron/carpe"}
                           caption={<CarpeCaption deploy={"https://carpe.ashley-chang.me/"}
-                          git={"https://github.com/spswatron/homework-tracker"}/>}
+                          git={"https://github.com/spswatron/carpe"}/>}
                           alts={["Carpe website with calendar that tasks can be inputted into and taken out of", "Page with" +
                           "rich text editor for to-do list messages", "Elapsify to-do list that starts a stopwatch for every task entered"]}
                    />
@@ -277,9 +277,9 @@ const GetBluenoImage = <ImageModal
                         images = {[GetBlueno1, GetBlueno2, GetBlueno3]}
                         src={GetBlueno1}
                           deploy={"https://get-blueno.ashley-chang.me/"}
-                          git={"https://github.com/spswatron/GetBlueno"}
+                          git={"https://github.com/spswatron/get-blueno"}
                         caption={<GetBluenoCaption deploy={"https://get-blueno.ashley-chang.me/"}
-                          git={"https://github.com/spswatron/GetBlueno"}/>}
+                          git={"https://github.com/spswatron/get-blueno"}/>}
                         alts={["Picture of Brown University bears and president in 2048 clone game", "Game Over message with" +
                         "even more bears in the margins of the site", "Success message for game that says 'You Brought Blueno Back!"]}
                    />
@@ -300,9 +300,9 @@ const ComixMatchImage =  <ImageModal src={ComixMatch1}
                         images = {[ComixMatch1,ComixMatch2, ComixMatch3]}
                         project={"Comix Match"}
                           deploy={"http://comix-match.herokuapp.com/"}
-                          git={"https://github.com/spswatron/from-scratch"}
+                          git={"https://github.com/spswatron/comix-match"}
                         caption={<ComixMatchCaption deploy={"http://comix-match.herokuapp.com/"}
-                          git={"https://github.com/spswatron/from-scratch"}/>}
+                          git={"https://github.com/spswatron/comix-match"}/>}
                           alts={["Comix Match homepage with comic books sorted from highest " +
                           "average rating to lowest", "Comix Match with comics sorted by random", "Chix match, " +
                           "which is just Comix Match for chicklit, with books sorted by total reviews"]}

@@ -14,9 +14,9 @@ import resume from "./Ashley_Chang_Resume.pdf";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/index" render={(props) => <App {...props} />} />
+      <Route path="/" render={(props) => <App {...props} />} />
        <Route path="/resume" render={() => <embed src={resume}  style={{width:'100%', height: 'auto'}} type="application/pdf"/>} />
-      <Redirect to="/index" />
+      <Redirect to="/" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
