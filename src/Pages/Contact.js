@@ -46,7 +46,7 @@ class ManualModal extends React.Component {
                                 <br/><br style={{fontSize: '0.5rem'}}/>
                                 <strong>Github: </strong> spswatron <a href="https://github.com/spswatron" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-external-link"/></a>
                                 <br/><br style={{fontSize: '0.5rem'}}/>
-                                <strong>Linkedin: </strong> Ashley Chang <a href={'https://www.linkedin.com/in/ashley-chang-1080b81a2/'} target='_blank' rel="noopener noreferrer"><i className="fa fa-external-link"/></a>
+                                <strong>Linkedin: </strong> Ashley Chang <a href={'https://www.linkedin.com/in/ashley-e-chang/'} target='_blank' rel="noopener noreferrer"><i className="fa fa-external-link"/></a>
                             </div>
                       </div>
                     </ReactModal>

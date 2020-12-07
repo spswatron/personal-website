@@ -15,7 +15,7 @@ function SocialBar() {
     return(
         <div className="socials" style={{margin: 0}}>
             <a className="link" href="https://github.com/spswatron" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-github"/></a>
-            <a className="link" href={"https://www.linkedin.com/in/ashley-chang-1080b81a2/"} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-linkedin"/></a>
+            <a className="link" href={"https://www.linkedin.com/in/ashley-e-chang"} target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-linkedin"/></a>
               <a className="link" href="mailto:ashley_e_chang@brown.edu" target={"_blank"}  rel="noopener noreferrer"><i className="fa fa-envelope"/></a>
             <a className="link" href="/resume" target={"_blank"}  rel="noopener noreferrer" style={{paddingRight: 0}}><i className="fa fa-file"/></a>
         </div>
