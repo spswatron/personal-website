@@ -41,6 +41,7 @@ body {
   font-size: 17px;
   color: black;
   min-height: 100vh;
+  -webkit-font-smoothing: subpixel-antialiased;
   background-color: $soft-white;
   @include bigFlex();
 }

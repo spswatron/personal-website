@@ -8,6 +8,7 @@ body {
   font-size: 17px;
   color: black;
   min-height: 100vh;
+  -webkit-font-smoothing: subpixel-antialiased;
   background-color: #f8f9fa;
   display: flex;
   width: 100%;
