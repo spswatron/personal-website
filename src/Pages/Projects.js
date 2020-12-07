@@ -299,9 +299,9 @@ const ShellImage = <ImageModal src={Shell1}
 const ComixMatchImage =  <ImageModal src={ComixMatch1}
                         images = {[ComixMatch1,ComixMatch2, ComixMatch3]}
                         project={"Comix Match"}
-                          deploy={"http://comix-match.herokuapp.com/"}
+                          deploy={"http://comix-match.ashley-chang.me/"}
                           git={"https://github.com/spswatron/comix-match"}
-                        caption={<ComixMatchCaption deploy={"http://comix-match.herokuapp.com/"}
+                        caption={<ComixMatchCaption deploy={"http://comix-match.ashley-chang.me/"}
                           git={"https://github.com/spswatron/comix-match"}/>}
                           alts={["Comix Match homepage with comic books sorted from highest " +
                           "average rating to lowest", "Comix Match with comics sorted by random", "Chix match, " +
