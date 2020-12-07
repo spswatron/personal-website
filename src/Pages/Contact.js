@@ -56,7 +56,6 @@ class ManualModal extends React.Component {
 }
 
 function SuccessMessage (props) {
-    console.log("success:" + props.i.toString())
     return(
             <div className={"success message"}>
            <div>
@@ -68,7 +67,6 @@ function SuccessMessage (props) {
 }
 
 function FailureMessage (props) {
-    console.log("failure:" + props.i.toString())
     return(
             <div className={"failure message"}>
            <div>
@@ -198,12 +196,10 @@ class Core extends React.Component{
             nameError: nameStatus
             }
         )
-        console.log(this.state)
     }
 
     emailChange(event) {
         let emailStatus = this.state.emailError
-        console.log(this.state)
         if(this.state.checked){
             emailStatus =
              !(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(event.target.value))
@@ -214,7 +210,6 @@ class Core extends React.Component{
             emailError: emailStatus
             }
         )
-        console.log(this.state)
     }
 
     subjectChange(event) {
@@ -228,7 +223,6 @@ class Core extends React.Component{
             subjectError: subjectStatus
             }
         )
-        console.log(this.state)
     }
 
     messageChange(event) {
@@ -248,10 +242,7 @@ class Core extends React.Component{
     }
 
     changeStatus(i) {
-        console.log(this.state.statuses)
         this.state.statuses.splice(i, 1);
-        console.log(i)
-        console.log(this.state.statuses)
         this.setState(
           {
             statuses: this.state.statuses,
@@ -291,7 +282,6 @@ class Core extends React.Component{
                   .then(res =>
                       this.setState({statuses: [...[res.status===200], ...this.state.statuses], circle: false}))
                   .catch(() => this.setState({statuses: [...[false], ...this.state.statuses], circle: false}))})
-          console.log(this.state)
       }
   }
 
