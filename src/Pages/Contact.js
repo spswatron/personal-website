@@ -269,7 +269,7 @@ class Core extends React.Component{
     async handleSubmit() {
       if(this.validForm(this.state)) {
           this.setState({circle: true}, () => {
-              fetch("https://server.ashley-chang.me/submit_personal_form", {
+              fetch("https://flask-server.server.ashley-chang.me/submit_personal_form", {
                   mode: 'cors',
                   method: 'POST',
                   headers: {
