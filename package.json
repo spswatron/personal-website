@@ -9,7 +9,13 @@
   },
   "dependencies": {
     "next": "10.0.4",
+    "next-seo": "^4.17.0",
+    "node-sass": "^5.0.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-burger-menu": "^3.0.2",
+    "react-dom": "17.0.1",
+    "react-modal": "^3.12.1",
+    "react-scroll": "^1.8.1",
+    "react-tabs": "^3.1.2"
   }
 }
