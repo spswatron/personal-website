@@ -21,7 +21,7 @@ $modal-backdrop: rgba(0, 0, 0, 0.3)!important;
 }
 
 .ReactModal__Overlay {
-  z-index: 300;
+  z-index: 3500;
   overflow-y: auto;
   background-color: $modal-backdrop;
 }
@@ -59,6 +59,7 @@ body.ReactModal__Body--open {
   justify-content: center;
   max-width: 600px;
   margin: auto;
+  z-index: 4000;
 
   button {
     border: none;
@@ -94,6 +95,7 @@ body.ReactModal__Body--open {
   button:hover {
     box-shadow: none;
     color: grey;
+    background-color: transparent;
   }
 
   h1 {
@@ -118,6 +120,10 @@ body.ReactModal__Body--open {
       padding-bottom: calc(2.5vh + 1rem);
   }
 
+}
+
+div.img.column > div {
+  box-shadow: 0 2px 4px 0 grey;
 }
 
 .img.row {

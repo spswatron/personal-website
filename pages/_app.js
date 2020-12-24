@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import '../css/spinkit.min.css'
 import '../css/TimeLine.scss'
+import '../css/Sidebar.scss'
 import '../css/modal.scss'
 import '../css/stars.css'
 import '../css/App.scss';

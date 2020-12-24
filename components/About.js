@@ -4,19 +4,19 @@ import Pager from "./Page"
 import Image from 'next/image'
 
 function Face(){
-    return <Image src={myFace} width="95%" height="auto" />
+    return <Image src={myFace} width="auto" height="415" />
     // return <Image alt="Ashley wearing a jean jacket and smiling in her backyard in Forest, VA" style={{borderRadius:'5px'}} layout="fill" src={myFace} />;
 }
 
 function Core() {
     return(
         <>
-            <div className="row">
+            <div style={{marginBottom: '1.2rem'}} className="row">
                 <h1 className={"mobile"} style={{textAlign: 'c'}}>
                                 About Me <br/>
                 </h1>
                 <div className="face mobile column">
-                    <Face />
+                    <Image src={myFace} layout="fill" objectFit="contain"/>
                     <h2 style = {{marginTop: '0'}}>
                     </h2>
                 </div>

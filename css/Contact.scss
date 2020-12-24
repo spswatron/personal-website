@@ -39,7 +39,7 @@ textarea {
 }
 
 input, select, textarea {
-    width: calc(100% - 30px);
+    width: 100%;
     font-size: 14px;
     vertical-align: middle;
 }
@@ -49,7 +49,7 @@ input, select, textarea {
   flex-direction: column;
   width: 95%;
   //max-width: 670px;
-  max-width: 500px;
+  max-width: 470px;
 }
 
 .form.row {
@@ -60,6 +60,13 @@ input, select, textarea {
 button:focus, input:focus, textarea:focus, select:focus {
   outline: none;
   box-shadow: none;
+}
+
+input.none:focus, textarea.none:focus {
+  -webkit-box-shadow: 0px 0px 7px 0px powderblue!important;
+  -moz-box-shadow: 0px 0px 7px 0px powderblue!important;
+  box-shadow: 0px 0px 7px 0px powderblue!important;
+  border: 1px solid powderblue!important;
 }
 
 .send {

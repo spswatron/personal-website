@@ -43,6 +43,7 @@
   padding: 2.5em 1.5em 0;
   font-size: 1.15rem;
   font-family: $font-stack;
+  margin-top: -1.25rem;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -64,6 +65,7 @@
 /* Styling of overlay */
 .bm-overlay {
   background: $navy;
+  margin-top: -1rem;
 }
 
 
@@ -87,6 +89,12 @@
 .bm-cross-button:hover {
   color: grey;
 }
+
+.bm-cross-button {
+  margin-top: -0.5rem;
+  margin-right: 0.25rem;
+}
+
 .bm-burger-button, .bm-cross-button {
   button {
     border: none!important;

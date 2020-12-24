@@ -236,17 +236,22 @@ class ImageModal extends React.Component {
                                 <div className={"img row"}>
                                     <div className={"slideshow arrow"}><button onClick={() => this.moveBack()}><i className="fa fa-chevron-left"/></button></div>
                                     <div className={"img column"}>
-                                        <Image src={slideImage} width="100%" height="100%" alt={""} loading="lazy"/>
+                                        <Image src={slideImage} width="auto" height="auto"
+                                        alt={""} loading="eager"/>
                                     </div>
                                     <div className={"slideshow arrow"}><button onClick={() => this.moveForward()}><i className="fa fa-chevron-right"/></button></div>
                                 </div>
                           {this.props.caption}
                             </div>
                     </ReactModal>
-                    <Image src={this.props.src} alt={altTag} 
-                    width = "100%" 
-                    height = "100%"
-                    loading="lazy"/></div>
+                    <Image 
+                    wrapperClassName="project-image-thumbnail"
+                    src={this.props.src} alt={altTag} 
+                    width = "auto" 
+                    height = "auto"
+                    // layout = "responsive"
+                    loading="lazy"/>
+                    </div>
             </div>
         )
     }
