@@ -34,11 +34,13 @@ class ManualModal extends React.Component {
                     >
                       <div className={"modal"} style={{maxWidth: '470px'}}>
                             <button className={"exit"} onClick={this.handleCloseModal}><i className="fa fa-times"/></button>
-                                <h2>
-                                    Contact Information
+                                <h2 style={{display: 'flex', justifyContent: 'center'}}>
+                                    <div className={"contact-info"}>
+                                        Contact Information
+                                    </div>
                                 </h2>
                           <br/>
-                            <div className={"content"} style={{width: '24rem'}}>
+                            <div className={"content"} style={{maxWidth: '24rem'}}>
                                 <strong>Email: </strong> ashley_e_chang@brown.edu
                                 <br/><br style={{fontSize: '0.5rem'}}/>
                                 <strong>Phone Number: </strong> 434-849-4438

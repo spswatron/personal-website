@@ -14,11 +14,7 @@ body {
   width: 100%;
 }
 
-#next {
-  width: 100%;
-}
-
-#__next {
+#root {
   display: flex;
   width: 100%;
   height: 100%;
@@ -53,6 +49,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+#projects .project-image-thumbnail {
+  display: block;
+}
 #projects img {
   box-shadow: 0 2px 5px 0 grey;
   margin: 0 auto;
@@ -65,7 +64,12 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 5px;
+  height: 100%;
+  width: 100%;
   box-shadow: 0 2px 5px 0 grey;
+}
+#projects .image-wrapper div:nth-child(2) {
+  display: block !important;
 }
 #projects .image-wrapper .project-links {
   position: absolute;
@@ -74,10 +78,18 @@ body {
   height: 100%;
   justify-content: center;
   align-items: center;
+  z-index: 3000;
+}
+#projects .image-wrapper .project-links button {
+  background: transparent;
+  border: none;
 }
 #projects .image-wrapper .project-links i {
   font-size: 30px;
   display: none;
+}
+#projects .image-wrapper .project-links button {
+  z-index: 3000;
 }
 #projects .project-links:hover {
   background: rgba(0, 0, 0, 0.15);
@@ -258,6 +270,8 @@ a {
   display: flex;
   justify-content: space-between;
   background-color: #f8f9fa;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .clear {
@@ -388,6 +402,9 @@ a {
     flex: 1.5;
   }
 
+  #projects button:hover {
+    background: transparent;
+  }
   #projects img {
     max-width: 260px;
     max-height: 130px;
@@ -419,7 +436,7 @@ a {
     display: none;
   }
 
-  .column img {
+  .column * * img {
     width: 95%;
   }
 
@@ -435,15 +452,61 @@ a {
   .face.column {
     flex: 2;
   }
+
+  #projects img {
+    height: 80px;
+  }
 }
 @media (max-width: 850px) {
   .face.column {
     flex: 3;
   }
 }
+div.face.mobile.column > div {
+  position: inherit !important;
+}
+
+div.face.mobile.column > div > img {
+  position: inherit !important;
+  height: 80vw !important;
+  margin-top: 0.7rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.face.mobile.column div {
+  position: inherit;
+  width: 100%;
+}
+.face.mobile.column img {
+  height: 30vh;
+}
+
+@media (max-width: 400px) {
+  .contact-info {
+    max-width: 15rem;
+  }
+}
 @media (max-width: 768px) {
+  .manual.caption {
+    margin-top: 1rem;
+  }
+
+  #projects > div > div {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  #projects > div > div img {
+    min-height: 25vh;
+  }
+
+  .face.column div {
+    height: 100%;
+    width: 95%;
+  }
+
   .image {
     padding-bottom: 30px;
+    width: 100%;
   }
 
   .image-wrapper {
@@ -542,10 +605,6 @@ a {
   .bottom.section {
     display: block;
   }
-}
-
-#__next {
-  width: 100%;
 }
 
 /*# sourceMappingURL=App.css.map */

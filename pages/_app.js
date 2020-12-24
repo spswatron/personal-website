@@ -8,14 +8,16 @@ import '../css/App.scss';
 import '../css/Contact.scss'
 import { NextSeo } from 'next-seo';
 import Head from 'next/head'
+import React from "react";
 
 function MyApp({ Component, pageProps }) {
   // document.getElementById("__next").width = '100%';
   return(
   <>
   <NextSeo
-      title="Ashley Chang"
-      description="Ashley Chang's personal website and portfolio."
+      description="The personal website and portfolio of Ashley Chang,
+      who is a student of Computer Science at Brown University."
+      nofollow={true}
     />
   <Head>
       <style>
@@ -23,7 +25,7 @@ function MyApp({ Component, pageProps }) {
         </style>
       <link href="https://fonts.gstatic.com/"/>
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-      
+      <title>Ashley Chang</title>
   </Head>
   <style global jsx>{`
         #__next {
