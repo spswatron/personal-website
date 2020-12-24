@@ -1,0 +1,193 @@
+$modal-backdrop: rgba(0, 0, 0, 0.3)!important;
+.ReactModal__Content.ReactModal__Content--after-open {
+  //top: 110px!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none!important;
+  //background: $modal-backdrop!important;
+  padding: 0!important;
+  top: 0!important;
+  left: 0!important;
+  bottom: 0!important;
+  right: 0!important;
+  background-color: $modal-backdrop;
+}
+
+.ReactModal__Content {
+  background: transparent;
+  width: auto;
+  height: auto;
+}
+
+.ReactModal__Overlay {
+  z-index: 3500;
+  overflow-y: auto;
+  background-color: $modal-backdrop;
+}
+
+.ReactModalPortal {
+  background-color: $modal-backdrop;
+}
+
+body.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.ReactModal__Body--open{
+  .bm-burger-button {
+    position: static;
+  }
+}
+
+.image-wrapper, .modal {
+  button {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.modal {
+  //border: 1px solid mix(grey, white);
+  border-radius: 5px;
+  z-index: 500;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: auto;
+  z-index: 4000;
+
+  button {
+    border: none;
+    width: 100%;
+    background: transparent;
+    padding: 2% 2% 10px;
+  }
+
+  i {
+    font-size: 1rem;
+  }
+
+  .img.column {
+    padding-bottom: 2vh;
+    margin: 0;
+    width: 90%;
+    flex: 1;
+  }
+
+  img {
+    position: static;
+    width: 100%;
+    max-height: 270px;
+    height: 40vw;
+    display: block;
+    object-fit: cover;
+    object-position: 0 0;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px 0 grey;
+
+  }
+
+  button:hover {
+    box-shadow: none;
+    color: grey;
+    background-color: transparent;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    padding-bottom: 1.5vh;
+    margin-top: calc(1.5vh - 20px);
+    margin-bottom: 1.5vh;
+  }
+
+  .caption {
+    padding-top: 4vh;
+  }
+  .content {
+      width: 90%;
+      padding-bottom: calc(2.5vh + 1rem);
+  }
+
+}
+
+div.img.column > div {
+  box-shadow: 0 2px 4px 0 grey;
+}
+
+.img.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exit {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+}
+
+.i.row {
+  flex-direction: row;
+  margin-top: calc(1.3rem);
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  i {
+    font-size: 1.5rem;
+    //padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .slideshow.arrow {
+      width: 6%;
+    }
+
+  .modal {
+    width: 100%;
+  }
+  .content {
+    width: 95%;
+    max-width: 600px;
+      padding-bottom: calc(20px + 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .slideshow.arrow {
+      width: 5%;
+  }
+
+  .img.row {
+    flex-direction: row;
+  }
+
+  .modal {
+    width: 95%;
+
+    .content {
+      max-width: 600px;
+      width: 90%;
+    }
+  }
+}
