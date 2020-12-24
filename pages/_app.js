@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }) {
       nofollow={true}
     />
   <Head>
+      <link rel="shortcut icon" href="/favicon.ico" />
       <style>
           @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
         </style>
