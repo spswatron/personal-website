@@ -1,0 +1,7 @@
+{
+  "ast": null,
+  "code": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from \"react\";\n\nclass Pager extends React.Component {\n  render() {\n    return /*#__PURE__*/_jsx(\"div\", {\n      className: \"page\",\n      id: this.props.id,\n      children: /*#__PURE__*/_jsx(\"div\", {\n        className: \"container\",\n        children: this.props.content\n      })\n    });\n  }\n\n}\n\nexport default Pager;",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

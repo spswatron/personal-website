@@ -36,7 +36,7 @@ body {
 }
 
 #projects {
-  background: linear-gradient(180deg, #F7FAF2, #ffffff);
+  background: linear-gradient(180deg, #f7faf2, #ffffff);
 }
 #projects .column {
   padding-bottom: 5vh;
@@ -125,7 +125,7 @@ body {
   width: 95%;
 }
 #resume {
-  background: linear-gradient(180deg, #F7FAF2, #ffffff);
+  background: linear-gradient(180deg, #f7faf2, #ffffff);
 }
 
 .App {
@@ -185,7 +185,7 @@ span {
 }
 
 .vertical-timeline::before {
-  background: #F0F0F0 !important;
+  background: #f0f0f0 !important;
 }
 
 .vertical-timeline.vertical-timeline--two-columns {
@@ -288,7 +288,7 @@ a {
 }
 
 #experiences {
-  background: linear-gradient(180deg, #F2FAFF, #ffffff);
+  background: linear-gradient(180deg, #f2faff, #ffffff);
 }
 #experiences .container {
   padding-bottom: 0;
@@ -296,14 +296,14 @@ a {
 }
 
 #about {
-  background: linear-gradient(180deg, #F7FAF2, #ffffff);
+  background: linear-gradient(180deg, #f7faf2, #ffffff);
 }
 #about .container {
   margin-top: 10vh;
 }
 
 #contact {
-  background: linear-gradient(180deg, #F2FAFF, #ffffff);
+  background: linear-gradient(180deg, #f2faff, #ffffff);
 }
 
 .page {
@@ -581,7 +581,8 @@ div.face.mobile.column > div > img {
     height: 200px;
   }
 
-  p, h3 {
+  p,
+h3 {
     margin-top: 15px;
     font-size: 1.08rem;
     line-height: 1.55rem;

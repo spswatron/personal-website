@@ -1,19 +1,21 @@
-.contact{
-  background: linear-gradient(180deg,#F2FAFF,#ffffff);
+.contact {
+  background: linear-gradient(180deg, #f2faff, #ffffff);
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .form-field {
-    position: relative;
+  position: relative;
 }
 
-input, textarea, button.form-field {
+input,
+textarea,
+button.form-field {
   background-color: white;
   border: 1px solid #ccc;
   box-shadow: inset 0 0.5px 1px #ddd;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 0 15px;
   border-radius: 5px;
 }
@@ -22,15 +24,15 @@ button.form-field {
   background: #f8f8f8;
   border-color: #d3d3d3;
   border: 1px solid #d3d3d3;
-  color: mix(mix(darkgray,black), black);
+  color: mix(mix(darkgray, black), black);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-
-textarea{
-  padding: 15px 15px
+textarea {
+  padding: 15px 15px;
 }
-input, button.form-field{
+input,
+button.form-field {
   height: 50px;
 }
 
@@ -38,10 +40,12 @@ textarea {
   height: 100px;
 }
 
-input, select, textarea {
-    width: 100%;
-    font-size: 14px;
-    vertical-align: middle;
+input,
+select,
+textarea {
+  width: 100%;
+  font-size: 14px;
+  vertical-align: middle;
 }
 
 .contact.form {
@@ -57,16 +61,20 @@ input, select, textarea {
   align-items: center;
 }
 
-button:focus, input:focus, textarea:focus, select:focus {
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   box-shadow: none;
 }
 
-input.none:focus, textarea.none:focus {
-  -webkit-box-shadow: 0px 0px 7px 0px powderblue!important;
-  -moz-box-shadow: 0px 0px 7px 0px powderblue!important;
-  box-shadow: 0px 0px 7px 0px powderblue!important;
-  border: 1px solid powderblue!important;
+input.none:focus,
+textarea.none:focus {
+  -webkit-box-shadow: 0px 0px 7px 0px powderblue !important;
+  -moz-box-shadow: 0px 0px 7px 0px powderblue !important;
+  box-shadow: 0px 0px 7px 0px powderblue !important;
+  border: 1px solid powderblue !important;
 }
 
 .send {
@@ -78,11 +86,12 @@ input.none:focus, textarea.none:focus {
   //width: 100%;
 }
 
-.sk-circle-fade, .fa-spinner {
+.sk-circle-fade,
+.fa-spinner {
   //margin-top: 1em;
   margin-left: 0.7em;
-  width: 20px!important;
-  height: 20px!important;
+  width: 20px !important;
+  height: 20px !important;
   font-size: 25px;
 }
 
@@ -95,13 +104,12 @@ button:hover {
 
 #contact {
   button {
-
   }
 }
 
 label {
   margin-top: 20px;
-  font-size: .94rem;
+  font-size: 0.94rem;
   display: inline-block;
 }
 
@@ -146,10 +154,10 @@ button {
 }
 
 .red {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(255,0,0,0.6)!important;
-  -moz-box-shadow: 0px 0px 5px 0px rgba(255,0,0,0.6)!important;
-  box-shadow: 0px 0px 5px 0px rgba(255,0,0,0.6)!important;
-  border: 1px solid mix(rgb(255, 0, 0), #ccc)!important;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 0, 0, 0.6) !important;
+  -moz-box-shadow: 0px 0px 5px 0px rgba(255, 0, 0, 0.6) !important;
+  box-shadow: 0px 0px 5px 0px rgba(255, 0, 0, 0.6) !important;
+  border: 1px solid mix(rgb(255, 0, 0), #ccc) !important;
 }
 
 .failure {
@@ -160,12 +168,15 @@ button {
 }
 
 .contact.form-field {
-    width: 4rem;
-    padding: 0;
+  width: 4rem;
+  padding: 0;
 }
 
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-    cursor: pointer;
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

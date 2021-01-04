@@ -1,16 +1,16 @@
-$modal-backdrop: rgba(0, 0, 0, 0.3)!important;
+$modal-backdrop: rgba(0, 0, 0, 0.3) !important;
 .ReactModal__Content.ReactModal__Content--after-open {
   //top: 110px!important;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none!important;
+  border: none !important;
   //background: $modal-backdrop!important;
-  padding: 0!important;
-  top: 0!important;
-  left: 0!important;
-  bottom: 0!important;
-  right: 0!important;
+  padding: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
   background-color: $modal-backdrop;
 }
 
@@ -34,13 +34,14 @@ body.ReactModal__Body--open {
   overflow: hidden;
 }
 
-.ReactModal__Body--open{
+.ReactModal__Body--open {
   .bm-burger-button {
     position: static;
   }
 }
 
-.image-wrapper, .modal {
+.image-wrapper,
+.modal {
   button {
     background: transparent;
     box-shadow: none;
@@ -89,7 +90,6 @@ body.ReactModal__Body--open {
     object-position: 0 0;
     margin: 0 auto;
     box-shadow: 0 2px 4px 0 grey;
-
   }
 
   button:hover {
@@ -116,10 +116,9 @@ body.ReactModal__Body--open {
     padding-top: 4vh;
   }
   .content {
-      width: 90%;
-      padding-bottom: calc(2.5vh + 1rem);
+    width: 90%;
+    padding-bottom: calc(2.5vh + 1rem);
   }
-
 }
 
 div.img.column > div {
@@ -157,11 +156,10 @@ div.img.column > div {
   }
 }
 
-
 @media (min-width: 768px) {
   .slideshow.arrow {
-      width: 6%;
-    }
+    width: 6%;
+  }
 
   .modal {
     width: 100%;
@@ -169,13 +167,13 @@ div.img.column > div {
   .content {
     width: 95%;
     max-width: 600px;
-      padding-bottom: calc(20px + 2rem);
+    padding-bottom: calc(20px + 2rem);
   }
 }
 
 @media (max-width: 768px) {
   .slideshow.arrow {
-      width: 5%;
+    width: 5%;
   }
 
   .img.row {

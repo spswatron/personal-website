@@ -35,6 +35,7 @@
   padding: 2.5em 1.5em 0;
   font-size: 1.15rem;
   font-family: Montserrat, sans-serif;
+  margin-top: -1.25rem;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -56,6 +57,7 @@
 /* Styling of overlay */
 .bm-overlay {
   background: #0a192f;
+  margin-top: -1rem;
 }
 
 /* Individual item */
@@ -80,11 +82,18 @@
   color: grey;
 }
 
-.bm-burger-button button, .bm-cross-button button {
+.bm-cross-button {
+  margin-top: -0.5rem;
+  margin-right: 0.25rem;
+}
+
+.bm-burger-button button,
+.bm-cross-button button {
   border: none !important;
   box-shadow: none !important;
 }
-.bm-burger-button button:hover, .bm-cross-button button:hover {
+.bm-burger-button button:hover,
+.bm-cross-button button:hover {
   background: #ccd6f6;
   color: #ccd6f6;
 }

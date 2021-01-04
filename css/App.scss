@@ -2,7 +2,7 @@ $font-stack: Montserrat, sans-serif;
 $light: #ccd6f6;
 $gray: #8892b0;
 $blue: #87cefa;
-$navy: rgb(10,25,47);
+$navy: rgb(10, 25, 47);
 $soft-white: #f8f9fa;
 
 @function min($numbers...) {
@@ -46,7 +46,7 @@ body {
   @include bigFlex();
 }
 
-#root{
+#root {
   @include bigFlex();
   height: 100%;
   flex-wrap: wrap;
@@ -64,12 +64,12 @@ body {
   }
 
   * {
-    padding: 0
+    padding: 0;
   }
 }
 
 #projects {
-  background: linear-gradient(180deg,#F7FAF2,#ffffff);
+  background: linear-gradient(180deg, #f7faf2, #ffffff);
   .column {
     padding-bottom: 5vh;
   }
@@ -106,7 +106,7 @@ body {
     box-shadow: 0 2px 5px 0 grey;
 
     div:nth-child(2) {
-      display: block!important;
+      display: block !important;
     }
 
     .project-links {
@@ -116,7 +116,7 @@ body {
       height: 100%;
       justify-content: center;
       align-items: center;
-      z-index:3000;
+      z-index: 3000;
 
       button {
         background: transparent;
@@ -135,7 +135,7 @@ body {
   }
 
   .project-links:hover {
-    background: rgba(0,0,0,.15);
+    background: rgba(0, 0, 0, 0.15);
     z-index: 100;
 
     i {
@@ -154,8 +154,8 @@ body {
     }
 
     + img {
-    filter: blur(0.5px) brightness(80%);
-  }
+      filter: blur(0.5px) brightness(80%);
+    }
   }
 
   .caption > div {
@@ -181,9 +181,8 @@ body {
   }
 }
 
-
 #resume {
-   background: linear-gradient(180deg,#F7FAF2,#ffffff);
+  background: linear-gradient(180deg, #f7faf2, #ffffff);
 }
 
 .App {
@@ -219,7 +218,7 @@ ul {
 }
 
 span {
-    white-space: pre-wrap;
+  white-space: pre-wrap;
 }
 
 .top {
@@ -228,7 +227,7 @@ span {
   width: 100vw;
   height: 70px;
   background: $soft-white;
-  box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
   z-index: 150;
 }
 
@@ -243,7 +242,7 @@ span {
 }
 
 .vertical-timeline::before {
-  background: #F0F0F0!important;
+  background: #f0f0f0 !important;
 }
 
 .vertical-timeline.vertical-timeline--two-columns {
@@ -257,7 +256,9 @@ span {
   margin: 0;
   height: 70px;
   z-index: 200;
-  a {font-size: 1rem;}
+  a {
+    font-size: 1rem;
+  }
 
   .nav1 {
     flex: 2;
@@ -287,11 +288,11 @@ span {
 }
 
 a:hover {
-  color: grey!important;
+  color: grey !important;
 }
 
 a {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .socials {
@@ -341,7 +342,7 @@ a {
 }
 
 #experiences {
-  background: linear-gradient(180deg,#F2FAFF,#ffffff);
+  background: linear-gradient(180deg, #f2faff, #ffffff);
   .container {
     padding-bottom: 0;
     margin-bottom: 0;
@@ -350,15 +351,15 @@ a {
 }
 
 #about {
-  background: linear-gradient(180deg,#F7FAF2,#ffffff);
+  background: linear-gradient(180deg, #f7faf2, #ffffff);
 
   .container {
-      margin-top: 10vh;
-    }
+    margin-top: 10vh;
+  }
 }
 
 #contact {
-  background: linear-gradient(180deg,#F2FAFF,#ffffff);
+  background: linear-gradient(180deg, #f2faff, #ffffff);
 }
 
 .page {
@@ -370,10 +371,10 @@ a {
   .container {
     margin-top: 8vh;
     margin-bottom: 3.5vh;
-    max-width : 1000px;
+    max-width: 1000px;
     //overflow-x: auto;
-    float:left;
-    clear:left;
+    float: left;
+    clear: left;
   }
 
   h1 {
@@ -383,13 +384,11 @@ a {
   }
 }
 
-#new-home{
+#new-home {
   //margin-top: 70px;
   width: 100%;
-  background-image: linear-gradient(
-          rgba(0, 0, 0, 0.2),
-          rgba(0, 0, 0, 0.2)
-        ), url("IMG_0837.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("IMG_0837.JPG");
   height: 90vh;
   color: white;
   justify-content: center;
@@ -418,7 +417,7 @@ a {
     flex-wrap: wrap;
   }
 
-  .container{
+  .container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -426,9 +425,9 @@ a {
     justify-content: center;
   }
   h1 {
-      font-size: 103px;
-      margin-top: 0;
-      margin-bottom: 4vh;
+    font-size: 103px;
+    margin-top: 0;
+    margin-bottom: 4vh;
   }
   h2 {
     font-size: 28px;
@@ -462,7 +461,6 @@ a {
 // }
 
 @media screen and (min-width: 769px) {
-
   .image-wrapper {
     max-height: 250px;
   }
@@ -486,12 +484,9 @@ a {
 
   .face.column {
     flex: 1.5;
-
-  
   }
 
   #projects {
-
     button:hover {
       background: transparent;
     }
@@ -528,7 +523,7 @@ a {
     display: none;
   }
 
-  .column * * img{
+  .column * * img {
     width: 95%;
   }
 
@@ -538,7 +533,7 @@ a {
 }
 
 .face.column {
-  transition: all 0.4s ease-out
+  transition: all 0.4s ease-out;
 }
 
 @media (max-width: 1000px) {
@@ -558,14 +553,14 @@ a {
 }
 
 div.face.mobile.column > div {
-  position: inherit!important;
+  position: inherit !important;
 }
 
 div.face.mobile.column > div > img {
-  position: inherit!important;
-  height: 80vw!important;
-  margin-top: 0.7rem!important;
-  margin-bottom: 1rem!important;
+  position: inherit !important;
+  height: 80vw !important;
+  margin-top: 0.7rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .face.mobile.column {
@@ -586,11 +581,10 @@ div.face.mobile.column > div > img {
 }
 
 @media (max-width: 768px) {
-
   .manual.caption {
     margin-top: 1rem;
   }
-  
+
   #projects > div > div {
     max-width: 400px;
     img {
@@ -621,9 +615,8 @@ div.face.mobile.column > div > img {
     width: 95%;
   }
 
-
   .page .container {
-    width: 90%
+    width: 90%;
   }
   .not-mobile {
     display: none;
@@ -636,8 +629,8 @@ div.face.mobile.column > div > img {
     }
   }
 
-  .mobile>h1::after{
-    content: '';
+  .mobile > h1::after {
+    content: "";
     display: block;
     border-top: 6px solid blue;
     margin-top: 0.5em;
@@ -658,7 +651,7 @@ div.face.mobile.column > div > img {
       margin-bottom: 2vh;
     }
   }
-  .image-wrapper{
+  .image-wrapper {
     width: 100%;
   }
   iframe {
@@ -684,7 +677,8 @@ div.face.mobile.column > div > img {
   .App {
     height: 200px;
   }
-  p, h3 {
+  p,
+  h3 {
     margin-top: 15px;
     font-size: 1.08rem;
     line-height: 1.55rem;

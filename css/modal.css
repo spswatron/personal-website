@@ -18,7 +18,7 @@
 }
 
 .ReactModal__Overlay {
-  z-index: 300;
+  z-index: 3500;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.3) !important;
 }
@@ -35,7 +35,8 @@ body.ReactModal__Body--open {
   position: static;
 }
 
-.image-wrapper button, .modal button {
+.image-wrapper button,
+.modal button {
   background: transparent;
   box-shadow: none;
   border: none;
@@ -51,6 +52,7 @@ body.ReactModal__Body--open {
   justify-content: center;
   max-width: 600px;
   margin: auto;
+  z-index: 4000;
 }
 .modal button {
   border: none;
@@ -81,6 +83,7 @@ body.ReactModal__Body--open {
 .modal button:hover {
   box-shadow: none;
   color: grey;
+  background-color: transparent;
 }
 .modal h1 {
   text-align: center;
@@ -100,6 +103,10 @@ body.ReactModal__Body--open {
 .modal .content {
   width: 90%;
   padding-bottom: calc(2.5vh + 1rem);
+}
+
+div.img.column > div {
+  box-shadow: 0 2px 4px 0 grey;
 }
 
 .img.row {

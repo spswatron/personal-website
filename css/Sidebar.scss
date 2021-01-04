@@ -1,8 +1,8 @@
- $gray: #8892b0;
- $light: #ccd6f6;
- $navy: rgb(10,25,47);
- $font-stack: Montserrat, sans-serif;
- $soft-white: #f8f9fa;
+$gray: #8892b0;
+$light: #ccd6f6;
+$navy: rgb(10, 25, 47);
+$font-stack: Montserrat, sans-serif;
+$soft-white: #f8f9fa;
 
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -35,8 +35,6 @@
   background: $gray;
 }
 
-
-
 /* General sidebar styles */
 .bm-menu {
   background: $soft-white;
@@ -68,7 +66,6 @@
   margin-top: -1rem;
 }
 
-
 /* Individual item */
 .bm-item {
   display: inline-block;
@@ -83,7 +80,7 @@
   color: grey;
 }
 
-.bm-item:focus{
+.bm-item:focus {
   outline: none;
 }
 .bm-cross-button:hover {
@@ -95,14 +92,15 @@
   margin-right: 0.25rem;
 }
 
-.bm-burger-button, .bm-cross-button {
+.bm-burger-button,
+.bm-cross-button {
   button {
-    border: none!important;
-    box-shadow: none!important;
+    border: none !important;
+    box-shadow: none !important;
   }
-  button:hover{
+  button:hover {
     background: $light;
-    color:$light;
+    color: $light;
   }
   //.bm-cross-button:hover {
   //  color:$light;
