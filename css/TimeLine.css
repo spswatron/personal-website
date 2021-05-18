@@ -81,7 +81,12 @@
   background: white;
 }
 .timeline-item:last-child {
-  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 60%,
+      rgba(0, 0, 0, 0)
+    )
+    1 100%;
 }
 
 @media (min-width: 768px) {

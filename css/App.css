@@ -326,7 +326,8 @@ a {
 
 #new-home {
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("IMG_0837.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("IMG_0837.JPG");
   height: 90vh;
   color: white;
   justify-content: center;
@@ -582,7 +583,7 @@ div.face.mobile.column > div > img {
   }
 
   p,
-h3 {
+  h3 {
     margin-top: 15px;
     font-size: 1.08rem;
     line-height: 1.55rem;

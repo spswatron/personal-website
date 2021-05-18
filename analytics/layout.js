@@ -1,19 +1,15 @@
 // components/layout.js
-import React from 'react'
-import { initGA, logPageView } from './analytics'
+import React from "react";
+import { initGA, logPageView } from "./analytics";
 export default class Layout extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
+      initGA();
+      window.GA_INITIALIZED = true;
     }
-    logPageView()
+    logPageView();
   }
-  render () {
-    return (
-      <div>
-        {this.props.children}
-      </div>
-    )
+  render() {
+    return <div>{this.props.children}</div>;
   }
 }

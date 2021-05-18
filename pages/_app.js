@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
 
         <style>
           @import
-          url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+          url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
         </style>
         <link href="https://fonts.gstatic.com/" />
         <link

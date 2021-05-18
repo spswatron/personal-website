@@ -16,19 +16,29 @@ const SchoolCaption = (
     </p>
   </>
 );
+
+const NASACaption = (
+  <p>
+    It's here that I work on all the wonders of image sonification, using
+    OpenCV.js and Tone.js to convert
+    images from the observatory into interactive sonic pieces. In fact, any image can
+    be converted live-time, and it always presents new thoughts and ideas.
+  </p>
+);
+
 const TACaption = (
   <p>
-    I TA for CS0111, Computing Foundations: Data. I spend about 8-9 hours every
-    week holding TA hours, grading assignments, and conducting labs for this
-    375-person class.
+    Over the course of my time as a TA, I've developed web interfaces for students to
+      check their homework solutions with, written solution and stencil code, and have experienced the full range of
+      TA and lab hours.
   </p>
 );
 const ChineseResearchCaption = (
   <p>
-    Using the wonders of pytesseract, scala, and Abby FineReader, I've
-    transcribed thousands of cables from the Chinese Ministry of the Foreign
-    Affairs during the 1960s. In the process, I've collected all sorts of
-    metadata.
+    Using the wonders of pytesseract, scala, and Abby FineReader, I've created an
+      online ocr engine for my team to use to transcribe thousands of cables
+      from the 1960s Chinese Ministry of the Foreign Affairs.
+      Plus, it's a blast collecting all the metadata too.
   </p>
 );
 
@@ -79,14 +89,14 @@ class TimeLineTab extends React.Component {
           {/*    </div>*/}
           <Tab>
             <div className={"tab-name"}>
-              <i className="fa fa-graduation-cap" />
-              <span> </span> Education
+              <i className="fa fa-briefcase" />
+              <span> </span> Work
             </div>
           </Tab>
           <Tab>
             <div className={"tab-name"}>
-              <i className="fa fa-briefcase" />
-              <span> </span> Work
+              <i className="fa fa-graduation-cap" />
+              <span> </span> Education
             </div>
           </Tab>
           <Tab>
@@ -97,10 +107,10 @@ class TimeLineTab extends React.Component {
           </Tab>
         </TabList>
         <TabPanel>
-          <TimeLineEducation />
+          <TimeLineWork />
         </TabPanel>
         <TabPanel>
-          <TimeLineWork />
+          <TimeLineEducation />
         </TabPanel>
         <TabPanel>
           <TimeLineWriting />
@@ -151,10 +161,14 @@ class TimeLineWork extends React.Component {
     return (
       <>
         <div className="timeline-item" date-is="08/2020 - Present">
+          <h2>NASA Chandra X-Ray Observatory</h2>
+          {NASACaption}
+        </div>
+        <div className="timeline-item" date-is="08/2020 - Present">
           <h2>Brown University Computer Science</h2>
           {TACaption}
         </div>
-        <div className="timeline-item" date-is="01/2020 - Present">
+        <div className="timeline-item" date-is="01/2020 - 01/2021">
           <h2>Watson Institute for Public Affairs</h2>
           {ChineseResearchCaption}
         </div>
