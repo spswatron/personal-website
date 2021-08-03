@@ -1,6 +1,7 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Pager from "./Page";
+import Collapsible from "react-collapsible";
 
 const SchoolCaption = (
   <>
@@ -20,25 +21,34 @@ const SchoolCaption = (
 const NASACaption = (
   <p>
     It's here that I work on all the wonders of image sonification, using
-    OpenCV.js and Tone.js to convert
-    images from the observatory into interactive sonic pieces. In fact, any image can
-    be converted live-time, and it always presents new thoughts and ideas.
+    OpenCV.js and Tone.js to convert images from the observatory into
+    interactive sonic pieces. In fact, any image can be converted live-time, and
+    it always presents new thoughts and ideas.
+  </p>
+);
+
+const CortevaCaption = (
+  <p>
+    Here, I've developed an app to be used for field scientists to request plant
+    inoculum, with a pretty advanced feedback system and approval cycle in
+    place. I've also developed the demo for the company's nonprofit GROW
+    sector's data displayal app.
   </p>
 );
 
 const TACaption = (
   <p>
-    Over the course of my time as a TA, I've developed web interfaces for students to
-      check their homework solutions with, written solution and stencil code, and have experienced the full range of
-      TA and lab hours.
+    Over the course of my time as a TA, I've developed web interfaces for
+    students to check their homework solutions with, written solution and
+    stencil code, and have experienced the full range of TA and lab hours.
   </p>
 );
 const ChineseResearchCaption = (
   <p>
-    Using the wonders of pytesseract, scala, and Abby FineReader, I've created an
-      online ocr engine for my team to use to transcribe thousands of cables
-      from the 1960s Chinese Ministry of the Foreign Affairs.
-      Plus, it's a blast collecting all the metadata too.
+    Using the wonders of pytesseract, scala, and Abby FineReader, I've created
+    an online ocr engine for my team to use to transcribe thousands of cables
+    from the 1960s Chinese Ministry of the Foreign Affairs. Plus, it's a blast
+    collecting all the metadata too.
   </p>
 );
 
@@ -156,21 +166,49 @@ class TimeLineEducation extends React.Component {
   }
 }
 
+function ExpTitle(props) {
+  return (
+    <div className={"row"} style={{ alignItems: "center" }}>
+      <h2 onClick={(e) => e.preventDefault()}>{props.title}</h2>
+      <i
+        style={{ marginTop: "2vh", marginLeft: "1rem" }}
+        className="cursor-hover fa fa-chevron-down"
+      />
+    </div>
+  );
+}
+
 class TimeLineWork extends React.Component {
   render() {
     return (
       <>
-        <div className="timeline-item" date-is="08/2020 - Present">
+        <div className="timeline-item" date-is="01/2021 - Present">
           <h2>NASA Chandra X-Ray Observatory</h2>
           {NASACaption}
         </div>
+        <div className="timeline-item" date-is="05/2021 - 08/2021">
+          <Collapsible
+            transitionTime={220}
+            trigger={<ExpTitle title={"Corteva Agriscience"} />}
+          >
+            {CortevaCaption}
+          </Collapsible>
+        </div>
         <div className="timeline-item" date-is="08/2020 - Present">
-          <h2>Brown University Computer Science</h2>
-          {TACaption}
+          <Collapsible
+            transitionTime={220}
+            trigger={<ExpTitle title={"Brown University Computer Science"} />}
+          >
+            {TACaption}
+          </Collapsible>
         </div>
         <div className="timeline-item" date-is="01/2020 - 01/2021">
-          <h2>Watson Institute for Public Affairs</h2>
-          {ChineseResearchCaption}
+          <Collapsible
+            transitionTime={220}
+            trigger={<ExpTitle title={"Watson Institute for Public Affairs"} />}
+          >
+            {ChineseResearchCaption}
+          </Collapsible>
         </div>
       </>
     );

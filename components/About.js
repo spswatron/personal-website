@@ -25,27 +25,28 @@ function Core() {
               About Me
             </h1>
             <div style={{ marginTop: "0" }}>
-              Hi, my name's Ashley and I'm a sophomore at Brown University
-              studying Computer Science and English.
+              Heyo!! My name's Ashley and I'm a junior at Brown University
+              studying Computer Science and Creative Writing.
             </div>
             <br />
             <div style={{ marginTop: "0" }}>
-              I'm a kiddo who loves computers (and that specific snake species),
-              comic books, poems about anthropomorphic awakenings, and the great
-              art of boots and cats.
+              I vibe a whole ton with React (and making radar charts about
+              batman), a whole bunch of other things that may wind up in a{" "}
+              <a target={"_blank"} href={"/Ashley_Chang_Resume.pdf"}>
+                <strong>tech stack,</strong>
+              </a>{" "}
+              beatboxing, and writing stories that hopefully are as snazzy as
+              they are short.
             </div>
             <br />
             <div style={{ marginTop: "0" }}>
-              These days, I've been living it up while studying remotely in
-              Forest, Virginia, where the great art (and loss) of Zoom is no
-              stranger.
+              Currently, I'm enjoying my days in America's most metaphorically
+              named town, Providence, Rhode Island. Excited to see where I may end up next :)
             </div>
             <br />
             <div style={{ marginTop: "0" }}>
-              Thanks a whole ton for visiting my site :)
+              Thanks a whole ton for visiting my site. Let's get this ship rolling!
             </div>
-            <br />
-            <div style={{ marginTop: "0" }}>Let's get this ship rolling!</div>
           </div>
         </div>
         <div className="face not-mobile column">

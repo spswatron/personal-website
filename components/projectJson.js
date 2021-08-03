@@ -132,8 +132,8 @@ const KathyChattyCaption = (
     Draft.js was the real mvp for being such a great framework to build a rich
     text editor off of. Before this project, I hadn't done a lot of work
     involving prefetching data, but next.js really sold me on that. And of
-    course, flask and postgresql are always wonderful, and they challenge and teach me a bit
-    about deployment every time.
+    course, flask and postgresql are always wonderful, and they challenge and
+    teach me a bit about deployment every time.
     <br />
   </>
 );
