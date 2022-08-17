@@ -41,11 +41,13 @@ function Core() {
             <br />
             <div style={{ marginTop: "0" }}>
               Currently, I'm enjoying my days in America's most metaphorically
-              named town, Providence, Rhode Island. Excited to see where I may end up next :)
+              named town, Providence, Rhode Island. Excited to see where I may
+              end up next :)
             </div>
             <br />
             <div style={{ marginTop: "0" }}>
-              Thanks a whole ton for visiting my site. Let's get this ship rolling!
+              Thanks a whole ton for visiting my site. Let's get this ship
+              rolling!
             </div>
           </div>
         </div>
