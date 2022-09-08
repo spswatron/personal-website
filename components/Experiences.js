@@ -18,6 +18,12 @@ const SchoolCaption = (
   </>
 );
 
+const StripeCaption = (
+  <p>
+    During my time here, I developed a portal to manage Stripe Terminal's supported platforms, countries, devices, and integration shapes. Now, when non-engineers within Stripe Terminal want to launch a new country, it's easy-breezy. 
+  </p>
+);
+
 const NASACaption = (
   <p>
     It's here that I work on all the wonders of image sonification, using
@@ -89,14 +95,6 @@ class TimeLineTab extends React.Component {
     return (
       <Tabs>
         <TabList>
-          {/*    <div className={"not-mobile"} style={{width: '100%'}}>*/}
-          {/*     <h1 style={{margin:0, textAlign:'center', width: '100%'}}>*/}
-          {/*    My*/}
-          {/*</h1>*/}
-          {/*    <h1 style={{margin: 0, textAlign:'center', width: '100%'}}>*/}
-          {/*    Experiences*/}
-          {/*</h1>*/}
-          {/*    </div>*/}
           <Tab>
             <div className={"tab-name"}>
               <i className="fa fa-briefcase" />
@@ -182,9 +180,21 @@ class TimeLineWork extends React.Component {
   render() {
     return (
       <>
+      <div className="timeline-item" date-is="06/2022 - 09/2022">
+          <Collapsible
+            transitionTime={220}
+            trigger={<ExpTitle title={"Stripe"} />}
+          >
+          {StripeCaption}
+          </Collapsible>
+        </div>
         <div className="timeline-item" date-is="01/2021 - Present">
-          <h2>NASA Chandra X-Ray Observatory</h2>
+          <Collapsible
+            transitionTime={220}
+            trigger={<ExpTitle title={"NASA Chandra X-Ray Observatory"} />}
+          >
           {NASACaption}
+          </Collapsible>
         </div>
         <div className="timeline-item" date-is="05/2021 - 08/2021">
           <Collapsible

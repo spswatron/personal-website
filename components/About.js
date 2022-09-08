@@ -1,11 +1,10 @@
 import React from "react";
-const myFace = "/images/IMG_3441.jpg";
+const myFace = "/images/IMG_1949.JPG";
 import Pager from "./Page";
 import Image from "next/image";
 
 function Face() {
   return <Image src={myFace} width="auto" height="415" />;
-  // return <Image alt="Ashley wearing a jean jacket and smiling in her backyard in Forest, VA" style={{borderRadius:'5px'}} layout="fill" src={myFace} />;
 }
 
 function Core() {
@@ -25,7 +24,7 @@ function Core() {
               About Me
             </h1>
             <div style={{ marginTop: "0" }}>
-              Heyo!! My name's Ashley and I'm a junior at Brown University
+              Heyo!! My name's Ashley and I'm a senior at Brown University
               studying Computer Science and Creative Writing.
             </div>
             <br />
