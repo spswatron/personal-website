@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-scroll";
+import Sidebar from "./Sidebar";
 
-class Navbar extends React.Component {
+class FullNavbar extends React.Component {
   render() {
     return (
       <ul className="navbar">
@@ -66,6 +67,21 @@ class Navbar extends React.Component {
       </ul>
     );
   }
+}
+
+function Navbar() {
+  return(
+    <>
+    <FullNavbar />
+      <div className="top" />
+      <div className={"nav fa"}>
+        <Sidebar
+          pageWrapId={"page-wrap"}
+          outerContainerId={"outer-container"}
+        />
+      </div>
+      </>
+  );
 }
 
 export default Navbar;

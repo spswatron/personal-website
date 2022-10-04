@@ -20,7 +20,10 @@ const SchoolCaption = (
 
 const StripeCaption = (
   <p>
-    During my time here, I developed a portal to manage Stripe Terminal's supported platforms, countries, devices, and integration shapes. Now, when non-engineers within Stripe Terminal want to launch a new country, it's easy-breezy. 
+    During my time here, I developed a portal to manage Stripe Terminal's
+    supported platforms, countries, devices, and integration shapes. Now, when
+    non-engineers within Stripe Terminal want to launch a new country, it's
+    easy-breezy.
   </p>
 );
 
@@ -180,12 +183,12 @@ class TimeLineWork extends React.Component {
   render() {
     return (
       <>
-      <div className="timeline-item" date-is="06/2022 - 09/2022">
+        <div className="timeline-item" date-is="06/2022 - 09/2022">
           <Collapsible
             transitionTime={220}
             trigger={<ExpTitle title={"Stripe"} />}
           >
-          {StripeCaption}
+            {StripeCaption}
           </Collapsible>
         </div>
         <div className="timeline-item" date-is="01/2021 - Present">
@@ -193,7 +196,7 @@ class TimeLineWork extends React.Component {
             transitionTime={220}
             trigger={<ExpTitle title={"NASA Chandra X-Ray Observatory"} />}
           >
-          {NASACaption}
+            {NASACaption}
           </Collapsible>
         </div>
         <div className="timeline-item" date-is="05/2021 - 08/2021">
