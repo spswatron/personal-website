@@ -3,6 +3,6 @@ body {
 }
 
 img {
-    max-width: min(100%, 700px);
-    padding: 3% 0;
+  max-width: min(100%, 700px);
+  padding: 3% 0;
 }

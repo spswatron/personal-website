@@ -6,9 +6,10 @@ body {
 }
 
 .content {
-    min-height: 100vh;
-    max-width: min(700px, 90%);
-    margin: 0 auto;
+  min-height: 100vh;
+  max-width: min(700px, 90%);
+  margin: 0 auto;
+  padding-bottom: 5%;
 }
 
 .header {
@@ -17,12 +18,12 @@ body {
 }
 
 figure {
-    width: 100%;
-    margin: 0;
+  width: 100%;
+  margin: 0;
 }
 
 figcaption {
-    text-align: left;
+  text-align: left;
 }
 
 @media screen and (min-width: 769px) {

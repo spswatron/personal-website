@@ -70,9 +70,9 @@ class FullNavbar extends React.Component {
 }
 
 function Navbar() {
-  return(
+  return (
     <>
-    <FullNavbar />
+      <FullNavbar />
       <div className="top" />
       <div className={"nav fa"}>
         <Sidebar
@@ -80,7 +80,7 @@ function Navbar() {
           outerContainerId={"outer-container"}
         />
       </div>
-      </>
+    </>
   );
 }
 
