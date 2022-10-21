@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Responsive Redesign</title>
+    <link rel="icon" type="image/x-icon" href="./apple-touch-icon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive_redesign.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <h1 class="title">Responsive Redesign</h1>
+        <!-- <figure>
+          <img src="./images/personas/microwave.png" />
+          <figcaption>
+            <b>Fig 1.</b>
+          </figcaption>
+        </figure> -->
+      </div>
+      <div class="section">
+        <h2>Overview</h2>
+        <div>
+          For my User Interfaces & User Experiences class, we were assigned the
+          task of redesigning a public-facing webpage and improving upon users'
+          experiences interacting with this site. I chose to redesign
+          <a href="https://www.brauburgers.com/">Brauburgers' home page.</a>
+          Brauburgers is burgers and craft beer restaraunt in my hometown, so I
+          chose to redesign the page because the I visited this location many
+          times growing up.
+        </div>
+      </div>
+      <div class="section">
+        <h2>Part 1: Identifying Usability Problems</h2>
+        <img
+          src="./images/responsive_redesign/brauburgers-full.png"
+          aria="Brauburgers' homepage."
+        />
+        <!-- <br> -->
+        <div>
+          <h3>Finding Problems</h3>
+          The Brauburgers home page is not very intuitive.
+          <ul>
+            <li>
+              When users first land on the site, they aren't provided with
+              information about what Brauburgers is, or how to interact with the
+              page.
+            </li>
+            <li>
+              The different sections of the page do not have clear headers.
+            </li>
+            <li>
+              The menu and order images appear to be buttons, but are not
+              clickable.
+            </li>
+            <li>
+              The links on the navbar are confusing, so menu and delivery
+              information is harder to find.
+            </li>
+            <li>
+              The Brauburgers description is written in bold face, making
+              reading the description feel agressive.
+            </li>
+          </ul>
+        </div>
+        <h3>Accessibility</h3>
+        <div>
+          After inspecting this site's accessibility using WebAIM WAVE, I found
+          the following issues:
+          <ul>
+            <li>One traditional image was missing alternative text.</li>
+            <li>
+              One spacer image (an image used mostly for layout) was missing
+              alternative text as well.
+            </li>
+            <li>
+              A &lt;noscript&gt; tag was present on the site, which means there
+              may be less of a focus on the scripted content's accessibility.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Part 2: Visual Redesign</h2>
+        Based on the problems I observed, I created low-fidelity wireframes, a
+        visual design style guide, and high-fidelity prototypes for a redesigned
+        version of Brauburgers' homepage.
+        <h3>Low-fidelity Wireframing</h3>
+        <div>
+          <img src="./images/responsive_redesign/lowfi-description.png" />
+          <img src="./images/responsive_redesign/brauburgers-wireframe-2.png" />
+          <img src="./images/responsive_redesign/brauburgers-wireframe-1.png" />
+        </div>
+        <h3>Visual Design Style Guide</h3>
+        <div>
+          <img src="./images/responsive_redesign/visual_design_style_guide.jpg">
+        </div>
+        <h3>High-Fidelity Prototyping</h3>
+        <img src="./images/responsive_redesign/annotated-figma-1.jpg">
+        <img src="./images/responsive_redesign/annotated-figma-2.jpg">
+        <img src="./images/responsive_redesign/brauburgers-ipad.png">
+      </div>
+      <div class="section">
+        <h2>Part 3: Responsive Redesign</h2>
+        <div>
+          Using my protoypes as reference, I created a responsive and redesigned version of Brauburger's home page. You can access it <a href="./redesigned_brauburgers.html">here!</a>
+        </div>
+      </div>
+      <br>
+      Thanks for reading! I hope this portfolio entry helped pave a way for
+      users' enhanced experience interacting with Brauburgers' website!
+    </div>
+  </body>
+</html>
